@@ -1,0 +1,93 @@
+{
+  "brand": {
+    "name": "Kwiaciarnia Strelicja",
+    "short": "Strelicja",
+    "owner": "Iwona Dąbrowa",
+    "descriptor": "Kwiaciarnia i kwiatomaty 24h, Oława i Jelcz-Laskowice",
+    "promise": "Świeże kwiaty o każdej porze.",
+    "essence": "Kwiaty z ręki florystki, także wtedy, gdy sklep jest zamknięty."
+  },
+  "contact": {
+    "phone": "880 056 918",
+    "phone_href": "tel:+48880056918",
+    "email": "kwiaciarniastrelicjaid@gmail.com",
+    "address": "ul. Wiejska 28A, 55-200 Oława",
+    "geo": {"lat": 50.9426035, "lng": 17.2814489},
+    "hours": {"mon_fri": "9:00–18:00", "sat": "9:00–14:00", "sun": "nieczynne (szyld: 10:00–14:00 — do potwierdzenia)"},
+    "area": "Oława i okolice (dowóz)",
+    "rating": {"google": 4.9, "count": 78, "checked": "2026-11-24"},
+    "social": {
+      "instagram": "https://www.instagram.com/kwiaciarniastrelicjaid/",
+      "facebook": "Kwiaciarnia Strelicja I.D"
+    }
+  },
+  "kiosks": [
+    {"id": "olawa", "label": "Kwiatomat Oława", "address": "ul. Lipowa 1c, 55-200 Oława", "hours": "24/7", "google": "Kwiatomat Strelicja ID 24/7"},
+    {"id": "jelcz", "label": "Kwiatomat Jelcz-Laskowice", "address": "ul. Oławska 27, 55-220 Jelcz-Laskowice", "hours": "24/7", "google": "Kwiatomat Strelicja ID 24/7 (profil bez właściciela — do przejęcia)"}
+  ],
+  "tokens": {
+    "color": {
+      "ink": "#1E3533",
+      "accent": "#2B765C",
+      "cta": "#B8471A",
+      "cta_hover": "#9E3C15",
+      "muted": "#5E716C",
+      "paper": "#F8F3EA",
+      "bloom": "#E8912A",
+      "white": "#FFFFFF",
+      "line": "#DDD5C6",
+      "surface": "#FFFDF8"
+    },
+    "font": {
+      "display": "Fraunces",
+      "body": "Inter",
+      "license": "SIL OFL 1.1 (oba)",
+      "subsets": ["latin", "latin-ext"]
+    },
+    "radius": "3px",
+    "grid": 12,
+    "measure": "70ch",
+    "motion": {"duration": "200-400ms", "ease": "cubic-bezier(.2,.7,.2,1)", "reduced_motion": "static"}
+  },
+  "voice": {
+    "address": "Ty",
+    "yes": ["ciepło, na Ty", "konkretnie: co, gdzie, kiedy", "krótko"],
+    "no": ["korporacyjnie", "przesłodzenie i wykrzykniki", "promocje przy żałobie"],
+    "banned": ["kompleksowy", "najwyższej jakości", "profesjonalny", "unikalny", "wyjątkowa oferta", "magia kwiatów"],
+    "rule": "Okazja → co dostajesz → jak odebrać → jeden krok"
+  },
+  "archetype": {
+    "primary": "Twórca",
+    "supporting": "Opiekun",
+    "styling_only": "Kochanek (zdjęcia: detal, faktura)",
+    "shadow_avoid": "perfekcjonizm i dystans; ckliwość i nadopiekuńczość"
+  },
+  "soul": {
+    "brand_line": "Świeże kwiaty o każdej porze.",
+    "metaphor": "pnącze",
+    "motif": "linia pnącza z logo z listkami (accent) i kropkami (bloom): separator, podkreślenie nagłówka, rysowanie przy scrollu, hover menu i kafelków",
+    "prop": "wazon z wodą albo wstążka w kolorze terakoty",
+    "photo_world": "jasne drewno lady lub biała półka, dzienne światło z lewej, ciepły balans, kwiat min. 60% kadru, bez napisów",
+    "section_schema": "eyebrow > h2 > lead > cta"
+  },
+  "contexts": [
+    {"id": "milosc", "label": "Miłość", "meaning": "dla żony, mamy, na randkę", "image": "images/bouquet-pink.jpg"},
+    {"id": "slub", "label": "Ślub", "meaning": "bukiet, wianki, dekoracja sali", "image": "images/wedding-white.jpg"},
+    {"id": "pozegnanie", "label": "Pożegnanie", "meaning": "wiązanki i wieńce, także na jutro", "image": "images/funeral-heart.jpg"},
+    {"id": "noc", "label": "Kwiatomat 24h", "meaning": "kwiaty teraz, gdy sklep zamknięty", "image": "TODO: kwiatomat-noc.jpg"},
+    {"id": "swieta", "label": "Święta", "meaning": "stroiki, wieńce, Walentynki", "image": "images/wreath-xmas.jpg"},
+    {"id": "codziennosc", "label": "Codzienność", "meaning": "flowerbox, kwiat w doniczce", "image": "images/flowerbox.jpg"}
+  ],
+  "method": ["Dzwonisz albo wpadasz", "Iwona dobiera i wiąże", "Odbierasz w kwiaciarni lub z dowozem", "Albo bierzesz z kwiatomatu, o każdej porze"],
+  "offer_priority": ["kwiatomaty", "bukiety i flowerboxy", "śluby", "pogrzeby", "sezon", "dowóz"],
+  "offer_notes": {"churches": "nie wyróżniać; jedna wzmianka w ślubach: 'dekoracja sali i ceremonii'"},
+  "messages": {
+    "hero": "Świeże kwiaty o każdej porze.",
+    "hero_sub": "W dzień bukiet wiąże Iwona przy Wiejskiej 28A. W nocy czekają na Ciebie dwa kwiatomaty: w Oławie i w Jelczu-Laskowicach.",
+    "short": "Kwiaciarnia Iwony Dąbrowy w Oławie i dwa kwiatomaty, w których świeże bukiety czekają całą dobę.",
+    "kiosk": "Kwiatomat od florystki: bukiety z naszej pracowni, całą dobę.",
+    "cta": "Zadzwoń: 880 056 918",
+    "cta_secondary": "Pokaż kwiatomaty"
+  },
+  "testimonials_source": "Google Maps, wybrane opinie z 24.11.2026 (cytować z imieniem autora i datą, bez edycji treści)"
+}

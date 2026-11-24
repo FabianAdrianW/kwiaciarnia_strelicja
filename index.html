@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwiaciarnia Strelicja Oława · kwiaty i kwiatomaty 24h</title>
+<meta name="description" content="Kwiaciarnia Iwony Dąbrowy przy ul. Wiejskiej 28A w Oławie. Bukiety, śluby, wiązanki i wieńce. Dwa kwiatomaty czynne całą dobę: Oława, Lipowa 1c i Jelcz-Laskowice, Oławska 27. Tel. 880 056 918.">
+<meta name="theme-color" content="#1E3533">
+<link rel="icon" href="img/favicon.png">
+<meta property="og:title" content="Kwiaciarnia Strelicja · świeże kwiaty o każdej porze">
+<meta property="og:description" content="Kwiaciarnia w Oławie i dwa kwiatomaty 24h. Zadzwoń: 880 056 918.">
+<meta property="og:image" content="img/roses-red-960.webp">
+<link rel="preload" as="image" href="img/strelitzia-960.webp" type="image/webp">
+<link rel="preload" as="font" href="fonts/fraunces-latin-400-normal.woff2" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Florist","name":"Kwiaciarnia Strelicja Iwona Dąbrowa","telephone":"+48880056918","email":"kwiaciarniastrelicjaid@gmail.com",
+"address":{"@type":"PostalAddress","streetAddress":"ul. Wiejska 28A","postalCode":"55-200","addressLocality":"Oława","addressCountry":"PL"},
+"geo":{"@type":"GeoCoordinates","latitude":50.9426035,"longitude":17.2814489},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],
+"sameAs":["https://www.instagram.com/kwiaciarniastrelicjaid/"]}
+</script>
+<style>
+@font-face{font-family:Fraunces;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-400-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-ext-400-italic.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Fraunces;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+
+:root{
+  --ink:#1E3533; --accent:#2B765C; --cta:#B8471A; --cta-hover:#9E3C15; --muted:#5E716C;
+  --paper:#F8F3EA; --bloom:#E8912A; --line:#DDD5C6; --surface:#FFFDF8; --white:#fff;
+  --night:#16282A; --night-2:#1E3533; --night-text:#F8F3EA; --night-muted:#B9C6C1;
+  --bg:var(--paper); --text:var(--ink); --text-muted:var(--muted); --card:var(--surface);
+  --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,-apple-system,sans-serif;
+  --r:3px; --ease:cubic-bezier(.2,.7,.2,1); --nav-h:72px;
+}
+@media (prefers-color-scheme:dark){
+  .brand .light{opacity:0}.brand .dark{opacity:1}
+  :root{--bg:#172A2B; --text:#F1ECE2; --text-muted:#B9C6C1; --card:#1F3534; --line:#34504D; --accent:#6CC3A0; --surface:#1F3534}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bloom);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(34px,5.2vw,68px);line-height:1.02}
+h2 em,h1 em{font-style:italic;color:var(--accent)}
+.lead{font-size:clamp(16px,1.3vw,18px);max-width:46ch;color:var(--text-muted)}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0 0 14px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:var(--r);font:600 15px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background .25s var(--ease),color .25s,box-shadow .25s,transform .25s var(--ease)}
+.btn svg{width:18px;height:18px;transition:transform .3s var(--ease)}
+.btn-cta{background:var(--cta);color:#fff;box-shadow:0 6px 18px -8px rgba(184,71,26,.6)}
+.btn-cta:hover{background:var(--cta-hover);transform:translateY(-1px)}
+.btn-cta:hover svg{transform:rotate(-12deg) scale(1.08)}
+.btn-line{color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent);background:transparent}
+.btn-line:hover{background:var(--accent);color:#fff}
+.btn-line:hover svg{transform:translateY(2px)}
+
+/* vine */
+.vine{display:block;height:16px;width:100%;overflow:visible}
+.vine path.stem{fill:none;stroke:currentColor;stroke-width:1.3;stroke-dasharray:var(--len,700);stroke-dashoffset:var(--len,700);transition:stroke-dashoffset 1.4s var(--ease)}
+.vine .leaf,.vine .dot{opacity:0;transform:scale(.4);transform-box:fill-box;transform-origin:center;transition:opacity .5s,transform .6s var(--ease)}
+.vine .leaf{fill:var(--accent)}.vine .dot{fill:var(--bloom)}
+.vine.on path.stem{stroke-dashoffset:0}
+.vine.on .leaf,.vine.on .dot{opacity:1;transform:none}
+.vine.on .leaf:nth-of-type(2){transition-delay:.5s}.vine.on .leaf:nth-of-type(3){transition-delay:.8s}.vine.on .leaf:nth-of-type(4){transition-delay:1.1s}
+.vine.on .dot{transition-delay:1.2s}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;display:flex;align-items:center;gap:24px;padding:0 clamp(16px,4vw,48px);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  color:var(--text);transition:background .6s var(--ease),color .6s var(--ease),box-shadow .4s}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease),background .6s}
+.nav.scrolled{box-shadow:0 10px 30px -22px rgba(30,53,51,.5)}
+.nav.scrolled::after{transform:scaleX(1)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.brand img{height:52px;width:auto;transition:opacity .5s}
+.brand .dark{position:absolute;opacity:0}
+.nav-links{display:flex;gap:4px;margin:0 auto;list-style:none;padding:0;position:relative}
+.nav-links a{display:block;padding:10px 14px;font-size:15px;text-decoration:none;color:inherit;position:relative}
+.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-dot{position:absolute;bottom:-2px;left:0;width:6px;height:6px;border-radius:50%;background:var(--bloom);opacity:0;transition:transform .5s var(--ease),opacity .3s}
+.nav .btn{min-height:44px;padding:0 16px;font-size:14px}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+body.night .nav{background:color-mix(in srgb,var(--night) 90%,transparent);color:var(--night-text)}
+body.night .nav::after{background:#34504D}
+body.night .brand .light{opacity:0}body.night .brand .dark{opacity:1}
+
+/* HERO */
+.hero{position:relative;padding:calc(var(--nav-h) + clamp(40px,7vw,96px)) 0 0;min-height:min(880px,100svh)}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/tex-linen.webp) center/600px;opacity:.55;pointer-events:none}
+.hero-mark{position:absolute;right:-8vw;top:4%;width:min(40vw,560px);opacity:.09;pointer-events:none;mix-blend-mode:multiply}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);padding-left:clamp(20px,7vw,120px);align-items:start}
+.status{max-width:100%;display:inline-flex;align-items:center;gap:10px;font-size:14px;padding:8px 14px 8px 12px;border-radius:40px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line);margin-bottom:26px}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(43,118,92,.5);animation:pulse 2.4s infinite}
+.status.closed i{background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.5)}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(44px,6.6vw,104px);line-height:.96;margin:0 0 28px}
+.hero h1 span,.hero h1 em{display:block;white-space:nowrap}
+.hero h1 em{padding-left:clamp(0px,5vw,90px)}
+.hero .lead{margin:0 0 32px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.proof{display:flex;align-items:center;gap:14px;font-size:14px;color:var(--text-muted)}
+.proof b{font:400 34px/1 var(--display);color:var(--text)}
+.stars{color:var(--bloom);letter-spacing:2px}
+.hero-photos{position:relative;height:clamp(420px,52vw,700px)}
+.hero-photos .p1{position:absolute;right:0;top:0;width:82%;height:92%;object-fit:cover;border-radius:var(--r) 0 0 var(--r)}
+.hero-photos .p2{position:absolute;left:-4%;bottom:-16%;width:44%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);border:8px solid var(--surface);transform:rotate(-3deg);box-shadow:0 30px 60px -30px rgba(30,53,51,.55);z-index:3;transition:transform .6s var(--ease)}
+.hero-photos:hover .p2{transform:rotate(-1deg) translateY(-6px)}
+.hero-photos figcaption{position:absolute;right:16px;bottom:calc(8% + 16px);background:#FFFDF8;color:var(--ink);padding:10px 14px;border-radius:var(--r);font-size:13px;max-width:220px}
+.hero-photos figcaption b{display:block;font:italic 400 17px/1.2 var(--display)}
+
+/* edges */
+.edge{display:block;width:100%;height:clamp(40px,6vw,90px)}
+
+/* OKAZJE */
+.okazje{position:relative;padding:clamp(120px,14vw,200px) clamp(20px,4vw,56px) clamp(60px,8vw,110px) clamp(20px,12vw,200px);background:var(--card)}
+.okazje::before{content:"";position:absolute;inset:0;background:url(img/tex-leafshadow.webp) right top/min(1200px,110%) no-repeat;opacity:.8;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 60% 35%,#000 40%,transparent 100%);mask-image:radial-gradient(ellipse 70% 60% at 60% 35%,#000 40%,transparent 100%)}
+.okazje-head{position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(36px,5vw,64px);max-width:1180px}
+.okazje-head .vine{color:var(--text);width:220px;margin-top:18px}
+.tags{position:relative;display:flex;flex-wrap:wrap;gap:clamp(16px,2.4vw,30px);align-items:flex-start;max-width:1280px}
+.tag{--rot:0deg;position:relative;background:#FFFDF8;color:var(--ink);border-radius:var(--r);box-shadow:0 1px 0 var(--line),0 18px 40px -28px rgba(30,53,51,.45);transform:rotate(var(--rot));transition:transform .5s var(--ease),box-shadow .5s;text-decoration:none;display:block}
+.tag::before{content:"";position:absolute;top:-12px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--line);z-index:2}
+.tag figure{margin:0;overflow:hidden;border-radius:var(--r) var(--r) 0 0;aspect-ratio:4/5}
+.tag img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.tag .t{padding:16px 18px 18px}
+.tag h3{font-size:24px;line-height:1.1}
+.tag p{margin:6px 0 0;font-size:14px;color:#5E716C}
+.tag .u{display:block;height:10px;margin-top:10px;color:var(--ink)}
+.tag .u path{fill:none;stroke:currentColor;stroke-width:1.2;stroke-dasharray:160;stroke-dashoffset:160;transition:stroke-dashoffset .7s var(--ease)}
+.tag .u circle{fill:var(--bloom);opacity:0;transition:opacity .3s .5s}
+.tag:hover,.tag:focus-visible{transform:rotate(0) translateY(-8px);box-shadow:0 1px 0 var(--line),0 34px 60px -30px rgba(30,53,51,.6)}
+.tag:hover img{transform:scale(1.06)}
+.tag:hover .u path,.tag:focus-visible .u path{stroke-dashoffset:0}
+.tag:hover .u circle{opacity:1}
+.tag.w1{width:clamp(220px,24vw,330px);--rot:-1.6deg}
+.tag.w2{width:clamp(200px,20vw,280px);--rot:1.2deg;margin-top:48px}
+.tag.w3{width:clamp(220px,22vw,300px);--rot:-.8deg;margin-top:12px}
+.tag.w4{width:clamp(200px,19vw,260px);--rot:2.2deg;margin-top:70px}
+.tag.w5{width:clamp(210px,21vw,290px);--rot:-2deg;margin-top:-30px}
+.tag.cta-tag{width:clamp(220px,22vw,300px);--rot:1.4deg;margin-top:20px;background:var(--ink);color:var(--paper);padding:26px 24px}
+.tag.cta-tag::before{background:var(--surface)}
+.tag.cta-tag h3{color:var(--paper);font-size:28px}
+.tag.cta-tag p{color:#C9D3CF;margin:10px 0 18px}
+
+/* NIGHT */
+.night-sec{position:relative;background:var(--night);color:var(--night-text);padding:clamp(70px,9vw,130px) clamp(20px,5vw,72px) clamp(90px,10vw,150px)}
+.night-sec::before{content:"";position:absolute;inset:0;background:url(img/tex-night.webp) center/cover;opacity:.9;pointer-events:none}
+.night-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center;max-width:1300px;margin-left:auto}
+.night-sec .label{color:var(--bloom)}
+.night-sec h2 em{color:var(--bloom)}
+.night-sec .lead{color:var(--night-muted)}
+.spots{display:grid;gap:12px;margin:30px 0 26px;max-width:520px}
+.spot{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px 18px;border-radius:var(--r);background:rgba(248,243,234,.06);box-shadow:inset 0 0 0 1px rgba(248,243,234,.12);text-decoration:none;transition:background .3s,box-shadow .3s,transform .3s var(--ease)}
+.spot:hover{background:rgba(232,145,42,.1);box-shadow:inset 0 0 0 1px rgba(232,145,42,.55);transform:translateX(4px)}
+.spot svg{width:26px;height:26px;stroke:var(--bloom);fill:none;stroke-width:1.5}
+.spot b{display:block;font:400 21px/1.2 var(--display)}
+.spot span{font-size:14px;color:var(--night-muted)}
+.spot .go{font-size:13px;font-weight:600;color:var(--bloom);white-space:nowrap}
+.quote-n{border-left:2px solid var(--bloom);padding-left:16px;margin:0;max-width:520px;font:italic 400 18px/1.5 var(--display);color:var(--night-text)}
+.quote-n cite{display:block;font:400 13px/1.4 var(--body);color:var(--night-muted);margin-top:8px;font-style:normal}
+/* machine */
+.machine{position:relative;justify-self:center;width:min(100%,470px);padding:22px 22px 30px;border-radius:6px;background:linear-gradient(160deg,#2A4744,#1A2E2E);box-shadow:0 0 0 1px rgba(248,243,234,.12),0 50px 90px -40px rgba(0,0,0,.8),0 0 120px -30px rgba(232,145,42,.35);transform:rotate(1.2deg)}
+.machine-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--night-muted)}
+.machine-top b{font:italic 400 20px/1 var(--display);letter-spacing:0;text-transform:none;color:var(--night-text)}
+.led{display:inline-flex;align-items:center;gap:8px;color:var(--bloom)}
+.led i{width:8px;height:8px;border-radius:50%;background:var(--bloom);box-shadow:0 0 12px var(--bloom);animation:blink 3s infinite}
+@keyframes blink{50%{opacity:.45}}
+.cells{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cell{position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:#0F1D1D;box-shadow:inset 0 0 0 1px rgba(248,243,234,.1)}
+.cell img{width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.85);transition:filter .5s var(--ease),transform .6s var(--ease)}
+.cell::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16) 0 18%,transparent 30%);pointer-events:none}
+.cell span{position:absolute;left:6px;bottom:6px;font-size:11px;padding:3px 6px;border-radius:2px;background:rgba(15,29,29,.75);color:var(--night-text);opacity:0;transform:translateY(4px);transition:.35s var(--ease)}
+.cell:hover img{filter:brightness(1.05) saturate(1.05);transform:scale(1.05)}
+.cell:hover{box-shadow:inset 0 0 0 1px var(--bloom),0 0 26px -6px var(--bloom)}
+.cell:hover span{opacity:1;transform:none}
+.cell.lit img{filter:brightness(1) saturate(1)}
+.machine-foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:12px;color:var(--night-muted)}
+.slot{width:38%;height:10px;border-radius:2px;background:#0B1616;box-shadow:inset 0 2px 4px rgba(0,0,0,.6)}
+.machine-note{position:absolute;right:-8px;bottom:-22px;font-size:12px;color:var(--night-muted);transform:rotate(-1.2deg)}
+
+/* PRACOWNIA */
+.pracownia{position:relative;padding:clamp(80px,10vw,150px) clamp(20px,9vw,150px) clamp(60px,8vw,120px) clamp(20px,4vw,56px)}
+.prac-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:clamp(30px,6vw,110px);align-items:center}
+.prac-photos{position:relative;min-height:clamp(420px,50vw,680px)}
+.prac-photos .a{position:absolute;left:0;top:-14%;width:62%;aspect-ratio:9/14;object-fit:cover;border-radius:var(--r)}
+.prac-photos .b{position:absolute;right:2%;bottom:10%;width:58%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r);border:8px solid var(--bg);box-shadow:0 30px 60px -34px rgba(30,53,51,.6);transform:rotate(1.5deg)}
+.facts{list-style:none;padding:0;margin:28px 0 30px;display:grid;gap:14px;max-width:520px}
+.facts li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+.facts svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+
+/* OPINIE */
+.opinie{position:relative;background:var(--card);padding:clamp(70px,9vw,130px) clamp(20px,4vw,56px) clamp(80px,9vw,140px) clamp(20px,6vw,100px);overflow:clip}
+.big-score{position:absolute;right:-2vw;top:-6vw;font:400 clamp(200px,34vw,520px)/1 var(--display);color:var(--accent);opacity:.08;pointer-events:none;letter-spacing:-.04em}
+.op-head{position:relative;max-width:760px;margin-bottom:44px}
+.op-head p{margin:12px 0 0;color:var(--text-muted)}
+.quotes{position:relative;columns:3 300px;column-gap:24px;max-width:1240px}
+.q{break-inside:avoid;margin:0 0 24px;padding:22px 22px 20px;background:var(--bg);border-radius:var(--r);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .35s,transform .35s var(--ease)}
+.q:hover{box-shadow:inset 0 0 0 1px var(--accent);transform:translateY(-3px)}
+.q p{margin:0;font:400 18px/1.5 var(--display)}
+.q footer{margin-top:14px;font-size:13px;color:var(--text-muted);display:flex;justify-content:space-between;gap:10px}
+.q .stars{font-size:13px}
+.q:nth-child(2){margin-top:40px}
+
+/* DOJAZD */
+.dojazd{position:relative;padding:clamp(70px,9vw,130px) clamp(20px,5vw,72px) clamp(60px,7vw,100px)}
+.doj-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(30px,5vw,80px);align-items:start;max-width:1320px}
+.phone-big{display:inline-block;font:400 clamp(40px,6.4vw,92px)/1 var(--display);text-decoration:none;color:var(--text);margin:18px 0 8px;transition:color .3s}
+.phone-big:hover{color:var(--cta)}
+.copy{background:none;border:0;color:var(--accent);font:600 14px var(--body);cursor:pointer;min-height:44px;padding:0;text-decoration:underline;text-underline-offset:4px}
+.hours{width:100%;max-width:420px;border-collapse:collapse;margin:26px 0;font-size:15px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{font-weight:600;color:var(--accent)}
+.addr{font-size:17px;margin:0}
+.map{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 70px -40px rgba(30,53,51,.6);transform:rotate(-.8deg);margin-top:-110px;background:var(--line);aspect-ratio:4/3}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75)}
+.map-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+/* FOOTER */
+.foot{background:var(--night);color:var(--night-text);padding:60px clamp(20px,6vw,100px) 110px;position:relative}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;max-width:1240px}
+.foot img{height:78px;width:auto}
+.foot h3{font-size:20px;margin-bottom:10px}
+.foot p,.foot a{font-size:14px;color:var(--night-muted);margin:0 0 6px;text-decoration:none}
+.foot a:hover{color:var(--bloom)}
+.foot small{display:block;margin-top:40px;color:#7D918C;font-size:12px}
+
+/* mobile call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
+.callbar.show{transform:none}
+.callbar .btn{width:100%;justify-content:center;min-height:54px;font-size:16px}
+
+@media (max-width:1020px){
+  .nav-links{display:none}
+  .menu-btn{display:inline-grid;place-items:center}
+  .nav>.btn{margin-left:auto}
+  .nav .btn .long{display:none}
+  .nav.open .nav-links{display:flex;position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;padding:12px 20px 20px;background:var(--bg);color:var(--text);box-shadow:0 20px 30px -20px rgba(0,0,0,.4)}
+  body.night .nav.open .nav-links{background:var(--night);color:var(--night-text)}
+  .nav.open .nav-links a{padding:14px 4px;font-size:18px;border-bottom:1px solid var(--line)}
+  .nav-dot{display:none}
+}
+@media (max-width:860px){
+  .hero-grid,.okazje-head,.night-grid,.prac-grid,.doj-grid,.foot-grid{grid-template-columns:1fr}
+  .hero-grid{padding-right:0}
+  .hero-photos{height:clamp(340px,90vw,520px);margin-left:12vw}
+  .hero-photos .p2{left:-14vw;bottom:-12%;width:46%}
+  .okazje{padding-top:110px}
+  .tags{gap:18px 14px}
+  .tag.w1,.tag.w2,.tag.w3,.tag.w4,.tag.w5,.tag.cta-tag{width:calc(50% - 7px);margin-top:0}
+  .tag.w2,.tag.w4{margin-top:26px}
+  .tag.cta-tag{width:100%}
+  .tag h3{font-size:20px}.tag .t{padding:12px 12px 14px}
+  .machine{transform:rotate(.6deg)}
+  .prac-photos{min-height:auto;height:clamp(380px,100vw,560px)}
+  .prac-photos .a{top:-6%}
+  .map{margin-top:10px;transform:rotate(-.5deg)}
+  .q:nth-child(2){margin-top:0}
+  .callbar{display:block}
+  .brand img{height:44px}
+}
+@media (max-width:420px){
+  .hero h1 span,.hero h1 em{white-space:normal}
+  .tag.w1,.tag.w2,.tag.w3,.tag.w4,.tag.w5{width:100%}
+  .tag.w2,.tag.w4{margin-top:0}
+  .tag figure{aspect-ratio:5/4}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .vine path.stem{stroke-dashoffset:0}.vine .leaf,.vine .dot{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Przejdź do treści</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Kwiaciarnia Strelicja, na górę strony">
+    <img class="light" src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja" width="640" height="640">
+    <img class="dark" src="img/logo-dark.webp" alt="" width="640" height="640">
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#kwiatomaty">Kwiatomaty</a></li>
+    <li><a href="#okazje">Okazje</a></li>
+    <li><a href="#pracownia">Pracownia</a></li>
+    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#dojazd">Dojazd</a></li>
+    <li class="nav-dot" id="navdot" aria-hidden="true"></li>
+  </ul>
+  <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span class="long">Zadzwoń:&nbsp;</span>880 056 918</a>
+  <button class="menu-btn" id="menubtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <img class="hero-mark" src="img/mark.webp" alt="" aria-hidden="true" width="640" height="640">
+  <div class="hero-grid">
+    <div>
+      <p class="status" id="status" role="status"><i></i><span>Kwiaciarnia: pn–pt 9–18, sob 9–14. Kwiatomaty: całą dobę.</span></p>
+      <h1><span>Świeże kwiaty</span><em>o każdej porze.</em></h1>
+      <p class="lead">W dzień bukiet wiąże Iwona przy Wiejskiej 28A w Oławie. Kiedy sklep jest zamknięty, nasze kwiaty czekają w dwóch kwiatomatach: w Oławie i w Jelczu-Laskowicach.</p>
+      <div class="hero-cta">
+        <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a>
+        <a class="btn btn-line" href="#kwiatomaty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Gdzie są kwiatomaty</a>
+      </div>
+      <a class="proof" href="#opinie"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Google</span></a>
+    </div>
+    <figure class="hero-photos" style="margin:0">
+      <img class="p1" src="img/strelitzia-960.webp" srcset="img/strelitzia-480.webp 480w, img/strelitzia-960.webp 960w" sizes="(max-width:860px) 88vw, 45vw" width="960" height="1200" alt="Kompozycja ze strelicją, kwiatem, od którego kwiaciarnia wzięła nazwę" fetchpriority="high" style="object-position:50% 30%">
+      <img class="p2" src="img/roses-red-480.webp" width="480" height="480" alt="Bukiet czerwonych róż z trzema białymi różami w środku">
+      <figcaption><b>Strelicja</b>od tego kwiatu mamy nazwę</figcaption>
+    </figure>
+  </div>
+</section>
+
+<svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="color:var(--card);margin-top:clamp(40px,8vw,110px);margin-bottom:-1px"><path fill="currentColor" d="M0 60 C120 20 200 80 330 50 S520 10 640 46 S860 88 990 40 S1220 10 1320 44 S1420 70 1440 56 V90 H0Z"/></svg>
+
+<!-- OKAZJE -->
+<section class="okazje" id="okazje" aria-labelledby="okazje-h">
+  <div class="okazje-head">
+    <div>
+      <p class="label">Na każdą okazję</p>
+      <h2 id="okazje-h">Powiedz, dla kogo.<br><em>Resztę dobierzemy.</em></h2>
+      <svg class="vine js-vine" viewBox="0 0 600 16" preserveAspectRatio="none" aria-hidden="true"><path class="stem" d="M2 9 C60 2,90 15,150 8 S250 2,300 8 S420 15,470 8 S560 3,598 8"/><path class="leaf" d="M148 8 c4-8 14-9 18-5 c-6 1-12 4-18 5z"/><path class="leaf" d="M300 8 c-3 7-12 9-17 6 c6-1 11-3 17-6z"/><path class="leaf" d="M468 8 c4-8 14-9 18-5 c-6 1-12 4-18 5z"/><circle class="dot" cx="230" cy="5" r="2.4"/><circle class="dot" cx="392" cy="11" r="2.4"/></svg>
+    </div>
+    <p class="lead">Nie musisz znać nazw kwiatów. Wystarczy powiedzieć, na jaką okazję i dla kogo, a Iwona doradzi i zwiąże bukiet. Dowozimy po Oławie i okolicy.</p>
+  </div>
+  <div class="tags">
+    <a class="tag w1" href="tel:+48880056918"><figure><img src="img/bouquet-pink-480.webp" srcset="img/bouquet-pink-480.webp 480w, img/bouquet-pink-960.webp 960w" sizes="(max-width:860px) 46vw, 24vw" width="480" height="600" loading="lazy" alt="Bukiet z różowych róż, goździków i eukaliptusa"></figure><div class="t"><h3>Dla bliskiej osoby</h3><p>Dla żony, mamy, na urodziny i bez okazji.</p><svg class="u" viewBox="0 0 160 10" aria-hidden="true"><path d="M1 6 C30 1 50 9 80 5 S130 1 159 5"/><circle cx="122" cy="3" r="2"/></svg></div></a>
+    <a class="tag w2" href="tel:+48880056918"><figure><img src="img/wedding-white-480.webp" srcset="img/wedding-white-480.webp 480w, img/wedding-white-960.webp 960w" sizes="(max-width:860px) 46vw, 20vw" width="480" height="480" loading="lazy" alt="Jasny bukiet z białych eustom, gerbery i kulek craspedii"></figure><div class="t"><h3>Ślub</h3><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii.</p><svg class="u" viewBox="0 0 160 10" aria-hidden="true"><path d="M1 6 C30 1 50 9 80 5 S130 1 159 5"/><circle cx="122" cy="3" r="2"/></svg></div></a>
+    <a class="tag w3" href="tel:+48880056918"><figure><img src="img/funeral-heart-480.webp" srcset="img/funeral-heart-480.webp 480w, img/funeral-heart-960.webp 960w" sizes="(max-width:860px) 46vw, 22vw" width="480" height="600" loading="lazy" alt="Serce z białych chryzantem na stojaku"></figure><div class="t"><h3>Pożegnanie</h3><p>Wiązanki i wieńce. Przygotujemy także na jutro.</p><svg class="u" viewBox="0 0 160 10" aria-hidden="true"><path d="M1 6 C30 1 50 9 80 5 S130 1 159 5"/><circle cx="122" cy="3" r="2"/></svg></div></a>
+    <a class="tag w4" href="tel:+48880056918"><figure><img src="img/wreath-xmas-480.webp" srcset="img/wreath-xmas-480.webp 480w, img/wreath-xmas-960.webp 960w" sizes="(max-width:860px) 46vw, 19vw" width="480" height="600" loading="lazy" alt="Świąteczny wieniec z jodły, bombek i kraciastej kokardy"></figure><div class="t"><h3>Święta i sezon</h3><p>Stroiki, wieńce na drzwi, Walentynki. Zamów wcześniej.</p><svg class="u" viewBox="0 0 160 10" aria-hidden="true"><path d="M1 6 C30 1 50 9 80 5 S130 1 159 5"/><circle cx="122" cy="3" r="2"/></svg></div></a>
+    <a class="tag w5" href="tel:+48880056918"><figure><img src="img/flowerbox-480.webp" srcset="img/flowerbox-480.webp 480w, img/flowerbox-960.webp 960w" sizes="(max-width:860px) 46vw, 21vw" width="480" height="600" loading="lazy" alt="Flowerbox z różami i alstromeriami w czerwonym pudełku"></figure><div class="t"><h3>Flowerbox i doniczki</h3><p>Coś ładnego na biurko, do domu, na prezent.</p><svg class="u" viewBox="0 0 160 10" aria-hidden="true"><path d="M1 6 C30 1 50 9 80 5 S130 1 159 5"/><circle cx="122" cy="3" r="2"/></svg></div></a>
+    <div class="tag cta-tag">
+      <h3>Masz termin albo pomysł?</h3>
+      <p>Zadzwoń. Ustalimy kwiaty, kolory, cenę i to, czy odbierasz w kwiaciarni, czy dowieźć.</p>
+      <a class="btn btn-cta" href="tel:+48880056918">Zadzwoń: 880 056 918</a>
+    </div>
+  </div>
+</section>
+
+<svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--card);color:var(--night);margin-bottom:-1px"><path fill="currentColor" d="M0 90 V55 L60 40 L95 62 L150 18 L190 52 L260 30 L300 58 L380 12 L420 50 L520 34 L560 60 L640 22 L690 54 L780 36 L820 64 L900 16 L950 50 L1040 30 L1080 58 L1160 20 L1210 52 L1290 34 L1340 60 L1400 28 L1440 46 V90Z"/></svg>
+
+<!-- KWIATOMATY (noc) -->
+<section class="night-sec" id="kwiatomaty" aria-labelledby="kw-h" data-night>
+  <div class="night-grid">
+    <div>
+      <p class="label">Kwiatomaty, całą dobę</p>
+      <h2 id="kw-h">Kiedy kwiaciarnia śpi,<br><em>kwiaty wciąż czekają.</em></h2>
+      <p class="lead" style="margin-top:20px">W kwiatomatach są bukiety z naszej pracowni, związane tego samego dnia co te przy ladzie. Podjeżdżasz, wybierasz, płacisz i jedziesz. Także w nocy, w niedzielę i w święta.</p>
+      <div class="spots">
+        <a class="spot" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Oława</b><span>ul. Lipowa 1c</span></div><span class="go">Prowadź</span></a>
+        <a class="spot" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Jelcz-Laskowice</b><span>ul. Oławska 27</span></div><span class="go">Prowadź</span></a>
+      </div>
+      <blockquote class="quote-n">„Sądziłam, że bukiety będą tam drogie i pewnie już długo będą stały. Ku mojemu zaskoczeniu, bukiet cudowny, kwiaty świeże i w przystępnej cenie.”<cite>Karolina L., opinia w Google o kwiatomacie</cite></blockquote>
+    </div>
+    <div class="machine" aria-label="Rysunek kwiatomatu z bukietami w przegródkach">
+      <div class="machine-top"><b>Strelicja</b><span class="led"><i></i>24h</span></div>
+      <div class="cells">
+        <div class="cell"><img src="img/roses-red-480.webp" alt="" loading="lazy" width="480" height="480"><span>róże</span></div>
+        <div class="cell lit"><img src="img/bouquet-pastel-480.webp" alt="" loading="lazy" width="480" height="480"><span>pastelowy</span></div>
+        <div class="cell"><img src="img/sunflowers-480.webp" alt="" loading="lazy" width="480" height="480"><span>słoneczniki</span></div>
+        <div class="cell"><img src="img/mixed-480.webp" alt="" loading="lazy" width="480" height="516"><span>mieszany</span></div>
+        <div class="cell"><img src="img/heartbox-480.webp" alt="" loading="lazy" width="480" height="480"><span>w sercu</span></div>
+        <div class="cell lit"><img src="img/bouquet-pink-480.webp" alt="" loading="lazy" width="480" height="600"><span>różowy</span></div>
+        <div class="cell"><img src="img/wedding-white-480.webp" alt="" loading="lazy" width="480" height="480"><span>jasny</span></div>
+        <div class="cell"><img src="img/roses-white-vase-480.webp" alt="" loading="lazy" width="480" height="600"><span>w wazonie</span></div>
+        <div class="cell"><img src="img/flowerbox-480.webp" alt="" loading="lazy" width="480" height="600"><span>flowerbox</span></div>
+      </div>
+      <div class="machine-foot"><span>płatność kartą</span><span class="slot"></span></div>
+      <span class="machine-note">rysunek poglądowy, w środku nasze bukiety</span>
+    </div>
+  </div>
+</section>
+
+<svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="background:var(--night);color:var(--bg);margin-top:-1px"><path fill="currentColor" d="M0 90 V40 C160 70 260 10 420 36 C560 58 640 20 760 26 C900 34 980 70 1120 52 C1240 36 1330 10 1440 30 V90Z"/></svg>
+
+<!-- PRACOWNIA -->
+<section class="pracownia" id="pracownia" aria-labelledby="pr-h">
+  <div class="prac-grid">
+    <div class="prac-photos">
+      <img class="a" src="img/shop-interior-480.webp" srcset="img/shop-interior-480.webp 480w, img/shop-interior-960.webp 960w" sizes="(max-width:860px) 60vw, 28vw" width="480" height="853" loading="lazy" alt="Wnętrze kwiaciarni: wiadra ze świeżymi kwiatami przy jasnej ladzie">
+      <img class="b" src="img/storefront-960.webp" srcset="img/storefront-480.webp 480w, img/storefront-960.webp 960w" sizes="(max-width:860px) 56vw, 26vw" width="960" height="620" loading="lazy" alt="Witryna kwiaciarni Strelicja przy ul. Wiejskiej 28A w Oławie">
+    </div>
+    <div>
+      <p class="label">Pracownia przy Wiejskiej 28A</p>
+      <h2 id="pr-h">Każdy bukiet<br><em>wiązany ręcznie.</em></h2>
+      <p class="lead" style="margin-top:20px">Kwiaciarnię prowadzi florystka Iwona Dąbrowa. Klienci w opiniach piszą o niej po imieniu. Kwiaty dobiera sama, a bukiety dowozi po Oławie i okolicy.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-8M12 13l-4 8M12 13l4 8"/><circle cx="12" cy="7" r="2.5"/><circle cx="7.5" cy="9.5" r="2.2"/><circle cx="16.5" cy="9.5" r="2.2"/></svg><span>Kwiaty cięte i doniczkowe, codziennie świeże.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 6a4 4 0 0 1-6 0z"/><path d="M9 9c-2 2-3 5-2 9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2c1-4 0-7-2-9"/></svg><span>Bukiet możesz dostać od razu w wazonie z wodą.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><span>Dowóz po Oławie i okolicy.</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg><span>Płatność kartą i telefonem.</span></li>
+      </ul>
+      <a class="btn btn-line" href="#dojazd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jak do nas trafić</a>
+    </div>
+  </div>
+</section>
+
+<svg class="edge" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" style="color:var(--card);margin-bottom:-1px"><path fill="currentColor" d="M0 70 Q60 30 120 62 Q180 30 240 62 Q300 30 360 62 Q420 30 480 62 Q540 30 600 62 Q660 30 720 62 Q780 30 840 62 Q900 30 960 62 Q1020 30 1080 62 Q1140 30 1200 62 Q1260 30 1320 62 Q1380 30 1440 62 V90 H0Z"/></svg>
+
+<!-- OPINIE -->
+<section class="opinie" id="opinie" aria-labelledby="op-h">
+  <span class="big-score" aria-hidden="true">4,9</span>
+  <div class="op-head">
+    <p class="label">Opinie z Google</p>
+    <h2 id="op-h">Klienci wracają<br><em>i piszą dlaczego.</em></h2>
+    <p>4,9 na 5 z 78 opinii w Mapach Google. Poniżej kilka z nich, bez skracania sensu.</p>
+  </div>
+  <div class="quotes">
+    <figure class="q"><p>„Przepiękna kompozycja, stworzona z dużym wyczuciem i dbałością o każdy detal. Kwiaty świeże, starannie dobrane i pięknie się prezentują. Ogromnym atutem jest bukiet od razu w wazonie z wodą.”</p><footer><span>Wodnik W., Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+    <figure class="q"><p>„Najpiękniejsze bukiety w Oławie i okolicy. Pani Iwona przemiła i zawsze pomocna we wszystkim.”</p><footer><span>Łukasz K., Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+    <figure class="q"><p>„Pani Iwona naprawdę wszystko zrobiła super, duże świeże kwiaty na ozdobienie kościoła, ślub i dekorowanie. Jestem bardzo zadowolona z bukietu ślubnego, był przepiękny.”</p><footer><span>Anna, Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+    <figure class="q"><p>„Zawsze dostaję bukiety od męża z tej kwiaciarni. Są piękne, bardzo estetyczne i długo się trzymają świeże.”</p><footer><span>Monika Ł., Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+    <figure class="q"><p>„Super obsługa, piękne kwiaty, miła sympatyczna Pani florystka. Kwiatki świeże, widać, że zawód wykonywany z miłości do kwiatów.”</p><footer><span>Aleksandra S., Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+    <figure class="q"><p>„Szybka realizacja, najładniejsza gipsówka w Oławie i przystępne ceny!”</p><footer><span>Agnieszka G., Google</span><span class="stars" aria-label="5 na 5">★★★★★</span></footer></figure>
+  </div>
+  <p style="position:relative;margin-top:16px"><a class="btn btn-line" href="https://maps.google.com/?cid=10932701776151703857" target="_blank" rel="noopener">Wszystkie opinie w Google</a></p>
+</section>
+
+<!-- DOJAZD -->
+<section class="dojazd" id="dojazd" aria-labelledby="doj-h">
+  <div class="doj-grid">
+    <div>
+      <p class="label">Kontakt i dojazd</p>
+      <h2 id="doj-h">Zadzwoń <em>albo wpadnij.</em></h2>
+      <a class="phone-big" href="tel:+48880056918">880 056 918</a><br>
+      <button class="copy" type="button" data-copy="880056918">Kopiuj numer</button>
+      <table class="hours" aria-label="Godziny otwarcia kwiaciarni">
+        <tr data-d="1 2 3 4 5"><td>Poniedziałek – piątek</td><td>9:00 – 18:00</td></tr>
+        <tr data-d="6"><td>Sobota</td><td>9:00 – 14:00</td></tr>
+        <tr data-d="0"><td>Niedziela</td><td>zamknięte, działają kwiatomaty</td></tr>
+        <tr><td>Kwiatomaty</td><td>całą dobę</td></tr>
+      </table>
+      <p class="addr">ul. Wiejska 28A, 55-200 Oława</p>
+      <p style="margin:6px 0 0"><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p>
+      <div class="map-links">
+        <a class="btn btn-cta" href="tel:+48880056918">Zadzwoń</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a>
+      </div>
+    </div>
+    <div class="map">
+      <iframe title="Mapa: Kwiaciarnia Strelicja, Wiejska 28A, Oława" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiaciarnia%20Strelicja%20Wiejska%2028A%20O%C5%82awa&z=15&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-grid">
+    <div><img src="img/logo-dark.webp" alt="Kwiaciarnia Strelicja, Iwona Dąbrowa" width="640" height="640" loading="lazy"><p style="margin-top:14px;max-width:32ch">Świeże kwiaty o każdej porze.</p></div>
+    <div><h3>Kwiaciarnia</h3><p>ul. Wiejska 28A, 55-200 Oława</p><p><a href="tel:+48880056918">880 056 918</a></p><p><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p><p><a href="https://www.instagram.com/kwiaciarniastrelicjaid/" target="_blank" rel="noopener">Instagram</a></p></div>
+    <div><h3>Kwiatomaty 24h</h3><p>Oława, ul. Lipowa 1c</p><p>Jelcz-Laskowice, ul. Oławska 27</p></div>
+  </div>
+  <small>© <span id="y">2026</span> Kwiaciarnia Strelicja Iwona Dąbrowa. Strona: Adrian Wojtasik <!-- TODO: potwierdzić podpis z firmą --></small>
+</footer>
+
+<div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div>
+
+<script>
+(()=>{
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  // live status (Europe/Warsaw)
+  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  const wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[parts.find(p=>p.type==='weekday').value];
+  const h=+parts.find(p=>p.type==='hour').value + (+parts.find(p=>p.type==='minute').value)/60;
+  const close= wd>=1&&wd<=5?18: wd===6?14:null;
+  const open = close!==null && h>=9 && h<close;
+  const st=$('#status');
+  if(st){
+    if(open) st.querySelector('span').textContent=`Kwiaciarnia otwarta do ${close}:00. Kwiatomaty działają całą dobę.`;
+    else {st.classList.add('closed'); st.querySelector('span').textContent='Kwiaciarnia teraz zamknięta. Kwiatomaty działają całą dobę.';}
+  }
+  $$('.hours tr[data-d]').forEach(tr=>{ if(tr.dataset.d.split(' ').includes(String(wd))) tr.classList.add('today'); });
+  // nav
+  const nav=$('#nav'), bar=$('#callbar'), hero=$('.hero');
+  const onScroll=()=>{ const y=scrollY; nav.classList.toggle('scrolled',y>10); bar&&bar.classList.toggle('show',y>innerHeight*.6); };
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  const mb=$('#menubtn'); mb.addEventListener('click',()=>{const o=nav.classList.toggle('open'); mb.setAttribute('aria-expanded',o);});
+  $$('#navlinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false);}));
+  // night mode while kwiatomaty under nav
+  const night=$('[data-night]');
+  const checkNight=()=>{const r=night.getBoundingClientRect(); document.body.classList.toggle('night', r.top<=64 && r.bottom>64);};
+  addEventListener('scroll',checkNight,{passive:true}); checkNight();
+  // active link dot
+  const links=$$('#navlinks a'), dot=$('#navdot');
+  const secs=links.map(a=>$(a.getAttribute('href')));
+  const setDot=()=>{ let i=-1; secs.forEach((s,k)=>{ if(s && s.getBoundingClientRect().top < innerHeight*.4) i=k; });
+    links.forEach((a,k)=>a.toggleAttribute('aria-current',k===i));
+    if(i<0){dot.style.opacity=0;return;} const a=links[i]; dot.style.opacity=1; dot.style.transform=`translateX(${a.offsetLeft+a.offsetWidth/2-3}px)`; };
+  addEventListener('scroll',setDot,{passive:true}); addEventListener('resize',setDot); setDot();
+  // vines draw
+  $$('.js-vine').forEach(v=>{const p=v.querySelector('.stem'); v.style.setProperty('--len',Math.ceil(p.getTotalLength()));});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.6});
+  $$('.js-vine').forEach(v=>io.observe(v));
+  // kiosk cells: soft random light
+  const cells=$$('.cell'); if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(()=>{cells.forEach(c=>c.classList.remove('lit')); for(let k=0;k<2;k++) cells[Math.floor(Math.random()*cells.length)].classList.add('lit');},2600);
+  // copy
+  $$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Skopiowano';setTimeout(()=>b.textContent='Kopiuj numer',2000);}catch(e){location.href='tel:+48'+b.dataset.copy;}}));
+  $('#y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
