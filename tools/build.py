@@ -78,23 +78,13 @@ def motif(name, style, speed=0.1, flip=False):
     return f'<svg class="g" data-speed="{speed}" viewBox="{vb}" style="{style}" aria-hidden="true">{inner}</svg>'
 
 PLACE = {
- 'hero': [motif('strelitzia', 'left:2vw;top:16vh;width:clamp(120px,15vw,240px)', 0),
-          motif('eucalyptus', 'right:3vw;top:20vh;width:clamp(80px,8vw,130px)', 0, True),
-          motif('vine', 'left:-4vw;bottom:3vh;width:clamp(260px,34vw,560px)', 0)],
- 'gal': [motif('strelitzia', 'right:-3vw;top:2%;width:clamp(120px,13vw,210px)', .1, True),
-         motif('eucalyptus', 'left:1vw;top:30%;width:clamp(70px,6vw,110px)', .16)],
- 'occ': [motif('leaf', 'right:-2vw;top:8%;width:clamp(120px,14vw,220px)', .12, True),
-         motif('gerbera', 'left:38%;top:4%;width:clamp(90px,9vw,150px)', .08),
-         motif('vine', 'left:-3vw;bottom:6%;width:clamp(280px,40vw,620px)', .05)],
- 'kiosk': [motif('strelitzia', 'right:2vw;top:6%;width:clamp(140px,16vw,260px)', .14, True),
-           motif('eucalyptus', 'left:1vw;bottom:10%;width:clamp(80px,8vw,130px)', .1)],
- 'studio': [motif('rose', 'left:46%;top:6%;width:clamp(110px,11vw,180px)', .1),
-            motif('leaf', 'left:-3vw;bottom:-4%;width:clamp(110px,12vw,190px)', .14)],
- 'reviews': [motif('gerbera', 'right:4vw;top:6%;width:clamp(110px,11vw,180px)', .1),
-             motif('eucalyptus', 'left:2vw;top:44%;width:clamp(70px,7vw,110px)', .08, True)],
- 'contact': [motif('vine', 'right:-6vw;top:10%;width:clamp(280px,36vw,560px)', .06, True),
-             motif('rose', 'left:44%;bottom:6%;width:clamp(100px,10vw,160px)', .1)],
- 'foot': [motif('strelitzia', 'right:3vw;bottom:-10px;width:clamp(140px,14vw,220px)', 0, True)],
+ 'hero': [motif('strelitzia', 'left:-1vw;top:58%;width:clamp(100px,10vw,170px)', 0),
+          motif('eucalyptus', 'right:1.5vw;top:10%;width:clamp(60px,5vw,90px)', 0, True)],
+ 'kiosk': [motif('vine', 'right:-4%;top:3%;width:clamp(240px,30vw,460px)', 0, True),
+           motif('gerbera', 'left:46%;bottom:2%;width:clamp(80px,7vw,120px)', 0)],
+ 'studio': [motif('leaf', 'right:1vw;top:2%;width:clamp(90px,8vw,140px)', 0, True)],
+ 'gal': [motif('rose', 'left:1vw;top:0;width:clamp(80px,7vw,120px)', 0)],
+ 'reviews': [motif('eucalyptus', 'right:3vw;top:10%;width:clamp(60px,5vw,90px)', 0)],
 }
 
 CATN = {'bukiety': 'Bukiet', 'okazje': 'Okazja', 'swieta': 'Święta', 'pracownia': 'Pracownia'}

@@ -9,8 +9,8 @@
 <link rel="icon" href="img/favicon.png">
 <meta property="og:title" content="Kwiaciarnia Strelicja · świeże kwiaty o każdej porze">
 <meta property="og:description" content="Kwiaciarnia w Oławie i dwa kwiatomaty 24h. Zadzwoń: 880 056 918.">
-<meta property="og:image" content="img/g/47-1280.webp">
-<link rel="preload" as="image" href="img/g/47-640.webp" type="image/webp">
+<meta property="og:image" content="img/g/10-1280.webp">
+<link rel="preload" as="image" href="img/g/10-1280.webp" type="image/webp">
 <link rel="preload" as="font" href="fonts/fraunces-latin-400-normal.woff2" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Florist","name":"Kwiaciarnia Strelicja Iwona Dąbrowa","telephone":"+48880056918","email":"kwiaciarniastrelicjaid@gmail.com",
@@ -31,418 +31,483 @@
 @font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
 @font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
 
+
 :root{
   --ink:#1E3533; --accent:#2B765C; --cta:#B8471A; --cta-hover:#9E3C15; --muted:#5E716C;
-  --paper:#F8F3EA; --bloom:#E8912A; --line:#DDD5C6; --surface:#FFFDF8;
-  --bg-paper:#F8F3EA; --bg-sage:#ECEEE3; --bg-night:#16282A;
-  --night-text:#F8F3EA; --night-muted:#B9C6C1;
+  --paper:#F8F3EA; --sage:#ECEEE3; --sand:#F1E7D6; --bloom:#E8912A; --amber:#F4B866; --line:#DDD5C6; --surface:#FFFDF8;
   --text:var(--ink); --text-muted:var(--muted);
   --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,-apple-system,sans-serif;
-  --r:2px; --sprig:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.5 15.2c5.6-1.7 12-2.4 19.5-2.1-5.6 2.5-12 3.6-18.6 3.3z'/%3E%3Cpath d='M9.2 13.7c.3-3.9 1.7-7.6 4.6-11.4-.9 4-1.8 7.6-2.3 11.1z'/%3E%3Cpath d='M12.4 13.3c1.5-3.2 3.7-5.8 7.2-7.8-2.2 2.8-3.7 5.4-4.8 7.8z'/%3E%3Cpath d='M6.8 14.1c-.8-2.8-.6-5.4.8-8 .3 2.7.6 5.2.9 7.7z'/%3E%3Cpath d='M7.6 15.8c-.5 2.9-1.1 5.1-2 7l1.2.5c1-2.1 1.6-4.4 2.1-7.4z'/%3E%3C/svg%3E"); --ease:cubic-bezier(.22,.7,.2,1); --nav-h:61px; --gx:clamp(17px,4.25vw,68px);
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg-paper:#172A2B; --bg-sage:#1B3130; --bg-night:#0F1E1F; --text:#F1ECE2; --text-muted:#B9C6C1; --line:#34504D; --accent:#6CC3A0; --surface:#1F3534}
+  --r:4px; --r-lg:14px; --ease:cubic-bezier(.22,.7,.2,1); --nav-h:64px; --gx:clamp(18px,4.4vw,72px); --maxw:1320px;
+  --sprig:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.5 15.2c5.6-1.7 12-2.4 19.5-2.1-5.6 2.5-12 3.6-18.6 3.3z'/%3E%3Cpath d='M9.2 13.7c.3-3.9 1.7-7.6 4.6-11.4-.9 4-1.8 7.6-2.3 11.1z'/%3E%3Cpath d='M12.4 13.3c1.5-3.2 3.7-5.8 7.2-7.8-2.2 2.8-3.7 5.4-4.8 7.8z'/%3E%3Cpath d='M6.8 14.1c-.8-2.8-.6-5.4.8-8 .3 2.7.6 5.2.9 7.7z'/%3E%3Cpath d='M7.6 15.8c-.5 2.9-1.1 5.1-2 7l1.2.5c1-2.1 1.6-4.4 2.1-7.4z'/%3E%3C/svg%3E");
 }
 *{box-sizing:border-box}
-html{background:var(--bg-paper);scroll-behavior:smooth;scroll-padding-top:var(--nav-h);overflow-x:clip}
-body{margin:0;background:transparent;color:var(--text);font:400 15px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased;transition:color .5s}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px);overflow-x:clip;background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--text);font:400 15px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--bloom);outline-offset:3px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;margin:0}
-h2{font-size:clamp(31px,4.59vw,68px);line-height:1}
-h2 em,h1 em{font-style:italic;color:var(--accent)}
-.kicker{font-size:11px;font-weight:600;color:var(--accent);margin:0 0 15px;display:flex;align-items:center;gap:10px}
-.kicker::before{content:"";width:17px;height:17px;flex:none;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat;transform:rotate(-8deg)}
-.lead{font-size:clamp(14px,1.06vw,15px);color:var(--text-muted);max-width:44ch}
-main{position:relative}
-.bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none}
-.bgfx i{position:absolute;inset:0;opacity:0;will-change:opacity}
-.bgfx .b0{background:var(--bg-paper);opacity:1}.bgfx .b1{background:var(--bg-sage)}.bgfx .b2{background:var(--bg-night)}
-section{position:relative}
-.content{position:relative;z-index:2}
+h2{font-size:clamp(32px,4.4vw,62px);line-height:1.02}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gx);position:relative;z-index:2}
+.kicker{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:18px;height:18px;flex:none;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat;transform:rotate(-8deg)}
+.lead{font-size:clamp(15px,1.15vw,17px);color:var(--text-muted);max-width:46ch;margin:0}
+.sec{padding:clamp(70px,11vh,130px) 0;position:relative}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(30px,5vh,56px)}
 
-/* garden motifs */
-.g{position:absolute;z-index:1;pointer-events:none;overflow:visible;will-change:transform}
-.g path,.g use{fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
-.g .a{stroke:var(--accent);opacity:.55}.g .b{stroke:var(--bloom);opacity:.8}.g .i{stroke:var(--text);opacity:.35}
-.g path{stroke-dasharray:1;stroke-dashoffset:var(--d,0)}
-.night .g .a{stroke:#6CC3A0;opacity:.35}.night .g .i{stroke:var(--night-text);opacity:.25}
+/* reveal: only gentle fade-up */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+
+/* motifs */
+.g{position:absolute;z-index:1;pointer-events:none;overflow:visible}
+.g path{fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--ease)}
+.g.in path{stroke-dashoffset:0}
+.g .a{stroke:var(--accent);opacity:.45}.g .b{stroke:var(--bloom);opacity:.75}.g .i{stroke:var(--ink);opacity:.28}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:var(--r);font:600 13px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease);position:relative;overflow:hidden}
-.btn svg{width:15px;height:15px;flex:none;transition:transform .35s var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 22px;border-radius:40px;font:600 14px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease)}
+.btn svg{width:17px;height:17px;flex:none;transition:transform .35s var(--ease)}
 .btn-cta{background:var(--cta);color:#fff}
 .btn-cta:hover{background:var(--cta-hover)}
 .btn-cta:hover svg{transform:rotate(-14deg) scale(1.1)}
-.btn-line{color:var(--text);box-shadow:inset 0 0 0 1px currentColor;background:transparent}
-.btn-line::before{content:"";position:absolute;inset:0;background:var(--text);transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease);z-index:-1}
-.btn-line:hover{color:var(--bg-paper)}
-.btn-line:hover::before{transform:scaleY(1)}
-.btn-line{isolation:isolate}
+.btn-dark{background:var(--ink);color:var(--paper)}
+.btn-dark:hover{background:#2B4845}
+.btn-line{color:var(--text);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--text) 40%,transparent);background:transparent}
+.btn-line:hover{box-shadow:inset 0 0 0 1px var(--text);background:color-mix(in srgb,var(--text) 5%,transparent)}
+.btn:hover .arr{transform:translateX(4px)}
+.link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;text-decoration:none;color:var(--accent)}
+.link svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.link:hover svg{transform:translateX(4px)}
 
 /* NAV */
-.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;display:flex;align-items:center;gap:24px;padding:0 var(--gx);color:var(--text);transition:color .5s var(--ease),background .5s var(--ease)}
-.nav::before{content:"";position:absolute;inset:0;background:var(--navbg,transparent);opacity:0;transition:opacity .5s var(--ease);z-index:-1}
-.nav::after{content:"";position:absolute;left:var(--gx);right:var(--gx);bottom:0;height:1px;background:currentColor;opacity:.15;transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
-.nav.scrolled::before{opacity:.86}.nav.scrolled::after{transform:scaleX(1)}
-.brand{display:block;position:relative;flex:none}
-.brand img{height:46px;width:auto;transition:opacity .5s}
-.brand .dark{position:absolute;inset:0;opacity:0}
-body.is-night .nav{color:var(--night-text)}
-body.is-night .brand .light{opacity:0}body.is-night .brand .dark{opacity:1}
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);transition:box-shadow .4s}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);opacity:0;transition:opacity .4s}
+.nav.scrolled::after{opacity:1}
+.nav-in{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 var(--gx);display:flex;align-items:center;gap:24px}
+.brand img{height:48px;width:auto}
 .nav-links{display:flex;gap:2px;margin:0 auto;list-style:none;padding:0;position:relative}
-.nav-links a{display:block;padding:8px 12px;font-size:13px;text-decoration:none;color:inherit;overflow:hidden;position:relative}
-.nav-links a span{display:block;transition:transform .45s var(--ease)}
-.nav-links a span::after{content:attr(data-t);position:absolute;left:0;top:100%;font-style:italic;font-family:var(--display);font-size:14px;color:var(--bloom)}
-.nav-links a:hover span{transform:translateY(-100%)}
-.nav-ind{position:absolute;bottom:2px;left:0;height:1px;background:var(--bloom);width:0;transition:transform .55s var(--ease),width .55s var(--ease),opacity .3s;opacity:0}
-.nav .btn{min-height:42px;padding:0 15px;font-size:12px}
-.menu-btn{display:none;background:none;border:0;width:37px;height:37px;cursor:pointer}
+.nav-links a{display:block;padding:10px 13px;font-size:14px;text-decoration:none;position:relative}
+.nav-links a::after{content:"";position:absolute;left:13px;right:13px;bottom:5px;height:1px;background:var(--bloom);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav-links a:hover::after,.nav-links a[aria-current]::after{transform:scaleX(1)}
+.nav-links a.hl{color:var(--cta);font-weight:600}
+.nav .btn{min-height:42px;padding:0 18px;font-size:13px}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 
-/* HERO: opening window */
-.hero{height:210vh;--p:0}
-.hero-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-.hero-text{position:absolute;inset:0;padding:calc(var(--nav-h) + 4vh) var(--gx) 5vh;display:grid;grid-template-columns:1fr minmax(204px,30vw) 1fr;grid-template-rows:auto 1fr;column-gap:2.55vw;z-index:3;pointer-events:none}
-.hero-text>*{pointer-events:auto}
-.hero h1{grid-column:1/-1;text-align:center;font-size:clamp(39px,7.31vw,128px);line-height:.92;transform:translateY(calc(var(--p) * -14vh));opacity:calc(1 - var(--p) * 1.8)}
-.hero h1 em{display:block}
-.hero-left,.hero-right{align-self:end;opacity:calc(1 - var(--p) * 3);transform:translateY(calc(var(--p) * 6vh))}
-.hero-left{grid-column:1}
-.hero-right{grid-column:3;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.status{display:inline-flex;align-items:center;gap:8px;font-size:12px;margin:0 0 15px}
-.status i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(43,118,92,.5);animation:pulse 2.4s infinite;flex:none}
+/* HERO */
+.hero{padding:calc(var(--nav-h) + clamp(28px,5vh,60px)) 0 clamp(40px,7vh,80px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,4.5vw,76px);align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:13px;padding:7px 14px 7px 11px;border-radius:40px;background:var(--surface);box-shadow:0 0 0 1px var(--line);margin:0 0 24px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(43,118,92,.5);animation:pulse 2.4s infinite;flex:none}
 .status.closed i{background:var(--bloom)}
-@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.proof{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--text-muted);text-decoration:none;margin-top:6px}
-.proof b{font:400 27px/1 var(--display);color:var(--text)}
+@keyframes pulse{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(40px,4.9vw,80px);line-height:.98;margin:0 0 22px}
+.hero h1 span,.hero h1 em{display:block;white-space:nowrap}
+.hero .lead{font-size:clamp(16px,1.3vw,19px);margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.proof{display:flex;align-items:center;gap:14px;text-decoration:none;font-size:13px;color:var(--text-muted)}
+.proof b{font:400 34px/1 var(--display);color:var(--text)}
 .stars{color:var(--bloom);letter-spacing:2px}
-.window{position:absolute;inset:0;z-index:2;overflow:hidden;transform-origin:50% 50%;will-change:transform}
-.window .wi{position:absolute;inset:0;transform:scale(var(--isx,1),var(--isy,1));will-change:transform}
-.window img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.window img.w1{inset:auto;object-fit:fill;max-width:none}
-.window .w1{will-change:transform}
-.window .w2{opacity:var(--o2,0)}
-.window::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,30,31,.65),transparent 45%);opacity:var(--o2,0)}
-.window-cap{position:absolute;left:var(--gx);bottom:6vh;z-index:3;color:#F8F3EA;opacity:var(--o3,0);transform:translateY(calc((1 - var(--o3,0)) * 17px))}
-.window-cap p{margin:0;font-size:12px;color:#DCE4E0}
-.window-cap h2{font-size:clamp(29px,4.25vw,61px)}
-.window-cap h2 em{color:var(--bloom)}
+.hero-media{position:relative}
+.hero-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:5/4.6}
+.hero-photo img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.09) translate(-1%,-1%)}}
+.today-card{position:absolute;left:clamp(-40px,-3vw,-16px);bottom:clamp(18px,3vw,36px);background:var(--surface);border-radius:var(--r-lg);padding:16px 18px;box-shadow:0 24px 50px -26px rgba(30,53,51,.45);min-width:240px}
+.today-card p{margin:0;font-size:12px;color:var(--text-muted)}
+.today-card dl{margin:8px 0 0;display:grid;grid-template-columns:auto auto;gap:6px 18px;font-size:14px}
+.today-card dt{color:var(--text-muted)}.today dd{margin:0;font-weight:600;text-align:right}
+.today-card dd.on{color:var(--accent)}.today-card dd.k{color:var(--cta)}
+.hero-badge{position:absolute;right:clamp(14px,2vw,26px);top:clamp(14px,2vw,26px);width:clamp(96px,8vw,118px);aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;text-align:center;text-decoration:none;font:400 13px/1.2 var(--body);transition:transform .5s var(--ease)}
+.hero-badge b{display:block;font:400 30px/1 var(--display);color:var(--amber)}
+.hero-badge:hover{transform:rotate(-6deg) scale(1.05)}
+
+/* TWO WAYS */
+.ways{padding:clamp(10px,3vh,30px) 0 clamp(60px,10vh,110px)}
+.ways-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px)}
+.way{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:clamp(330px,46vh,440px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,2.8vw,40px);text-decoration:none;isolation:isolate}
+.way img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.4s var(--ease)}
+.way::before{content:"";position:absolute;inset:0;z-index:-1}
+.way:hover img{transform:scale(1.05)}
+.way-shop{color:var(--paper)}
+.way-shop::before{background:linear-gradient(180deg,rgba(20,36,35,.05) 30%,rgba(20,36,35,.82))}
+.way-kiosk{color:var(--ink);background:linear-gradient(135deg,#F6C77E,#E8912A 70%)}
+.way-kiosk::before{background:radial-gradient(70% 60% at 90% 10%,rgba(255,255,255,.35),transparent 60%)}
+.way small{font-size:13px;font-weight:600;opacity:.85}
+.way h3{font-size:clamp(30px,3.3vw,48px);line-height:1;margin:8px 0 12px}
+.way h3 em{color:inherit}
+.way p{margin:0 0 20px;max-width:36ch;font-size:15px;opacity:.92}
+.way ul{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:8px}
+.way li{font-size:12px;font-weight:600;padding:6px 11px;border-radius:40px;background:rgba(255,255,255,.16);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.way-kiosk li{background:rgba(30,53,51,.08);box-shadow:inset 0 0 0 1px rgba(30,53,51,.2)}
+.way .go{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.way .go svg{width:18px;height:18px;transition:transform .4s var(--ease)}
+.way:hover .go svg{transform:translateX(6px)}
+.k-ill{position:absolute;right:clamp(18px,2.6vw,40px);top:clamp(16px,2.4vw,34px);opacity:.95}
+.k-ill .big{font:400 clamp(48px,5vw,80px)/.85 var(--display);color:var(--ink);letter-spacing:-.03em;text-align:right}
+
+/* KIOSK section */
+.kiosk-panel{background:var(--sage);border-radius:clamp(18px,2vw,28px);padding:clamp(40px,7vh,90px) clamp(20px,4vw,64px);position:relative;overflow:hidden}
+.k-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,22px);margin:0 0 clamp(36px,6vh,60px);padding:0;list-style:none}
+.k-benefits li{background:var(--surface);border-radius:var(--r-lg);padding:22px 22px 20px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;transition:transform .4s var(--ease),box-shadow .4s}
+.k-benefits li:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(30,53,51,.4)}
+.k-benefits .ic{width:44px;height:44px;border-radius:50%;background:#FBE6C6;display:grid;place-items:center}
+.k-benefits svg{width:22px;height:22px;stroke:var(--cta);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.k-benefits b{display:block;font:400 20px/1.2 var(--display);margin-bottom:4px}
+.k-benefits span{font-size:14px;color:var(--text-muted)}
+.rescue{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(16px,2.6vw,40px);align-items:stretch}
+.sc-title{font:400 clamp(22px,2vw,30px)/1.2 var(--display);margin:0 0 16px}
+.sc-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;align-content:start}
+.sc-list button{width:100%;text-align:left;background:transparent;border:0;border-radius:var(--r-lg);padding:13px 16px;cursor:pointer;color:var(--text-muted);display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:baseline;transition:background .3s,color .3s;position:relative;overflow:hidden}
+.sc-list button b{font:400 18px/1 var(--display);color:var(--text);font-variant-numeric:tabular-nums}
+.sc-list button span{font-size:14px;line-height:1.35}
+.sc-list button:hover{background:rgba(255,253,248,.6);color:var(--text)}
+.sc-list button[aria-selected="true"]{background:var(--surface);color:var(--text);box-shadow:0 10px 30px -22px rgba(30,53,51,.5)}
+.sc-list button[aria-selected="true"] b{color:var(--cta)}
+.sc-list button i{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--bloom);transform-origin:left;transform:scaleX(0)}
+.sc-list button[aria-selected="true"] i.run{animation:scbar 6s linear forwards}
+.rescue.paused .sc-list i.run{animation-play-state:paused}
+@keyframes scbar{to{transform:scaleX(1)}}
+.sc-stage{position:relative;border-radius:var(--r-lg);padding:clamp(22px,3vw,44px);background:var(--ink);color:var(--paper);overflow:hidden}
+.sc-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 70% at 100% 0%,rgba(232,145,42,.28),transparent 60%);pointer-events:none}
+.sc-anim{position:relative;transition:opacity .35s,transform .5s var(--ease)}
+.sc-stage.swap .sc-anim{opacity:0;transform:translateY(10px)}
+.sc-day{font-size:13px;color:#B9C6C1;margin:0 0 4px}
+.sc-time{font:400 clamp(58px,6.6vw,104px)/.9 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
+.sc-status{display:grid;grid-template-columns:auto 1fr;gap:9px 16px;align-items:center;margin:22px 0;font-size:13px}
+.sc-status dt{color:#B9C6C1}.sc-status dd{margin:0}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:40px;font-weight:600;font-size:13px}
+.pill i{width:7px;height:7px;border-radius:50%}
+.pill.off{color:#9FB0AB;background:rgba(248,243,234,.07);text-decoration:line-through;text-decoration-color:rgba(248,243,234,.35)}
+.pill.off i{background:#6E807B}
+.pill.on{color:#1E3533;background:var(--bloom);box-shadow:0 0 22px rgba(232,145,42,.45)}
+.pill.on i{background:#1E3533;animation:pulse 2.4s infinite}
+.pill.shop{color:#1E3533;background:#6CC3A0}.pill.shop i{background:#1E3533}
+.sc-problem{font:italic 400 clamp(19px,1.8vw,27px)/1.3 var(--display);margin:0 0 12px;max-width:30ch}
+.sc-fix{position:relative;margin:0 0 22px;color:#C9D3CF;font-size:14px;max-width:52ch}
+.sc-fix b{color:var(--paper)}
+.sc-go{position:relative;display:flex;gap:10px;flex-wrap:wrap}
+.btn-amber{background:var(--bloom);color:#1E3533}.btn-amber:hover{background:var(--amber)}
+.btn-ghost{color:var(--paper);box-shadow:inset 0 0 0 1px rgba(248,243,234,.4)}.btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--paper)}
+.k-places{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px);margin-top:clamp(36px,6vh,60px)}
+.place{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.place .info{padding:22px;display:flex;flex-direction:column;gap:4px}
+.place b{font:400 clamp(24px,2.2vw,32px)/1.1 var(--display)}
+.place span{color:var(--text-muted);font-size:14px}
+.place .link{margin-top:auto;padding-top:16px}
+.place .map{position:relative;min-height:180px;background:var(--line)}
+.place iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75)}
+.k-quote{margin:clamp(30px,5vh,50px) 0 0;display:flex;gap:18px;align-items:flex-start;max-width:820px}
+.k-quote::before{content:"„";font:400 70px/.8 var(--display);color:var(--bloom)}
+.k-quote p{margin:0;font:italic 400 clamp(18px,1.6vw,24px)/1.4 var(--display)}
+.k-quote cite{display:block;margin-top:8px;font:400 13px var(--body);color:var(--text-muted);font-style:normal}
+
+/* STUDIO */
+.st-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:center}
+.st-photos{position:relative;display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:clamp(10px,1.2vw,16px)}
+.st-photos figure{margin:0;border-radius:var(--r-lg);overflow:hidden;position:relative}
+.st-photos img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.st-photos figure:hover img{transform:scale(1.05)}
+.st-photos .p1{grid-row:1/3;aspect-ratio:4/5.2}
+.st-photos .p2{aspect-ratio:4/3}.st-photos .p3{aspect-ratio:4/3.4}
+.st-photos figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,253,248,.92);color:var(--ink);font-size:12px;padding:4px 10px;border-radius:40px}
+.statement{font:400 clamp(26px,2.6vw,40px)/1.18 var(--display);margin:0 0 24px}
+.statement em{color:var(--accent)}
+.facts{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.facts li{font-size:14px;color:var(--text-muted);padding-top:12px;border-top:1px solid var(--line)}
+.facts b{display:block;color:var(--text);font:400 18px/1.25 var(--display);margin-bottom:2px}
+.st-cta{display:flex;gap:10px;flex-wrap:wrap}
+
+/* occasions panels */
+.occ-wrap{margin-top:clamp(56px,9vh,100px)}
+.occ-title{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.occ-title h3{font-size:clamp(26px,2.6vw,38px)}
+.panels{display:flex;gap:clamp(8px,.8vw,12px);height:clamp(380px,56vh,540px)}
+.panel{flex:1;min-width:0;position:relative;overflow:hidden;border-radius:var(--r-lg);cursor:pointer;transition:flex 1s var(--ease);background:#1E3533}
+.panel.open{flex:4.4;cursor:default}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.15);filter:saturate(.75) brightness(.82);transition:transform 1.4s var(--ease),filter 1s}
+.panel.open img{transform:scale(1);filter:none}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,31,.05) 35%,rgba(15,30,31,.82));pointer-events:none}
+.pn-v{position:absolute;left:50%;bottom:24px;z-index:2;writing-mode:vertical-rl;transform:translateX(-50%) rotate(180deg);font:400 clamp(18px,1.5vw,24px)/1 var(--display);color:#F8F3EA;white-space:nowrap;transition:opacity .4s}
+.panel.open .pn-v{opacity:0}
+.pn-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(20px,2.6vw,36px);color:#F8F3EA;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .7s var(--ease);pointer-events:none}
+.panel.open .pn-body{opacity:1;transform:none;transition-delay:.35s;pointer-events:auto}
+.pn-body h4{font:400 clamp(28px,3vw,46px)/1 var(--display);margin:0}
+.pn-body h4 em{color:var(--amber)}
+.pn-body p{margin:10px 0 18px;max-width:40ch;color:#DCE4E0;font-size:14px}
 
 /* GALLERY */
-.gallery{padding:clamp(85px,16vh,162px) var(--gx) clamp(68px,12vh,128px)}
-.gal-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:clamp(26px,6vh,54px);flex-wrap:wrap}
 .filters{display:flex;gap:4px;flex-wrap:wrap}
-.filters button{background:none;border:0;padding:8px 12px;min-height:44px;cursor:pointer;font-size:13px;color:var(--text-muted);position:relative;transition:color .3s}
-.filters button::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:1px;background:var(--bloom);transform:scaleX(0);transition:transform .4s var(--ease)}
-.filters button:hover,.filters button[aria-pressed="true"]{color:var(--text)}
-.filters button[aria-pressed="true"]::after{transform:scaleX(1)}
-.masonry{position:relative;transition:opacity .35s}
+.filters button{background:none;border:0;padding:8px 14px;min-height:44px;cursor:pointer;font-size:13px;color:var(--text-muted);border-radius:40px;transition:background .3s,color .3s}
+.filters button:hover{color:var(--text)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.masonry{transition:opacity .35s}
 .masonry.fading{opacity:0}
-.spread{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(82px,9.35vw,162px);gap:clamp(10px,1.19vw,19px);margin-bottom:clamp(10px,1.19vw,19px)}
-.spread:hover .gi:not(:hover){opacity:.42;filter:saturate(.55)}
-.gi{margin:0;position:relative;overflow:hidden;cursor:zoom-in;border-radius:var(--r);background:color-mix(in srgb,var(--text) 8%,transparent);clip-path:inset(100% 0 0 0);transition:clip-path 1.1s var(--ease),opacity .5s,filter .5s}
-.gi.in{clip-path:inset(0 0 0 0)}
-.gi img{width:100%;height:100%;object-fit:cover;transform:scale(1.2);transition:transform 1.5s var(--ease)}
-.gi.in img{transform:scale(1)}
-.gi.in:hover img{transform:scale(1.06);transition-duration:1s}
-.gi figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 15px 14px;font-size:11px;color:#F8F3EA;background:linear-gradient(transparent,rgba(15,30,31,.82));transform:translateY(101%);transition:transform .5s var(--ease)}
+.spread{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(90px,9.4vw,150px);gap:clamp(10px,1.2vw,18px);margin-bottom:clamp(10px,1.2vw,18px)}
+.spread:hover .gi:not(:hover){opacity:.5}
+.gi{margin:0;position:relative;overflow:hidden;cursor:zoom-in;border-radius:var(--r-lg);background:var(--line);opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
+.gi.in{opacity:1;transform:none}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.gi:hover img{transform:scale(1.05)}
+.gi figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;font-size:13px;color:#F8F3EA;background:linear-gradient(transparent,rgba(15,30,31,.8));transform:translateY(101%);transition:transform .5s var(--ease)}
 .gi:hover figcaption,.gi:focus-visible figcaption{transform:none}
-.gi figcaption b{display:block;font:italic 400 17px/1.2 var(--display);margin-bottom:2px;color:#F4B866}
-.gq{display:flex;flex-direction:column;justify-content:flex-end;min-height:0;padding:0 4px 6px;margin:0}
-.gq p{margin:0;font:italic 400 clamp(17px,1.61vw,26px)/1.25 var(--display);color:var(--text)}
-.gq cite{margin-top:8px;font:400 11px var(--body);color:var(--text-muted);font-style:normal}
+.gi figcaption b{display:block;font:italic 400 18px/1.2 var(--display);color:var(--amber)}
+.gq{display:flex;flex-direction:column;justify-content:flex-end;margin:0;padding:0 4px 6px;min-height:0}
 .gq::before{content:"";width:24px;height:24px;margin-bottom:12px;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat}
-.gal-more{display:flex;justify-content:center;margin-top:clamp(34px,7vh,60px)}
+.gq p{margin:0;font:italic 400 clamp(18px,1.6vw,26px)/1.25 var(--display)}
+.gq cite{margin-top:8px;font:400 12px var(--body);color:var(--text-muted);font-style:normal}
+.gal-more{display:flex;justify-content:center;margin-top:clamp(30px,5vh,56px)}
 .gal-more[hidden]{display:none}
 
 /* lightbox */
-.lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,24,25,.0);transition:background .4s}
-.lb.open{display:block}
-.lb.show{background:rgba(12,24,25,.94)}
-.lb-img{position:absolute;left:50%;top:50%;max-width:86vw;max-height:80vh;width:auto;height:auto;transform:translate(-50%,-50%);transform-origin:center;border-radius:var(--r)}
-.lb-cap{position:absolute;left:0;right:0;bottom:3vh;text-align:center;color:#DCE4E0;font-size:12px;opacity:0;transition:opacity .3s .2s}
+.lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,24,25,0);transition:background .4s}
+.lb.open{display:block}.lb.show{background:rgba(12,24,25,.94)}
+.lb-img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:var(--r)}
+.lb-cap{position:absolute;left:0;right:0;bottom:3vh;text-align:center;color:#DCE4E0;font-size:13px;opacity:0;transition:opacity .3s .2s}
 .lb.show .lb-cap,.lb.show .lb-ui{opacity:1}
 .lb-ui{opacity:0;transition:opacity .3s .2s}
 .lb-ui button{position:absolute;width:48px;height:48px;border:0;background:rgba(248,243,234,.08);color:#F8F3EA;cursor:pointer;display:grid;place-items:center;border-radius:50%;transition:background .3s}
 .lb-ui button:hover{background:rgba(232,145,42,.5)}
 .lb-ui svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6}
-.lb-prev{left:2.55vw;top:50%;margin-top:-28px}.lb-next{right:2.55vw;top:50%;margin-top:-28px}.lb-close{right:2.55vw;top:3vh}
-.lb-count{position:absolute;left:2.55vw;top:3vh;margin-top:15px;color:#DCE4E0;font-size:11px}
-
-/* OCCASIONS: expanding panels */
-.occ-sec{padding:clamp(85px,14vh,144px) var(--gx) clamp(68px,12vh,128px)}
-.occ-head{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:end;margin-bottom:clamp(26px,6vh,51px)}
-.panels{display:flex;gap:clamp(8px,.8vw,12px);height:clamp(374px,66vh,544px)}
-.panel{flex:1;min-width:0;position:relative;overflow:hidden;border-radius:var(--r);cursor:pointer;transition:flex 1s var(--ease);background:#1E3533;outline-offset:4px}
-.panel.open{flex:4.6;cursor:default}
-.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.18);filter:saturate(.7) brightness(.8);transition:transform 1.4s var(--ease),filter 1s}
-.panel.open img{transform:scale(1);filter:none}
-.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,31,.1) 30%,rgba(15,30,31,.85));pointer-events:none}
-.pn-v{position:absolute;left:50%;bottom:24px;z-index:2;writing-mode:vertical-rl;transform:translateX(-50%) rotate(180deg);font:400 clamp(17px,1.44vw,24px)/1 var(--display);color:#F8F3EA;white-space:nowrap;transition:opacity .4s}
-.pn-v::after{content:"";display:block;width:14px;height:14px;margin:12px auto 0;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat;transform:rotate(90deg)}
-.panel.open .pn-v{opacity:0}
-.pn-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(19px,2.55vw,37px);color:#F8F3EA;opacity:0;transform:translateY(20px);transition:opacity .5s,transform .7s var(--ease);pointer-events:none}
-.panel.open .pn-body{opacity:1;transform:none;transition-delay:.35s;pointer-events:auto}
-.pn-body small{display:block;font-size:11px;color:#F4B866;margin-bottom:8px}
-.pn-body h3{font-size:clamp(29px,3.4vw,53px);line-height:1}
-.pn-body h3 em{font-style:italic;color:#F4B866}
-.pn-body p{margin:10px 0 19px;max-width:40ch;color:#DCE4E0;font-size:13px}
-.occ-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:31px}
-.occ-cta p{margin:0;color:var(--text-muted)}
-
-/* KIOSKS (night) */
-.kiosk{color:var(--night-text);padding:30vh var(--gx) 16vh}
-.kiosk .kicker{color:var(--bloom)}
-.kiosk h2 em{color:var(--bloom)}
-.kiosk .lead{color:var(--night-muted)}
-.k-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(26px,5.1vw,85px);align-items:end}
-.k-now{border-left:1px solid rgba(248,243,234,.18);padding-left:clamp(17px,2.55vw,34px)}
-.k-now .big{font:400 clamp(54px,6.8vw,102px)/.9 var(--display);color:var(--bloom);letter-spacing:-.02em}
-.k-now p{margin:12px 0 0;color:var(--night-muted);font-size:13px}
-.k-now .live{display:inline-flex;align-items:center;gap:8px;color:var(--night-text);font-weight:600;font-size:12px;margin-bottom:10px}
-.k-now .live i{width:9px;height:9px;border-radius:50%;background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.6);animation:pulse 2.4s infinite}
-.rescue{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:clamp(24px,4vw,70px);margin:clamp(42px,8vh,80px) 0 clamp(50px,9vh,90px);align-items:stretch}
-.sc-list{list-style:none;margin:0;padding:0;display:grid;gap:4px;align-content:start}
-.sc-list button{width:100%;text-align:left;background:none;border:0;border-left:2px solid rgba(248,243,234,.14);padding:14px 16px;cursor:pointer;color:var(--night-muted);display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:baseline;transition:background .3s,border-color .3s,color .3s;position:relative}
-.sc-list button b{font:400 19px/1 var(--display);color:var(--night-text);font-variant-numeric:tabular-nums}
-.sc-list button span{font-size:14px;line-height:1.35}
-.sc-list button:hover{background:rgba(248,243,234,.04);color:var(--night-text)}
-.sc-list button[aria-selected="true"]{border-left-color:var(--bloom);background:rgba(232,145,42,.08);color:var(--night-text)}
-.sc-list button[aria-selected="true"] b{color:var(--bloom)}
-.sc-list button i{position:absolute;left:-2px;top:0;width:2px;height:100%;background:#F4B866;transform-origin:top;transform:scaleY(0)}
-.sc-list button[aria-selected="true"] i.run{animation:scbar 6s linear forwards}
-.rescue.paused .sc-list i.run{animation-play-state:paused}
-@keyframes scbar{to{transform:scaleY(1)}}
-.sc-stage{position:relative;border:1px solid rgba(248,243,234,.12);border-radius:var(--r);padding:clamp(24px,3.4vw,50px);overflow:hidden;background:radial-gradient(120% 90% at 85% 0%,rgba(232,145,42,.14),transparent 55%)}
-.sc-anim{transition:opacity .35s,transform .5s var(--ease)}
-.sc-stage.swap .sc-anim{opacity:0;transform:translateY(10px)}
-.sc-day{font-size:13px;color:var(--night-muted);margin:0 0 6px}
-.sc-time{font:400 clamp(64px,8vw,124px)/.9 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
-.sc-status{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;align-items:center;margin:26px 0 24px;font-size:14px}
-.sc-status dt{color:var(--night-muted)}
-.sc-status dd{margin:0}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:40px;font-weight:600;font-size:13px}
-.pill i{width:8px;height:8px;border-radius:50%}
-.pill.off{color:#9FB0AB;background:rgba(248,243,234,.06);text-decoration:line-through;text-decoration-color:rgba(248,243,234,.35)}
-.pill.off i{background:#6E807B}
-.pill.on{color:#1E3533;background:#E8912A;box-shadow:0 0 24px rgba(232,145,42,.45)}
-.pill.on i{background:#1E3533;animation:pulse 2.4s infinite}
-.pill.shop{color:#1E3533;background:#6CC3A0}
-.pill.shop i{background:#1E3533}
-.sc-problem{font:italic 400 clamp(20px,2vw,30px)/1.3 var(--display);margin:0 0 14px;max-width:30ch}
-.sc-fix{margin:0 0 24px;color:var(--night-muted);font-size:15px;max-width:52ch}
-.sc-fix b{color:var(--night-text);font-weight:600}
-.sc-go{display:flex;gap:10px;flex-wrap:wrap}
-.btn-night{color:var(--night-text);box-shadow:inset 0 0 0 1px rgba(248,243,234,.4);background:transparent}
-.btn-night:hover{background:var(--bloom);color:#1E3533;box-shadow:inset 0 0 0 1px var(--bloom)}
-.k-bottom{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(34px,5.1vw,85px);align-items:start}
-.k-places{display:grid;gap:15px}
-.place{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border:1px solid rgba(248,243,234,.14);border-radius:var(--r);overflow:hidden;transition:border-color .4s}
-.place:hover{border-color:rgba(232,145,42,.6)}
-.place .info{padding:20px 19px;display:flex;flex-direction:column;gap:6px}
-.place b{font:400 clamp(22px,2.04vw,29px)/1.1 var(--display)}
-.place span{color:var(--night-muted);font-size:13px}
-.place .go{margin-top:auto;padding-top:15px;color:var(--bloom);font-weight:600;font-size:12px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
-.place .go svg{width:14px;height:14px;transition:transform .35s var(--ease)}
-.place .go:hover svg{transform:translateX(4px)}
-.place .map{position:relative;min-height:162px;background:#0F1E1F}
-.place iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) invert(.9) hue-rotate(180deg) contrast(.9)}
-.steps{list-style:none;padding:0;margin:0 0 34px;display:grid;gap:19px}
-.steps li{padding:14px 0 0;border-top:1px solid rgba(248,243,234,.2);font-size:13px;color:var(--night-muted);position:relative}
-.steps li::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:var(--bloom);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease)}
-.steps.on li::before{transform:scaleX(1)}
-.steps.on li:nth-child(2)::before{transition-delay:.3s}.steps.on li:nth-child(3)::before{transition-delay:.6s}
-.steps b{display:block;font:400 19px/1.2 var(--display);color:var(--night-text);margin-bottom:4px}
-.k-quote{margin:0;font:italic 400 clamp(16px,1.36vw,20px)/1.45 var(--display)}
-.k-quote cite{display:block;margin-top:10px;font:400 11px var(--body);color:var(--night-muted)}
-
-/* STUDIO */
-.studio{padding:24vh var(--gx) clamp(51px,10vh,102px)}
-.st-top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(30px,5vw,90px);align-items:end;margin-bottom:clamp(28px,5vh,52px)}
-.statement{font:400 clamp(26px,2.9vw,44px)/1.15 var(--display);margin:0;max-width:24ch}
-.statement em{color:var(--accent)}
-.facts{list-style:none;padding:0;margin:0 0 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px}
-.facts li{font-size:13px;color:var(--text-muted);padding-top:10px;border-top:1px solid color-mix(in srgb,var(--text) 18%,transparent)}
-.facts b{display:block;color:var(--text);font:400 17px/1.25 var(--display);margin-bottom:2px}
-.st-strip{display:flex;gap:clamp(10px,1.2vw,18px);height:clamp(220px,38vh,400px)}
-.st-strip figure{margin:0;flex:var(--a) 1 0;min-width:0;position:relative;overflow:hidden;border-radius:var(--r)}
-.st-strip img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;transform:translate3d(0,var(--py,0px),0) scale(1.02);transition:transform 1.2s var(--ease)}
-.st-strip figure:hover img{transform:translate3d(0,var(--py,0px),0) scale(1.07)}
-.st-strip figcaption{position:absolute;left:12px;bottom:12px;background:rgba(248,243,234,.92);color:#1E3533;font-size:12px;padding:5px 10px;border-radius:2px}
+.lb-prev{left:2.5vw;top:50%;margin-top:-24px}.lb-next{right:2.5vw;top:50%;margin-top:-24px}.lb-close{right:2.5vw;top:3vh}
+.lb-count{position:absolute;left:2.5vw;top:3vh;margin-top:14px;color:#DCE4E0;font-size:12px}
 
 /* REVIEWS */
-.reviews{padding:clamp(68px,12vh,128px) 0 clamp(51px,10vh,102px)}
-.rv-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(26px,5.1vw,94px);padding:0 var(--gx);align-items:start}
-.score{font:400 clamp(94px,12.75vw,196px)/.8 var(--display);letter-spacing:-.04em;color:var(--accent)}
-.score small{display:block;font:400 12px/1.5 var(--body);color:var(--text-muted);letter-spacing:0;margin-top:15px}
-.rotator{position:relative;min-height:clamp(221px,30vh,289px)}
-.rq{position:absolute;inset:0;margin:0;opacity:0;transform:translateY(15px);transition:opacity .7s var(--ease),transform .9s var(--ease);pointer-events:none}
+.rv-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(26px,5vw,90px);align-items:start}
+.score{font:400 clamp(90px,11vw,170px)/.8 var(--display);letter-spacing:-.04em;color:var(--accent)}
+.score small{display:block;font:400 13px/1.5 var(--body);color:var(--text-muted);letter-spacing:0;margin-top:14px}
+.rotator{position:relative;min-height:clamp(200px,26vh,260px)}
+.rq{position:absolute;inset:0;margin:0;opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .9s var(--ease);pointer-events:none}
 .rq.on{opacity:1;transform:none;pointer-events:auto}
-.rq p{margin:0;font:400 clamp(20px,2.29vw,36px)/1.25 var(--display);max-width:30ch}
-.rq cite{display:block;margin-top:17px;font:400 12px var(--body);color:var(--text-muted);font-style:normal}
-.rv-ctrl{display:flex;align-items:center;gap:15px;margin-top:8px}
-.rv-ctrl button{width:41px;height:41px;border-radius:50%;border:1px solid color-mix(in srgb,var(--text) 25%,transparent);background:none;cursor:pointer;display:grid;place-items:center;transition:background .3s,border-color .3s}
+.rq p{margin:0;font:400 clamp(21px,2.2vw,34px)/1.28 var(--display);max-width:32ch}
+.rq cite{display:block;margin-top:16px;font:400 13px var(--body);color:var(--text-muted);font-style:normal}
+.rv-ctrl{display:flex;align-items:center;gap:14px;margin-top:8px}
+.rv-ctrl button{width:44px;height:44px;border-radius:50%;border:1px solid color-mix(in srgb,var(--text) 25%,transparent);background:none;cursor:pointer;display:grid;place-items:center;transition:background .3s,border-color .3s}
 .rv-ctrl button:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
 .rv-ctrl svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6}
-.rv-bar{flex:1;max-width:221px;height:1px;background:color-mix(in srgb,var(--text) 18%,transparent);position:relative;overflow:hidden}
+.rv-bar{flex:1;max-width:220px;height:2px;border-radius:2px;background:color-mix(in srgb,var(--text) 14%,transparent);position:relative;overflow:hidden}
 .rv-bar i{position:absolute;inset:0;background:var(--bloom);transform-origin:left;transform:scaleX(0)}
 .rv-bar i.run{animation:bar 7s linear forwards}
-.rotator:hover~.rv-ctrl .rv-bar i.run,.rv-paused .rv-bar i.run{animation-play-state:paused}
+.rv-paused .rv-bar i.run{animation-play-state:paused}
 @keyframes bar{to{transform:scaleX(1)}}
-.rv-num{font-size:11px;color:var(--text-muted);font-variant-numeric:tabular-nums}
-.marquee{margin-top:clamp(42px,9vh,85px);overflow:hidden;border-top:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-bottom:1px solid color-mix(in srgb,var(--text) 14%,transparent);padding:19px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.mq-track{display:flex;gap:48px;width:max-content;animation:mq 60s linear infinite}
-.marquee:hover .mq-track{animation-play-state:paused}
-.mq-track span{white-space:nowrap;font:italic 400 17px/1.3 var(--display)}
-.mq-track span small{font:400 11px var(--body);color:var(--text-muted);font-style:normal;margin-left:8px}
-.mq-track span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--bloom);margin-right:15px;vertical-align:middle}
-@keyframes mq{to{transform:translateX(-50%)}}
-.rv-all{padding:0 var(--gx);margin-top:26px}
+.rv-num{font-size:12px;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.rv-all{margin-top:22px}
 
 /* CONTACT */
-.contact{padding:clamp(68px,12vh,136px) var(--gx) clamp(60px,10vh,110px)}
-.c-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,5.1vw,94px);align-items:start}
-.phone-big{display:block;white-space:nowrap;font:400 clamp(39px,5.27vw,85px)/.95 var(--display);text-decoration:none;color:var(--text);margin:8px 0 12px;letter-spacing:-.02em;transition:color .35s}
-.phone-big:hover{color:var(--cta)}
-.copy{background:none;border:0;color:var(--accent);font:600 12px var(--body);cursor:pointer;min-height:37px;padding:0;text-decoration:underline;text-underline-offset:4px}
-.hours{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 22px}
-.hours td{padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--text) 15%,transparent)}
+.contact-card{background:var(--ink);color:var(--paper);border-radius:clamp(18px,2vw,28px);padding:clamp(34px,6vh,72px) clamp(20px,4vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);position:relative;overflow:hidden}
+.contact-card .kicker{color:var(--amber)}
+.contact-card h2 em{color:var(--amber)}
+.phone-big{display:block;white-space:nowrap;font:400 clamp(42px,5.6vw,86px)/.95 var(--display);text-decoration:none;color:var(--paper);margin:18px 0 10px;letter-spacing:-.02em;transition:color .35s}
+.phone-big:hover{color:var(--amber)}
+.copy{background:none;border:0;color:var(--amber);font:600 13px var(--body);cursor:pointer;min-height:44px;padding:0;text-decoration:underline;text-underline-offset:4px}
+.c-addr{margin:14px 0 22px;color:#C9D3CF}
+.c-addr a{color:#C9D3CF}
+.hours{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 20px}
+.hours td{padding:11px 0;border-bottom:1px solid rgba(248,243,234,.14)}
 .hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
-.hours tr.today td{color:var(--accent);font-weight:600}
-.c-map{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;background:var(--line);margin-top:8px}
-.c-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.7)}
-.c-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:19px}
+.hours tr.today td{color:var(--amber);font-weight:600}
+.c-map{position:relative;aspect-ratio:16/9;border-radius:var(--r-lg);overflow:hidden;background:#2B4845}
+.c-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* FOOTER */
-.foot{background:var(--bg-night);color:var(--night-text);padding:60px var(--gx) 94px;position:relative;overflow:hidden}
-.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px;position:relative;z-index:2}
-.foot img{height:73px;width:auto}
-.foot h3{font-size:17px;margin-bottom:8px}
-.foot p,.foot a{font-size:12px;color:var(--night-muted);margin:0 0 6px;text-decoration:none}
-.foot a:hover{color:var(--bloom)}
-.foot small{display:block;margin-top:39px;color:#7D918C;font-size:10px;position:relative;z-index:2}
+.foot{padding:56px 0 100px;font-size:14px;color:var(--text-muted)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
+.foot img{height:70px;width:auto}
+.foot h3{font-size:18px;margin-bottom:8px;color:var(--text)}
+.foot p{margin:0 0 5px}
+.foot a{text-decoration:none}.foot a:hover{color:var(--cta)}
+.foot small{display:block;margin-top:36px;font-size:12px}
 
-.callbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
 .callbar.show{transform:none}
-.callbar .btn{width:100%;min-height:46px;font-size:14px}
+.callbar .btn{width:100%;min-height:52px;font-size:15px}
 
-@media (max-width:867px){
+@media (max-width:1020px){
   .nav-links{display:none}
-  .nav>.btn{margin-left:auto}
+  .nav-in>.btn{margin-left:auto}
   .menu-btn{display:inline-grid;place-items:center}
   .nav .btn .long{display:none}
-  .nav.open .nav-links{display:flex;position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;padding:10px 17px 20px;background:var(--bg-paper);color:var(--text)}
-  .nav.open .nav-links a{padding:12px 4px;font-size:17px;font-family:var(--display)}
-  .nav-ind{display:none}
+  .nav.open .nav-links{display:flex;position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;padding:10px var(--gx) 22px;background:var(--paper);box-shadow:0 20px 30px -24px rgba(0,0,0,.4)}
+  .nav.open .nav-links a{padding:13px 4px;font-size:19px;font-family:var(--display)}
 }
-@media (max-width:731px){
-  .hero{height:200vh}
-  .hero-text{grid-template-columns:1fr;grid-template-rows:auto auto 1fr;row-gap:14px;padding-top:calc(var(--nav-h) + 2vh)}
-  .hero h1{font-size:clamp(36px,10.2vw,61px)}
-  .hero-left{grid-column:1;grid-row:2;align-self:start;text-align:center}
-  .hero-left .lead{display:none}
-  .hero-left .status{margin:0}
-  .hero-right{grid-column:1;grid-row:3;align-self:end;align-items:stretch}
-  .hero-right .proof{display:none}
+@media (max-width:860px){
+  .hero-grid,.sec-head,.ways-grid,.rescue,.st-intro,.rv-grid,.contact-card,.foot-grid,.k-places{grid-template-columns:minmax(0,1fr)}
+  .rescue>div{min-width:0}
+  .hero-media{order:-1}
+  .hero-photo{aspect-ratio:4/3.2}
+  .today-card{position:relative;left:auto;bottom:auto;margin:-28px 14px 0;min-width:0}
+  .hero-badge{width:88px}
+  .k-benefits{grid-template-columns:1fr}
+  .place{grid-template-columns:1fr}
+  .sc-list{display:flex;overflow-x:auto;gap:8px;scrollbar-width:none;margin:0 -4px;padding:0 4px 4px}
+  .sc-list li{flex:none;width:72vw}
+  .sc-list button{height:100%;background:rgba(255,253,248,.5)}
+  .panels{flex-direction:column;height:auto}
+  .panel{flex:none;height:70px;transition:height .8s var(--ease)}
+  .panel.open{height:400px}
+  .pn-v{writing-mode:horizontal-tb;transform:none;left:20px;bottom:auto;top:50%;margin-top:-11px}
   .spread{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:26vw}
   .gi figcaption{display:none}
-  .gq p{font-size:15px}
-  .k-head,.k-bottom,.occ-head,.st-grid,.c-grid,.foot-grid,.rv-top{grid-template-columns:1fr}
-  .panels{flex-direction:column;height:auto}
-  .panel{flex:none;height:65px;transition:height .8s var(--ease)}
-  .panel.open{height:374px}
-  .pn-v{writing-mode:horizontal-tb;transform:none;left:17px;bottom:auto;top:50%;margin-top:-12px;display:flex;align-items:center;gap:10px}
-  .pn-v::after{margin:0;transform:none;order:-1}
-  .rescue{grid-template-columns:1fr}
-  .sc-list{display:flex;overflow-x:auto;gap:8px;scrollbar-width:none;margin:0 calc(var(--gx) * -1);padding:0 var(--gx)}
-  .sc-list li{flex:none;width:70vw}
-  .sc-list button{border-left:0;border-top:2px solid rgba(248,243,234,.14);height:100%}
-  .sc-list button[aria-selected="true"]{border-top-color:var(--bloom)}
-  .sc-list button i{display:none}
-  .st-top{grid-template-columns:1fr}
-  .st-strip{height:auto;flex-wrap:wrap}
-  .st-strip figure{flex:1 1 100%;height:56vw}
-  .st-strip figure:nth-child(2){flex-basis:calc(40% - 6px)}
-  .st-strip figure:nth-child(3){flex-basis:calc(60% - 6px)}
-  .k-now{border-left:0;padding-left:0;border-top:1px solid rgba(248,243,234,.18);padding-top:20px}
-  .wk-axis .wk-scale span:nth-child(2),.wk-axis .wk-scale span:nth-child(4){display:none}
-  .now b{font-size:9px}
-  .place{grid-template-columns:1fr}
-  .place .map{min-height:144px}
-  .facts{grid-template-columns:1fr}
+  .gq p{font-size:17px}
+  .facts{grid-template-columns:1fr 1fr}
   .callbar{display:block}
-  .brand img{height:37px}
-  .score{font-size:94px}
-  .rotator{min-height:255px}
+  .brand img{height:42px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .hero{height:auto}.hero-stage{position:relative;height:100vh}
-  .g path{stroke-dashoffset:0!important}
-  .gi{clip-path:none}.gi img{transform:none}
+  .rv,.gi{opacity:1;transform:none}.g path{stroke-dashoffset:0}
 }
 </style>
 </head>
 <body>
 <a class="sr" href="#main">Przejdź do treści</a>
-<div class="bgfx" aria-hidden="true"><i class="b0"></i><i class="b1"></i><i class="b2"></i></div>
 
-
-<header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="Kwiaciarnia Strelicja, na górę strony">
-    <img class="light" src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja" width="640" height="640">
-    <img class="dark" src="img/logo-dark.webp" alt="" width="640" height="640">
-  </a>
+<header class="nav" id="nav"><div class="nav-in">
+  <a class="brand" href="#top" aria-label="Kwiaciarnia Strelicja, na górę strony"><img src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja" width="640" height="640"></a>
   <ul class="nav-links" id="navlinks">
-    <li><a href="#kwiatomaty"><span data-t="Kwiatomaty">Kwiatomaty</span></a></li>
-    <li><a href="#galeria"><span data-t="Galeria">Galeria</span></a></li>
-    <li><a href="#okazje"><span data-t="Okazje">Okazje</span></a></li>
-    <li><a href="#opinie"><span data-t="Opinie">Opinie</span></a></li>
-    <li><a href="#kontakt"><span data-t="Kontakt">Kontakt</span></a></li>
-    <li class="nav-ind" id="navind" aria-hidden="true"></li>
+    <li><a class="hl" href="#kwiatomaty">Kwiatomaty 24/7</a></li>
+    <li><a href="#pracownia">Pracownia</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#opinie">Opinie</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
   </ul>
   <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span class="long">Zadzwoń:&nbsp;</span>880 056 918</a>
   <button class="menu-btn" id="menubtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
-</header>
+</div></header>
 
 <main id="main">
 
 <!-- HERO -->
-<section class="hero" id="top" data-bg="paper">
-  <div class="hero-stage">
-    <svg class="g" data-speed="0" viewBox="0 0 230 270" style="left:2vw;top:16vh;width:clamp(120px,15vw,240px)" aria-hidden="true"><path class="a" d="M110 266 C108 220 104 180 98 140" pathLength="1"/><path class="i" d="M98 140 C130 128 170 120 214 112 C176 134 136 146 98 146" pathLength="1"/><path class="b" d="M128 128 C130 96 140 66 160 30 C152 70 146 100 140 126" pathLength="1"/><path class="b" d="M144 124 C156 98 176 76 204 58 C182 84 168 104 156 122" pathLength="1"/><path class="b" d="M120 130 C116 104 118 78 128 52 C128 82 128 104 128 128" pathLength="1"/><path class="i" d="M150 120 C170 108 188 100 206 96" pathLength="1"/><path class="a" d="M104 236 C70 218 46 182 44 134 C72 156 94 192 104 236" pathLength="1"/><path class="a" d="M104 236 C84 206 62 172 44 134" pathLength="1"/><path class="a" d="M112 214 C140 200 168 174 184 144 C154 156 128 180 112 214" pathLength="1"/></svg>
-<svg class="g" data-speed="0" viewBox="0 0 160 260" style="right:3vw;top:20vh;width:clamp(80px,8vw,130px)" aria-hidden="true"><g transform="translate(160,0) scale(-1,1)"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></g></svg>
-<svg class="g" data-speed="0" viewBox="0 0 640 80" style="left:-4vw;bottom:3vh;width:clamp(260px,34vw,560px)" aria-hidden="true"><path class="i" d="M4 50 C80 20 120 70 200 44 S320 14 380 44 S520 74 636 36" pathLength="1"/><path class="a" d="M196 44 c6-16 26-20 34-10 c-12 2-22 6-34 10" pathLength="1"/><path class="a" d="M380 44 c-6 14-24 18-34 12 c12-2 22-6 34-12" pathLength="1"/><path class="a" d="M520 56 c6-16 26-18 34-8 c-12 2-22 4-34 8" pathLength="1"/><path class="a" d="M90 38 c-4-14 6-28 20-28 c-4 10-10 20-20 28" pathLength="1"/><path class="b" d="M292 24 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="b" d="M458 62 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="i" d="M380 44 C392 30 410 28 418 36 C424 44 414 52 406 46" pathLength="1"/></svg>
-    <div class="window" id="window" aria-hidden="true">
-      <div class="wi"><img class="w1" src="img/g/47-640.webp" srcset="img/g/47-640.webp 640w, img/g/47-1280.webp 1280w" sizes="100vw" width="1024" height="1280" alt="" fetchpriority="high">
-      <img class="w2" src="img/g/10-1280.webp" width="1280" height="960" alt="" decoding="async"></div>
+<section class="hero" id="top">
+  <svg class="g" data-speed="0" viewBox="0 0 230 270" style="left:-1vw;top:58%;width:clamp(100px,10vw,170px)" aria-hidden="true"><path class="a" d="M110 266 C108 220 104 180 98 140" pathLength="1"/><path class="i" d="M98 140 C130 128 170 120 214 112 C176 134 136 146 98 146" pathLength="1"/><path class="b" d="M128 128 C130 96 140 66 160 30 C152 70 146 100 140 126" pathLength="1"/><path class="b" d="M144 124 C156 98 176 76 204 58 C182 84 168 104 156 122" pathLength="1"/><path class="b" d="M120 130 C116 104 118 78 128 52 C128 82 128 104 128 128" pathLength="1"/><path class="i" d="M150 120 C170 108 188 100 206 96" pathLength="1"/><path class="a" d="M104 236 C70 218 46 182 44 134 C72 156 94 192 104 236" pathLength="1"/><path class="a" d="M104 236 C84 206 62 172 44 134" pathLength="1"/><path class="a" d="M112 214 C140 200 168 174 184 144 C154 156 128 180 112 214" pathLength="1"/></svg>
+<svg class="g" data-speed="0" viewBox="0 0 160 260" style="right:1.5vw;top:10%;width:clamp(60px,5vw,90px)" aria-hidden="true"><g transform="translate(160,0) scale(-1,1)"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></g></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="status rv" id="status" role="status"><i></i><span>Kwiaciarnia: pn–pt 9–18, sob 9–14. Kwiatomaty: całą dobę.</span></p>
+      <h1 class="rv d1"><span>Świeże kwiaty</span><em>o każdej porze.</em></h1>
+      <p class="lead rv d2">Zapraszamy do pracowni przy Wiejskiej 28A w Oławie. Iwona dobierze kwiaty i zwiąże bukiet na Twoją okazję. A gdy jesteśmy zamknięci, bukiety czekają w kwiatomatach, w dzień i w nocy.</p>
+      <div class="hero-cta rv d3">
+        <a class="btn btn-dark" href="#pracownia">Odwiedź pracownię</a>
+        <a class="btn btn-line" href="#kwiatomaty">Znajdź kwiatomat <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <a class="proof rv d3" href="#opinie"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Google</span></a>
     </div>
-    <div class="window-cap" aria-hidden="true"><p>Pracownia przy Wiejskiej 28A</p><h2>Zobacz, co <em>wiążemy.</em></h2></div>
-    <div class="hero-text">
-      <h1>Świeże kwiaty<em>o każdej porze.</em></h1>
-      <div class="hero-left">
-        <p class="status" id="status" role="status"><i></i><span>Kwiaciarnia: pn–pt 9–18, sob 9–14. Kwiatomaty: całą dobę.</span></p>
-        <p class="lead">Kwiaciarnia Iwony Dąbrowy w Oławie. Kiedy sklep jest zamknięty, bukiety czekają w dwóch kwiatomatach: w Oławie i w Jelczu-Laskowicach.</p>
+    <div class="hero-media rv d1">
+      <div class="hero-photo"><img src="img/g/10-1280.webp" srcset="img/g/10-640.webp 640w, img/g/10-1280.webp 1280w" sizes="(max-width:860px) 92vw, 52vw" width="1280" height="960" alt="Wnętrze pracowni Strelicja: strelicje w wazonie, półki z kwiatami i dekoracjami" fetchpriority="high"></div>
+      <a class="hero-badge" href="#kwiatomaty"><span><b>24/7</b>kwiatomaty</span></a>
+      <div class="today-card" aria-live="polite"><p id="todayLbl">Dziś</p><dl><dt>Pracownia</dt><dd id="todayShop">9:00–18:00</dd><dt>Kwiatomaty</dt><dd class="k">całą dobę</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO WAYS -->
+<section class="ways" aria-label="Dwa sposoby na kwiaty">
+  <div class="wrap ways-grid">
+    <a class="way way-shop rv" href="#pracownia">
+      <img src="img/g/19-1280.webp" srcset="img/g/19-640.webp 640w, img/g/19-1280.webp 1280w" sizes="(max-width:860px) 92vw, 46vw" width="1080" height="810" alt="" loading="lazy">
+      <small>W dzień</small>
+      <h3>Wpadnij <em>do pracowni</em></h3>
+      <p>Porozmawiasz z florystką, wybierzesz kwiaty i dostaniesz bukiet związany przy Tobie.</p>
+      <ul><li>pn–pt 9–18</li><li>sob 9–14</li><li>dowóz po Oławie</li></ul>
+      <span class="go">Zobacz pracownię <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <a class="way way-kiosk rv d1" href="#kwiatomaty">
+      <div class="k-ill" aria-hidden="true"><div class="big">24/7</div></div>
+      <small>Kiedy jesteśmy zamknięci</small>
+      <h3>Kwiatomat <em>zawsze otwarty</em></h3>
+      <p>Świeże bukiety z naszej pracowni w automacie. Wieczorem, w niedzielę, w święta.</p>
+      <ul><li>Oława, Lipowa 1c</li><li>Jelcz-Laskowice, Oławska 27</li></ul>
+      <span class="go">Jak to działa <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- KIOSKS -->
+<section class="sec" id="kwiatomaty" aria-labelledby="kw-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="kiosk-panel">
+      <svg class="g" data-speed="0" viewBox="0 0 640 80" style="right:-4%;top:3%;width:clamp(240px,30vw,460px)" aria-hidden="true"><g transform="translate(640,0) scale(-1,1)"><path class="i" d="M4 50 C80 20 120 70 200 44 S320 14 380 44 S520 74 636 36" pathLength="1"/><path class="a" d="M196 44 c6-16 26-20 34-10 c-12 2-22 6-34 10" pathLength="1"/><path class="a" d="M380 44 c-6 14-24 18-34 12 c12-2 22-6 34-12" pathLength="1"/><path class="a" d="M520 56 c6-16 26-18 34-8 c-12 2-22 4-34 8" pathLength="1"/><path class="a" d="M90 38 c-4-14 6-28 20-28 c-4 10-10 20-20 28" pathLength="1"/><path class="b" d="M292 24 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="b" d="M458 62 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="i" d="M380 44 C392 30 410 28 418 36 C424 44 414 52 406 46" pathLength="1"/></g></svg>
+<svg class="g" data-speed="0" viewBox="0 0 200 240" style="left:46%;bottom:2%;width:clamp(80px,7vw,120px)" aria-hidden="true"><path class="b" d="M113 100 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="b" d="M106 100 a6 6 0 1 0 -12 0 a6 6 0 1 0 12 0" pathLength="1"/><path class="b" d="M118.0 100.0 Q144.0 107.0 170.0 100.0 Q144.0 93.0 118.0 100.0" pathLength="1"/><path class="a" d="M116.6 106.9 Q138.0 123.3 164.7 126.8 Q143.3 110.4 116.6 106.9" pathLength="1"/><path class="b" d="M112.7 112.7 Q126.2 136.1 149.5 149.5 Q136.1 126.2 112.7 112.7" pathLength="1"/><path class="a" d="M106.9 116.6 Q110.4 143.3 126.8 164.7 Q123.3 138.0 106.9 116.6" pathLength="1"/><path class="b" d="M100.0 118.0 Q93.0 144.0 100.0 170.0 Q107.0 144.0 100.0 118.0" pathLength="1"/><path class="a" d="M93.1 116.6 Q76.7 138.0 73.2 164.7 Q89.6 143.3 93.1 116.6" pathLength="1"/><path class="b" d="M87.3 112.7 Q63.9 126.2 50.5 149.5 Q73.8 136.1 87.3 112.7" pathLength="1"/><path class="a" d="M83.4 106.9 Q56.7 110.4 35.3 126.8 Q62.0 123.3 83.4 106.9" pathLength="1"/><path class="b" d="M82.0 100.0 Q56.0 93.0 30.0 100.0 Q56.0 107.0 82.0 100.0" pathLength="1"/><path class="a" d="M83.4 93.1 Q62.0 76.7 35.3 73.2 Q56.7 89.6 83.4 93.1" pathLength="1"/><path class="b" d="M87.3 87.3 Q73.8 63.9 50.5 50.5 Q63.9 73.8 87.3 87.3" pathLength="1"/><path class="a" d="M93.1 83.4 Q89.6 56.7 73.2 35.3 Q76.7 62.0 93.1 83.4" pathLength="1"/><path class="b" d="M100.0 82.0 Q107.0 56.0 100.0 30.0 Q93.0 56.0 100.0 82.0" pathLength="1"/><path class="a" d="M106.9 83.4 Q123.3 62.0 126.8 35.3 Q110.4 56.7 106.9 83.4" pathLength="1"/><path class="b" d="M112.7 87.3 Q136.1 73.8 149.5 50.5 Q126.2 63.9 112.7 87.3" pathLength="1"/><path class="a" d="M116.6 93.1 Q143.3 89.6 164.7 73.2 Q138.0 76.7 116.6 93.1" pathLength="1"/><path class="a" d="M100 172 C100 190 98 210 94 238" pathLength="1"/><path class="a" d="M98 212 C120 198 140 200 152 214 C130 222 112 222 98 212" pathLength="1"/></svg>
+      <div class="sec-head" style="position:relative;z-index:2">
+        <div><p class="kicker rv">Kwiatomaty Strelicja</p><h2 id="kw-h" class="rv d1">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2></div>
+        <p class="lead rv d2">Zapomniana rocznica, niedziela, świt przed pracą. W naszych kwiatomatach zawsze czekają bukiety z pracowni, więc nie zostajesz z pustymi rękami.</p>
       </div>
-      <div class="hero-right">
-        <a class="btn btn-line" href="#kwiatomaty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Kwiatomaty 24/7</a>
-        <a class="proof" href="#opinie"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Google</span></a>
+      <ul class="k-benefits" style="position:relative;z-index:2">
+        <li class="rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Całą dobę, 7 dni</b><span>Także w nocy, w niedziele i w święta.</span></div></li>
+        <li class="rv d1"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21v-8M12 13l-4 8M12 13l4 8"/><circle cx="12" cy="7" r="2.5"/><circle cx="7.5" cy="9.5" r="2.2"/><circle cx="16.5" cy="9.5" r="2.2"/></svg></span><div><b>Bukiety z pracowni</b><span>Wiązane przez Iwonę, nie z hurtowni.</span></div></li>
+        <li class="rv d2"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>Dwie lokalizacje</b><span>Oława i Jelcz-Laskowice, blisko drogi.</span></div></li>
+      </ul>
+      <div class="rescue rv" id="rescue" style="position:relative;z-index:2">
+        <div>
+          <p class="sc-title">Kiedy kwiatomat ratuje sytuację</p>
+          <ul class="sc-list" role="tablist" aria-label="Sytuacje"><li role="presentation"><button type="button" role="tab" data-sc="live" aria-selected="true" aria-controls="scStage"><i></i><b>Teraz</b><span>teraz</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="a" aria-selected="false" aria-controls="scStage"><i></i><b>6:40</b><span>Urodziny w pracy przed otwarciem kwiaciarni.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="b" aria-selected="false" aria-controls="scStage"><i></i><b>21:30</b><span>Rocznica przypomniana wieczorem.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="c" aria-selected="false" aria-controls="scStage"><i></i><b>11:00</b><span>Niedziela, imieniny mamy.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="d" aria-selected="false" aria-controls="scStage"><i></i><b>23:10</b><span>Późny powrót, a w domu ktoś czeka.</span></button></li></ul>
+        </div>
+        <div class="sc-stage" id="scStage" role="tabpanel" aria-live="polite">
+          <div class="sc-anim">
+            <p class="sc-day" id="scDay">Teraz</p>
+            <p class="sc-time" id="scTime">24/7</p>
+            <dl class="sc-status"><dt>Pracownia</dt><dd><span class="pill off" id="scShop"><i></i>zamknięta</span></dd><dt>Kwiatomaty</dt><dd><span class="pill on"><i></i>otwarte</span></dd></dl>
+            <p class="sc-problem" id="scProblem"></p>
+            <p class="sc-fix" id="scFix"></p>
+          </div>
+          <div class="sc-go">
+            <a class="btn btn-amber" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Prowadź: Oława</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Prowadź: Jelcz-Laskowice</a>
+          </div>
+        </div>
       </div>
+      <div class="k-places" style="position:relative;z-index:2">
+        <article class="place rv"><div class="info"><b>Oława</b><span>ul. Lipowa 1c</span><span>czynny całą dobę</span><a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="map"><iframe title="Mapa: kwiatomat Oława, ul. Lipowa 1c" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiatomat%20Strelicja%20Lipowa%201c%20O%C5%82awa&z=15&output=embed"></iframe></div></article>
+        <article class="place rv d1"><div class="info"><b>Jelcz-Laskowice</b><span>ul. Oławska 27</span><span>czynny całą dobę</span><a class="link" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener">Wyznacz trasę <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="map"><iframe title="Mapa: kwiatomat Jelcz-Laskowice, ul. Oławska 27" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=O%C5%82awska%2027%20Jelcz-Laskowice&z=15&output=embed"></iframe></div></article>
+      </div>
+      <blockquote class="k-quote rv" style="position:relative;z-index:2"><div><p>Sądziłam, że bukiety będą tam drogie i pewnie już długo będą stały. Ku mojemu zaskoczeniu, bukiet cudowny, kwiaty świeże i w przystępnej cenie.</p><cite>Karolina L., opinia w Google o kwiatomacie</cite></div></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="sec" id="pracownia" aria-labelledby="st-h">
+  <svg class="g" data-speed="0" viewBox="0 0 160 260" style="right:1vw;top:2%;width:clamp(90px,8vw,140px)" aria-hidden="true"><g transform="translate(160,0) scale(-1,1)"><path class="a" d="M80 255 C30 200 18 120 70 10 C130 90 138 190 80 255" pathLength="1"/><path class="a" d="M80 255 C76 180 74 100 70 10" pathLength="1"/><path class="a" d="M77 200 C60 185 46 170 38 150" pathLength="1"/><path class="a" d="M77 200 C96 186 112 170 120 152" pathLength="1"/><path class="a" d="M75 150 C58 132 46 116 40 96" pathLength="1"/><path class="a" d="M75 150 C94 134 108 116 116 98" pathLength="1"/><path class="a" d="M73 100 C60 86 52 72 50 58" pathLength="1"/><path class="a" d="M73 100 C86 86 96 72 100 58" pathLength="1"/></g></svg>
+  <div class="wrap">
+    <div class="st-intro">
+      <div class="st-photos rv">
+        <figure class="p1"><img src="img/g/17-1280.webp" srcset="img/g/17-640.webp 640w, img/g/17-1280.webp 1280w" sizes="(max-width:860px) 52vw, 26vw" width="1024" height="1280" loading="lazy" alt="Świeże kwiaty w wiadrach przy ladzie"><figcaption>Dzisiejsza dostawa</figcaption></figure>
+        <figure class="p2"><img src="img/g/15-1280.webp" srcset="img/g/15-640.webp 640w, img/g/15-1280.webp 1280w" sizes="(max-width:860px) 40vw, 20vw" width="1080" height="697" loading="lazy" alt="Witryna kwiaciarni Strelicja przy ul. Wiejskiej 28A"><figcaption>Wiejska 28A</figcaption></figure>
+        <figure class="p3"><img src="img/g/9-640.webp" width="640" height="688" loading="lazy" alt="Bukiet z róż, gerber i eukaliptusa"><figcaption>Z pracowni</figcaption></figure>
+      </div>
+      <div>
+        <p class="kicker rv">Pracownia przy Wiejskiej 28A</p>
+        <h2 id="st-h" class="rv d1">Bukiet związany<br><em>przy Tobie.</em></h2>
+        <p class="statement rv d2" style="font-size:clamp(19px,1.6vw,24px);margin-top:18px">Pracownię prowadzi florystka Iwona Dąbrowa. Klienci w opiniach piszą o niej po imieniu: że doradzi, dobierze i czasem sama dowiezie.</p>
+        <ul class="facts rv d2">
+          <li><b>Codziennie świeże</b>Kwiaty cięte i doniczkowe.</li>
+          <li><b>W wazonie z wodą</b>Bukiet od razu gotowy do postawienia.</li>
+          <li><b>Dowóz</b>Po Oławie i okolicy.</li>
+          <li><b>Karta i telefon</b>Płatności bezgotówkowe.</li>
+        </ul>
+        <div class="st-cta rv d3"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zamów: 880 056 918</a><a class="btn btn-line" href="#kontakt">Jak dojechać</a></div>
+      </div>
+    </div>
+
+    <div class="occ-wrap">
+      <div class="occ-title rv"><h3>Na jaką okazję <em>szukasz kwiatów?</em></h3><p class="lead" style="max-width:40ch">Wybierz okazję. Resztę dobierzemy razem.</p></div>
+      <div class="panels rv" id="panels"><article class="panel open" tabindex="0" aria-expanded="true"><img src="img/g/48-1280.webp" srcset="img/g/48-640.webp 640w, img/g/48-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Dla bliskiej osoby</span><div class="pn-body"><h4>Dla <em>bliskiej</em> osoby</h4><p>Dla żony, mamy, na urodziny, rocznicę i bez okazji. Powiedz, kim jest i co lubi.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/49-1280.webp" srcset="img/g/49-640.webp 640w, img/g/49-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Ślub</span><div class="pn-body"><h4><em>Ślub</em></h4><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii. Ustalimy kolory i termin z wyprzedzeniem.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/23-1280.webp" srcset="img/g/23-640.webp 640w, img/g/23-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Pożegnanie</span><div class="pn-body"><h4><em>Pożegnanie</em></h4><p>Wiązanki i wieńce przygotowane spokojnie i z szacunkiem, także na jutro.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/37-1280.webp" srcset="img/g/37-640.webp 640w, img/g/37-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Święta i sezon</span><div class="pn-body"><h4>Święta <em>i sezon</em></h4><p>Stroiki, wieńce na drzwi, dekoracje na stół i Walentynki. W sezonie zamów wcześniej.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/20-1280.webp" srcset="img/g/20-640.webp 640w, img/g/20-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Flowerbox i doniczki</span><div class="pn-body"><h4>Flowerbox <em>i doniczki</em></h4><p>Kwiaty w pudełku, rośliny doniczkowe i szklane ogrody. Na biurko albo na prezent.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article></div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="gallery" id="galeria" data-bg="paper" aria-labelledby="gal-h">
-  <svg class="g" data-speed="0.1" viewBox="0 0 230 270" style="right:-3vw;top:2%;width:clamp(120px,13vw,210px)" aria-hidden="true"><g transform="translate(230,0) scale(-1,1)"><path class="a" d="M110 266 C108 220 104 180 98 140" pathLength="1"/><path class="i" d="M98 140 C130 128 170 120 214 112 C176 134 136 146 98 146" pathLength="1"/><path class="b" d="M128 128 C130 96 140 66 160 30 C152 70 146 100 140 126" pathLength="1"/><path class="b" d="M144 124 C156 98 176 76 204 58 C182 84 168 104 156 122" pathLength="1"/><path class="b" d="M120 130 C116 104 118 78 128 52 C128 82 128 104 128 128" pathLength="1"/><path class="i" d="M150 120 C170 108 188 100 206 96" pathLength="1"/><path class="a" d="M104 236 C70 218 46 182 44 134 C72 156 94 192 104 236" pathLength="1"/><path class="a" d="M104 236 C84 206 62 172 44 134" pathLength="1"/><path class="a" d="M112 214 C140 200 168 174 184 144 C154 156 128 180 112 214" pathLength="1"/></g></svg>
-<svg class="g" data-speed="0.16" viewBox="0 0 160 260" style="left:1vw;top:30%;width:clamp(70px,6vw,110px)" aria-hidden="true"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></svg>
-  <div class="content">
-    <div class="gal-head">
-      <div><p class="kicker">Galeria realizacji</p><h2 id="gal-h">Prosto z <em>pracowni.</em></h2></div>
-      <div class="filters" role="group" aria-label="Filtruj galerię">
+<section class="sec" id="galeria" aria-labelledby="gal-h" style="padding-top:0">
+  <svg class="g" data-speed="0" viewBox="0 0 200 210" style="left:1vw;top:0;width:clamp(80px,7vw,120px)" aria-hidden="true"><path class="b" d="M100 100 C110 92 120 104 110 114 C96 128 78 110 86 94 C96 74 128 80 132 104 C136 132 104 148 82 138 C56 126 56 92 74 74 C96 52 140 60 150 96" pathLength="1"/><path class="i" d="M150 96 C156 130 132 160 100 162 C64 164 42 136 46 104" pathLength="1"/><path class="i" d="M46 104 C48 70 74 46 106 46 C134 46 154 64 156 84" pathLength="1"/><path class="a" d="M100 162 C100 180 96 196 92 208" pathLength="1"/><path class="a" d="M98 184 C120 172 140 174 150 186 C128 194 112 192 98 184" pathLength="1"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker rv">Galeria</p><h2 id="gal-h" class="rv d1">Prosto <em>z pracowni.</em></h2></div>
+      <div class="filters rv d2" role="group" aria-label="Filtruj galerię">
         <button type="button" data-f="all" aria-pressed="true">Wszystko</button>
         <button type="button" data-f="bukiety" aria-pressed="false">Bukiety</button>
         <button type="button" data-f="okazje" aria-pressed="false">Okazje</button>
@@ -480,207 +545,66 @@ body.is-night .brand .light{opacity:0}body.is-night .brand .dark{opacity:1}
   </div>
 </section>
 
-<!-- OCCASIONS -->
-<section class="occ-sec" id="okazje" data-bg="sage" aria-labelledby="occ-h">
-  <svg class="g" data-speed="0.12" viewBox="0 0 160 260" style="right:-2vw;top:8%;width:clamp(120px,14vw,220px)" aria-hidden="true"><g transform="translate(160,0) scale(-1,1)"><path class="a" d="M80 255 C30 200 18 120 70 10 C130 90 138 190 80 255" pathLength="1"/><path class="a" d="M80 255 C76 180 74 100 70 10" pathLength="1"/><path class="a" d="M77 200 C60 185 46 170 38 150" pathLength="1"/><path class="a" d="M77 200 C96 186 112 170 120 152" pathLength="1"/><path class="a" d="M75 150 C58 132 46 116 40 96" pathLength="1"/><path class="a" d="M75 150 C94 134 108 116 116 98" pathLength="1"/><path class="a" d="M73 100 C60 86 52 72 50 58" pathLength="1"/><path class="a" d="M73 100 C86 86 96 72 100 58" pathLength="1"/></g></svg>
-<svg class="g" data-speed="0.08" viewBox="0 0 200 240" style="left:38%;top:4%;width:clamp(90px,9vw,150px)" aria-hidden="true"><path class="b" d="M113 100 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="b" d="M106 100 a6 6 0 1 0 -12 0 a6 6 0 1 0 12 0" pathLength="1"/><path class="b" d="M118.0 100.0 Q144.0 107.0 170.0 100.0 Q144.0 93.0 118.0 100.0" pathLength="1"/><path class="a" d="M116.6 106.9 Q138.0 123.3 164.7 126.8 Q143.3 110.4 116.6 106.9" pathLength="1"/><path class="b" d="M112.7 112.7 Q126.2 136.1 149.5 149.5 Q136.1 126.2 112.7 112.7" pathLength="1"/><path class="a" d="M106.9 116.6 Q110.4 143.3 126.8 164.7 Q123.3 138.0 106.9 116.6" pathLength="1"/><path class="b" d="M100.0 118.0 Q93.0 144.0 100.0 170.0 Q107.0 144.0 100.0 118.0" pathLength="1"/><path class="a" d="M93.1 116.6 Q76.7 138.0 73.2 164.7 Q89.6 143.3 93.1 116.6" pathLength="1"/><path class="b" d="M87.3 112.7 Q63.9 126.2 50.5 149.5 Q73.8 136.1 87.3 112.7" pathLength="1"/><path class="a" d="M83.4 106.9 Q56.7 110.4 35.3 126.8 Q62.0 123.3 83.4 106.9" pathLength="1"/><path class="b" d="M82.0 100.0 Q56.0 93.0 30.0 100.0 Q56.0 107.0 82.0 100.0" pathLength="1"/><path class="a" d="M83.4 93.1 Q62.0 76.7 35.3 73.2 Q56.7 89.6 83.4 93.1" pathLength="1"/><path class="b" d="M87.3 87.3 Q73.8 63.9 50.5 50.5 Q63.9 73.8 87.3 87.3" pathLength="1"/><path class="a" d="M93.1 83.4 Q89.6 56.7 73.2 35.3 Q76.7 62.0 93.1 83.4" pathLength="1"/><path class="b" d="M100.0 82.0 Q107.0 56.0 100.0 30.0 Q93.0 56.0 100.0 82.0" pathLength="1"/><path class="a" d="M106.9 83.4 Q123.3 62.0 126.8 35.3 Q110.4 56.7 106.9 83.4" pathLength="1"/><path class="b" d="M112.7 87.3 Q136.1 73.8 149.5 50.5 Q126.2 63.9 112.7 87.3" pathLength="1"/><path class="a" d="M116.6 93.1 Q143.3 89.6 164.7 73.2 Q138.0 76.7 116.6 93.1" pathLength="1"/><path class="a" d="M100 172 C100 190 98 210 94 238" pathLength="1"/><path class="a" d="M98 212 C120 198 140 200 152 214 C130 222 112 222 98 212" pathLength="1"/></svg>
-<svg class="g" data-speed="0.05" viewBox="0 0 640 80" style="left:-3vw;bottom:6%;width:clamp(280px,40vw,620px)" aria-hidden="true"><path class="i" d="M4 50 C80 20 120 70 200 44 S320 14 380 44 S520 74 636 36" pathLength="1"/><path class="a" d="M196 44 c6-16 26-20 34-10 c-12 2-22 6-34 10" pathLength="1"/><path class="a" d="M380 44 c-6 14-24 18-34 12 c12-2 22-6 34-12" pathLength="1"/><path class="a" d="M520 56 c6-16 26-18 34-8 c-12 2-22 4-34 8" pathLength="1"/><path class="a" d="M90 38 c-4-14 6-28 20-28 c-4 10-10 20-20 28" pathLength="1"/><path class="b" d="M292 24 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="b" d="M458 62 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="i" d="M380 44 C392 30 410 28 418 36 C424 44 414 52 406 46" pathLength="1"/></svg>
-  <div class="content">
-    <div class="occ-head">
-      <div><p class="kicker">Na każdą okazję</p><h2 id="occ-h">Powiedz, dla kogo.<br><em>Resztę dobierzemy.</em></h2></div>
-      <p class="lead">Nie musisz znać nazw kwiatów. Powiedz, na jaką okazję i dla kogo, a Iwona doradzi i zwiąże bukiet. Dowozimy po Oławie i okolicy.</p>
-    </div>
-    <div class="panels" id="panels">
-      <article class="panel open" tabindex="0" aria-expanded="true">
-        <img src="img/g/48-1280.webp" srcset="img/g/48-640.webp 640w, img/g/48-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async">
-        <span class="pn-v" aria-hidden="true">Dla bliskiej osoby</span>
-        <div class="pn-body"><small>Okazja</small><h3>Dla <em>bliskiej</em> osoby</h3><p>Dla żony, mamy, na urodziny, rocznicę i bez okazji. Powiedz, kim jest i co lubi, a dobierzemy kwiaty.</p><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń i zamów: 880 056 918</a></div>
-      </article>
-      <article class="panel" tabindex="0" aria-expanded="false">
-        <img src="img/g/49-1280.webp" srcset="img/g/49-640.webp 640w, img/g/49-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async">
-        <span class="pn-v" aria-hidden="true">Ślub</span>
-        <div class="pn-body"><small>Okazja</small><h3><em>Ślub</em></h3><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii. Ustalimy kolory i termin z wyprzedzeniem.</p><a class="btn btn-cta" href="tel:+48880056918">Umów termin: 880 056 918</a></div>
-      </article>
-      <article class="panel" tabindex="0" aria-expanded="false">
-        <img src="img/g/23-1280.webp" srcset="img/g/23-640.webp 640w, img/g/23-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async">
-        <span class="pn-v" aria-hidden="true">Pożegnanie</span>
-        <div class="pn-body"><small>Okazja</small><h3><em>Pożegnanie</em></h3><p>Wiązanki i wieńce. Przygotujemy je spokojnie i z szacunkiem, także na jutro.</p><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń: 880 056 918</a></div>
-      </article>
-      <article class="panel" tabindex="0" aria-expanded="false">
-        <img src="img/g/37-1280.webp" srcset="img/g/37-640.webp 640w, img/g/37-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async">
-        <span class="pn-v" aria-hidden="true">Święta i sezon</span>
-        <div class="pn-body"><small>Okazja</small><h3>Święta <em>i sezon</em></h3><p>Stroiki, wieńce na drzwi, dekoracje na stół i Walentynki. W sezonie warto zamówić wcześniej.</p><a class="btn btn-cta" href="tel:+48880056918">Zamów: 880 056 918</a></div>
-      </article>
-      <article class="panel" tabindex="0" aria-expanded="false">
-        <img src="img/g/20-1280.webp" srcset="img/g/20-640.webp 640w, img/g/20-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async">
-        <span class="pn-v" aria-hidden="true">Flowerbox i doniczki</span>
-        <div class="pn-body"><small>Okazja</small><h3>Flowerbox <em>i doniczki</em></h3><p>Kwiaty w pudełku, rośliny doniczkowe i szklane ogrody. Na biurko, do domu albo na prezent.</p><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń: 880 056 918</a></div>
-      </article>
-    </div>
-    <div class="occ-cta"><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń: 880 056 918</a><p>Ustalimy kwiaty, kolory, cenę i odbiór albo dowóz.</p></div>
-  </div>
-</section>
-
-<!-- KIOSKS -->
-<section class="kiosk night" id="kwiatomaty" data-bg="night" aria-labelledby="kw-h">
-  <svg class="g" data-speed="0.14" viewBox="0 0 230 270" style="right:2vw;top:6%;width:clamp(140px,16vw,260px)" aria-hidden="true"><g transform="translate(230,0) scale(-1,1)"><path class="a" d="M110 266 C108 220 104 180 98 140" pathLength="1"/><path class="i" d="M98 140 C130 128 170 120 214 112 C176 134 136 146 98 146" pathLength="1"/><path class="b" d="M128 128 C130 96 140 66 160 30 C152 70 146 100 140 126" pathLength="1"/><path class="b" d="M144 124 C156 98 176 76 204 58 C182 84 168 104 156 122" pathLength="1"/><path class="b" d="M120 130 C116 104 118 78 128 52 C128 82 128 104 128 128" pathLength="1"/><path class="i" d="M150 120 C170 108 188 100 206 96" pathLength="1"/><path class="a" d="M104 236 C70 218 46 182 44 134 C72 156 94 192 104 236" pathLength="1"/><path class="a" d="M104 236 C84 206 62 172 44 134" pathLength="1"/><path class="a" d="M112 214 C140 200 168 174 184 144 C154 156 128 180 112 214" pathLength="1"/></g></svg>
-<svg class="g" data-speed="0.1" viewBox="0 0 160 260" style="left:1vw;bottom:10%;width:clamp(80px,8vw,130px)" aria-hidden="true"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></svg>
-  <div class="content">
-    <div class="k-head">
-      <div>
-        <p class="kicker">Kwiatomaty, całą dobę</p>
-        <h2 id="kw-h">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2>
-        <p class="lead" style="margin-top:22px">Zapomniana rocznica, niedziela, świt przed pracą. W dwóch kwiatomatach czekają bukiety z naszej pracowni, więc nie zostajesz z pustymi rękami. Wybierz sytuację i zobacz.</p>
-      </div>
-      <div class="k-now"><span class="live"><i></i><span>Otwarte teraz i zawsze</span></span><div class="big">24/7</div><p>Siedem dni w tygodniu, bez przerwy.<br>Oława i Jelcz-Laskowice.</p></div>
-    </div>
-
-    <div class="rescue" id="rescue">
-      <ul class="sc-list" role="tablist" aria-label="Sytuacje, w których ratuje kwiatomat"><li role="presentation"><button type="button" role="tab" data-sc="live" aria-selected="true" aria-controls="scStage"><i></i><b>Teraz</b><span>teraz</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="6:40" aria-selected="false" aria-controls="scStage"><i></i><b>6:40</b><span>Urodziny w pracy, a kwiaciarnie otwierają się dopiero o 9.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="21:30" aria-selected="false" aria-controls="scStage"><i></i><b>21:30</b><span>Rocznica. Telefon przypomniał o niej dopiero wieczorem.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="nd11" aria-selected="false" aria-controls="scStage"><i></i><b>11:00</b><span>Niedziela, imieniny mamy, a wszystkie kwiaciarnie zamknięte.</span></button></li><li role="presentation"><button type="button" role="tab" data-sc="23:10" aria-selected="false" aria-controls="scStage"><i></i><b>23:10</b><span>Późny powrót z pracy, a w domu czeka ktoś ważny.</span></button></li></ul>
-      <div class="sc-stage" id="scStage" role="tabpanel" aria-live="polite">
-        <div class="sc-anim">
-          <p class="sc-day" id="scDay">Dziś</p>
-          <p class="sc-time" id="scTime">24/7</p>
-          <dl class="sc-status"><dt>Kwiaciarnia</dt><dd><span class="pill off" id="scShop"><i></i>zamknięta</span></dd><dt>Kwiatomaty</dt><dd><span class="pill on"><i></i>otwarte, z kwiatami z pracowni</span></dd></dl>
-          <p class="sc-problem" id="scProblem"></p>
-          <p class="sc-fix" id="scFix"></p>
-        </div>
-        <div class="sc-go">
-          <a class="btn btn-night" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Oława, Lipowa 1c</a>
-          <a class="btn btn-night" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jelcz-Laskowice, Oławska 27</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="k-bottom">
-      <div class="k-places">
-        <article class="place">
-          <div class="info"><b>Oława</b><span>ul. Lipowa 1c</span><span>czynne całą dobę</span>
-            <a class="go" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener">Prowadź <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <div class="map"><iframe title="Mapa: kwiatomat Oława, ul. Lipowa 1c" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiatomat%20Strelicja%20Lipowa%201c%20O%C5%82awa&z=15&output=embed"></iframe></div>
-        </article>
-        <article class="place">
-          <div class="info"><b>Jelcz-Laskowice</b><span>ul. Oławska 27</span><span>czynne całą dobę</span>
-            <a class="go" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener">Prowadź <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <div class="map"><iframe title="Mapa: kwiatomat Jelcz-Laskowice, ul. Oławska 27" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=O%C5%82awska%2027%20Jelcz-Laskowice&z=15&output=embed"></iframe></div>
-        </article>
-      </div>
-      <div>
-        <ol class="steps" id="steps">
-          <li><b>Podjedź</b>Oława albo Jelcz-Laskowice, o dowolnej porze.</li>
-          <li><b>Wybierz</b>Bukiety z pracowni, widoczne za szybą.</li>
-          <li><b>Zapłać</b>Przy automacie, bez czekania na otwarcie.</li>
-        </ol>
-        <blockquote class="k-quote">„Sądziłam, że bukiety będą tam drogie i pewnie już długo będą stały. Ku mojemu zaskoczeniu, bukiet cudowny, kwiaty świeże i w przystępnej cenie.”<cite>Karolina L., opinia w Google o kwiatomacie</cite></blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STUDIO -->
-<section class="studio" id="pracownia" data-bg="paper" aria-labelledby="st-h">
-  <svg class="g" data-speed="0.1" viewBox="0 0 200 210" style="left:46%;top:6%;width:clamp(110px,11vw,180px)" aria-hidden="true"><path class="b" d="M100 100 C110 92 120 104 110 114 C96 128 78 110 86 94 C96 74 128 80 132 104 C136 132 104 148 82 138 C56 126 56 92 74 74 C96 52 140 60 150 96" pathLength="1"/><path class="i" d="M150 96 C156 130 132 160 100 162 C64 164 42 136 46 104" pathLength="1"/><path class="i" d="M46 104 C48 70 74 46 106 46 C134 46 154 64 156 84" pathLength="1"/><path class="a" d="M100 162 C100 180 96 196 92 208" pathLength="1"/><path class="a" d="M98 184 C120 172 140 174 150 186 C128 194 112 192 98 184" pathLength="1"/></svg>
-<svg class="g" data-speed="0.14" viewBox="0 0 160 260" style="left:-3vw;bottom:-4%;width:clamp(110px,12vw,190px)" aria-hidden="true"><path class="a" d="M80 255 C30 200 18 120 70 10 C130 90 138 190 80 255" pathLength="1"/><path class="a" d="M80 255 C76 180 74 100 70 10" pathLength="1"/><path class="a" d="M77 200 C60 185 46 170 38 150" pathLength="1"/><path class="a" d="M77 200 C96 186 112 170 120 152" pathLength="1"/><path class="a" d="M75 150 C58 132 46 116 40 96" pathLength="1"/><path class="a" d="M75 150 C94 134 108 116 116 98" pathLength="1"/><path class="a" d="M73 100 C60 86 52 72 50 58" pathLength="1"/><path class="a" d="M73 100 C86 86 96 72 100 58" pathLength="1"/></svg>
-  <div class="content">
-    <div class="st-top">
-      <div>
-        <p class="kicker">Pracownia przy Wiejskiej 28A</p>
-        <h2 id="st-h" class="sr">Pracownia</h2>
-        <p class="statement">Każdy bukiet wiąże ręcznie <em>Iwona Dąbrowa</em>, florystka z Oławy. Klienci w opiniach piszą o niej po imieniu.</p>
-      </div>
-      <div>
-        <ul class="facts">
-          <li><b>Codziennie świeże</b>Kwiaty cięte i doniczkowe.</li>
-          <li><b>W wazonie z wodą</b>Bukiet od razu gotowy do postawienia.</li>
-          <li><b>Dowóz</b>Po Oławie i okolicy.</li>
-          <li><b>Karta i telefon</b>Płatności bezgotówkowe.</li>
-        </ul>
-        <a class="btn btn-line" href="#kontakt">Jak do nas trafić</a>
-      </div>
-    </div>
-    <div class="st-strip" id="stmedia">
-      <figure style="--a:1.33"><img src="img/g/19-1280.webp" srcset="img/g/19-640.webp 640w, img/g/19-1280.webp 1280w" sizes="(max-width:860px) 90vw, 40vw" width="1080" height="810" loading="lazy" alt="Lada kwiaciarni z różami i wiadrami świeżych kwiatów"><figcaption>Lada</figcaption></figure>
-      <figure style="--a:.8"><img src="img/g/17-640.webp" srcset="img/g/17-640.webp 640w, img/g/17-1280.webp 1280w" sizes="(max-width:860px) 50vw, 22vw" width="1024" height="1280" loading="lazy" alt="Świeże kwiaty w wiadrach przy ladzie"><figcaption>Dzisiejsza dostawa</figcaption></figure>
-      <figure style="--a:1.55"><img src="img/g/15-1280.webp" srcset="img/g/15-640.webp 640w, img/g/15-1280.webp 1280w" sizes="(max-width:860px) 90vw, 45vw" width="1080" height="697" loading="lazy" alt="Witryna kwiaciarni Strelicja przy ul. Wiejskiej 28A w Oławie"><figcaption>Wiejska 28A, Oława</figcaption></figure>
-    </div>
-  </div>
-</section>
-
 <!-- REVIEWS -->
-<section class="reviews" id="opinie" data-bg="sage" aria-labelledby="rv-h">
-  <svg class="g" data-speed="0.1" viewBox="0 0 200 240" style="right:4vw;top:6%;width:clamp(110px,11vw,180px)" aria-hidden="true"><path class="b" d="M113 100 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="b" d="M106 100 a6 6 0 1 0 -12 0 a6 6 0 1 0 12 0" pathLength="1"/><path class="b" d="M118.0 100.0 Q144.0 107.0 170.0 100.0 Q144.0 93.0 118.0 100.0" pathLength="1"/><path class="a" d="M116.6 106.9 Q138.0 123.3 164.7 126.8 Q143.3 110.4 116.6 106.9" pathLength="1"/><path class="b" d="M112.7 112.7 Q126.2 136.1 149.5 149.5 Q136.1 126.2 112.7 112.7" pathLength="1"/><path class="a" d="M106.9 116.6 Q110.4 143.3 126.8 164.7 Q123.3 138.0 106.9 116.6" pathLength="1"/><path class="b" d="M100.0 118.0 Q93.0 144.0 100.0 170.0 Q107.0 144.0 100.0 118.0" pathLength="1"/><path class="a" d="M93.1 116.6 Q76.7 138.0 73.2 164.7 Q89.6 143.3 93.1 116.6" pathLength="1"/><path class="b" d="M87.3 112.7 Q63.9 126.2 50.5 149.5 Q73.8 136.1 87.3 112.7" pathLength="1"/><path class="a" d="M83.4 106.9 Q56.7 110.4 35.3 126.8 Q62.0 123.3 83.4 106.9" pathLength="1"/><path class="b" d="M82.0 100.0 Q56.0 93.0 30.0 100.0 Q56.0 107.0 82.0 100.0" pathLength="1"/><path class="a" d="M83.4 93.1 Q62.0 76.7 35.3 73.2 Q56.7 89.6 83.4 93.1" pathLength="1"/><path class="b" d="M87.3 87.3 Q73.8 63.9 50.5 50.5 Q63.9 73.8 87.3 87.3" pathLength="1"/><path class="a" d="M93.1 83.4 Q89.6 56.7 73.2 35.3 Q76.7 62.0 93.1 83.4" pathLength="1"/><path class="b" d="M100.0 82.0 Q107.0 56.0 100.0 30.0 Q93.0 56.0 100.0 82.0" pathLength="1"/><path class="a" d="M106.9 83.4 Q123.3 62.0 126.8 35.3 Q110.4 56.7 106.9 83.4" pathLength="1"/><path class="b" d="M112.7 87.3 Q136.1 73.8 149.5 50.5 Q126.2 63.9 112.7 87.3" pathLength="1"/><path class="a" d="M116.6 93.1 Q143.3 89.6 164.7 73.2 Q138.0 76.7 116.6 93.1" pathLength="1"/><path class="a" d="M100 172 C100 190 98 210 94 238" pathLength="1"/><path class="a" d="M98 212 C120 198 140 200 152 214 C130 222 112 222 98 212" pathLength="1"/></svg>
-<svg class="g" data-speed="0.08" viewBox="0 0 160 260" style="left:2vw;top:44%;width:clamp(70px,7vw,110px)" aria-hidden="true"><g transform="translate(160,0) scale(-1,1)"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></g></svg>
-  <div class="content">
-    <div class="rv-top">
-      <div class="score" aria-label="Ocena 4,9 na 5">4,9<small><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Mapach Google</small></div>
-      <div>
-        <p class="kicker">Opinie klientów</p>
-        <h2 id="rv-h" class="sr">Opinie</h2>
-        <div class="rotator" id="rotator" aria-live="polite">
-          <figure class="rq on"><p>„Przepiękna kompozycja, stworzona z dużym wyczuciem i dbałością o każdy detal. Ogromnym atutem jest bukiet od razu w wazonie z wodą.”</p><cite>Wodnik W., Google</cite></figure>
-          <figure class="rq"><p>„Najpiękniejsze bukiety w Oławie i okolicy. Pani Iwona przemiła i zawsze pomocna we wszystkim.”</p><cite>Łukasz K., Google</cite></figure>
-          <figure class="rq"><p>„Pani Iwona naprawdę wszystko zrobiła super. Jestem bardzo zadowolona z bukietu ślubnego, był przepiękny.”</p><cite>Anna, Google</cite></figure>
-          <figure class="rq"><p>„Zawsze dostaję bukiety od męża z tej kwiaciarni. Są piękne, bardzo estetyczne i długo się trzymają świeże.”</p><cite>Monika Ł., Google</cite></figure>
-          <figure class="rq"><p>„Kwiatki świeże, widać, że zawód wykonywany z miłości do kwiatów.”</p><cite>Aleksandra S., Google</cite></figure>
-        </div>
-        <div class="rv-ctrl">
-          <button type="button" id="rvPrev" aria-label="Poprzednia opinia"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-          <button type="button" id="rvNext" aria-label="Następna opinia"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
-          <span class="rv-bar"><i id="rvBar"></i></span>
-          <span class="rv-num" id="rvNum">1 / 5</span>
-        </div>
+<section class="sec" id="opinie" aria-labelledby="rv-h" style="padding-top:clamp(30px,5vh,60px)">
+  <svg class="g" data-speed="0" viewBox="0 0 160 260" style="right:3vw;top:10%;width:clamp(60px,5vw,90px)" aria-hidden="true"><path class="a" d="M80 258 C84 200 70 150 86 90 C96 50 84 24 92 4" pathLength="1"/><path class="a" d="M73 225 a13 13 0 1 0 -26 0 a13 13 0 1 0 26 0" pathLength="1"/><path class="a" d="M116 200 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M70 170 a12 12 0 1 0 -24 0 a12 12 0 1 0 24 0" pathLength="1"/><path class="a" d="M115 140 a11 11 0 1 0 -22 0 a11 11 0 1 0 22 0" pathLength="1"/><path class="a" d="M76 112 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M114 82 a10 10 0 1 0 -20 0 a10 10 0 1 0 20 0" pathLength="1"/><path class="a" d="M81 56 a9 9 0 1 0 -18 0 a9 9 0 1 0 18 0" pathLength="1"/><path class="a" d="M110 30 a8 8 0 1 0 -16 0 a8 8 0 1 0 16 0" pathLength="1"/></svg>
+  <div class="wrap rv-grid">
+    <div class="score rv" aria-label="Ocena 4,9 na 5">4,9<small><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Mapach Google</small></div>
+    <div>
+      <p class="kicker rv">Opinie klientów</p>
+      <h2 id="rv-h" class="sr">Opinie</h2>
+      <div class="rotator rv d1" id="rotator" aria-live="polite">
+        <figure class="rq on"><p>„Przepiękna kompozycja, stworzona z dużym wyczuciem i dbałością o każdy detal. Ogromnym atutem jest bukiet od razu w wazonie z wodą.”</p><cite>Wodnik W., Google</cite></figure>
+        <figure class="rq"><p>„Najpiękniejsze bukiety w Oławie i okolicy. Pani Iwona przemiła i zawsze pomocna we wszystkim.”</p><cite>Łukasz K., Google</cite></figure>
+        <figure class="rq"><p>„Pierwszy raz przekonałam się do użycia kwiatomatu. Bukiet cudowny, kwiaty świeże i w przystępnej cenie.”</p><cite>Karolina L., Google</cite></figure>
+        <figure class="rq"><p>„Zawsze dostaję bukiety od męża z tej kwiaciarni. Są piękne, bardzo estetyczne i długo się trzymają świeże.”</p><cite>Monika Ł., Google</cite></figure>
+        <figure class="rq"><p>„Pani Iwona naprawdę wszystko zrobiła super. Jestem bardzo zadowolona z bukietu ślubnego, był przepiękny.”</p><cite>Anna, Google</cite></figure>
       </div>
+      <div class="rv-ctrl">
+        <button type="button" id="rvPrev" aria-label="Poprzednia opinia"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="rvNext" aria-label="Następna opinia"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+        <span class="rv-bar"><i id="rvBar"></i></span><span class="rv-num" id="rvNum">1 / 5</span>
+      </div>
+      <p class="rv-all"><a class="link" href="https://maps.google.com/?cid=10932640024013107505" target="_blank" rel="noopener">Wszystkie opinie w Google <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
     </div>
-    <div class="marquee" aria-hidden="true"><div class="mq-track">
-      <span>Bardzo miła obsługa, przepiękne bukiety w dobrej cenie.<small>Diana D.</small></span>
-      <span>Piękne bukiety, wiązanki i stroiki oraz przemiła obsługa.<small>Marzena C.</small></span>
-      <span>Najładniejsza gipsówka w Oławie.<small>Agnieszka G.</small></span>
-      <span>Dziś zauroczył mnie przepiękny wianek świąteczny.<small>Google</small></span>
-      <span>Bukiet cudowny, kwiaty świeże i w przystępnej cenie.<small>Karolina L.</small></span>
-      <span>Bardzo miła obsługa, przepiękne bukiety w dobrej cenie.<small>Diana D.</small></span>
-      <span>Piękne bukiety, wiązanki i stroiki oraz przemiła obsługa.<small>Marzena C.</small></span>
-      <span>Najładniejsza gipsówka w Oławie.<small>Agnieszka G.</small></span>
-      <span>Dziś zauroczył mnie przepiękny wianek świąteczny.<small>Google</small></span>
-      <span>Bukiet cudowny, kwiaty świeże i w przystępnej cenie.<small>Karolina L.</small></span>
-    </div></div>
-    <p class="rv-all"><a class="btn btn-line" href="https://maps.google.com/?cid=10932640024013107505" target="_blank" rel="noopener">Wszystkie opinie w Google</a></p>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="kontakt" data-bg="paper" aria-labelledby="c-h">
-  <svg class="g" data-speed="0.06" viewBox="0 0 640 80" style="right:-6vw;top:10%;width:clamp(280px,36vw,560px)" aria-hidden="true"><g transform="translate(640,0) scale(-1,1)"><path class="i" d="M4 50 C80 20 120 70 200 44 S320 14 380 44 S520 74 636 36" pathLength="1"/><path class="a" d="M196 44 c6-16 26-20 34-10 c-12 2-22 6-34 10" pathLength="1"/><path class="a" d="M380 44 c-6 14-24 18-34 12 c12-2 22-6 34-12" pathLength="1"/><path class="a" d="M520 56 c6-16 26-18 34-8 c-12 2-22 4-34 8" pathLength="1"/><path class="a" d="M90 38 c-4-14 6-28 20-28 c-4 10-10 20-20 28" pathLength="1"/><path class="b" d="M292 24 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="b" d="M458 62 a5 5 0 1 0 -10 0 a5 5 0 1 0 10 0" pathLength="1"/><path class="i" d="M380 44 C392 30 410 28 418 36 C424 44 414 52 406 46" pathLength="1"/></g></svg>
-<svg class="g" data-speed="0.1" viewBox="0 0 200 210" style="left:44%;bottom:6%;width:clamp(100px,10vw,160px)" aria-hidden="true"><path class="b" d="M100 100 C110 92 120 104 110 114 C96 128 78 110 86 94 C96 74 128 80 132 104 C136 132 104 148 82 138 C56 126 56 92 74 74 C96 52 140 60 150 96" pathLength="1"/><path class="i" d="M150 96 C156 130 132 160 100 162 C64 164 42 136 46 104" pathLength="1"/><path class="i" d="M46 104 C48 70 74 46 106 46 C134 46 154 64 156 84" pathLength="1"/><path class="a" d="M100 162 C100 180 96 196 92 208" pathLength="1"/><path class="a" d="M98 184 C120 172 140 174 150 186 C128 194 112 192 98 184" pathLength="1"/></svg>
-  <div class="c-grid content">
-    <div>
-      <p class="kicker">Kontakt i dojazd</p>
-      <h2 id="c-h">Zadzwoń <em>albo wpadnij.</em></h2>
-      <a class="phone-big" href="tel:+48880056918">880 056 918</a>
-      <button class="copy" type="button" data-copy="880056918">Kopiuj numer</button>
-      <p style="margin:18px 0 0;font-size:17px">ul. Wiejska 28A, 55-200 Oława<br><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p>
-      <div class="c-links"><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></div>
-    </div>
-    <div>
-      <table class="hours" aria-label="Godziny otwarcia">
-        <tr data-d="1 2 3 4 5"><td>Poniedziałek – piątek</td><td>9:00 – 18:00</td></tr>
-        <tr data-d="6"><td>Sobota</td><td>9:00 – 14:00</td></tr>
-        <tr data-d="0"><td>Niedziela</td><td>zamknięte</td></tr>
-        <tr><td>Kwiatomaty</td><td>całą dobę</td></tr>
-      </table>
-      <div class="c-map"><iframe title="Mapa: Kwiaciarnia Strelicja, Wiejska 28A, Oława" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiaciarnia%20Strelicja%20Wiejska%2028A%20O%C5%82awa&z=15&output=embed"></iframe></div>
+<section class="sec" id="kontakt" aria-labelledby="c-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-card">
+      <div>
+        <p class="kicker rv">Kontakt</p>
+        <h2 id="c-h" class="rv d1">Zadzwoń <em>albo wpadnij.</em></h2>
+        <a class="phone-big rv d2" href="tel:+48880056918">880 056 918</a>
+        <button class="copy" type="button" data-copy="880056918">Kopiuj numer</button>
+        <p class="c-addr">Pracownia: ul. Wiejska 28A, 55-200 Oława<br><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p>
+        <div class="st-cta"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń</a><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></div>
+      </div>
+      <div>
+        <table class="hours" aria-label="Godziny otwarcia">
+          <tr data-d="1 2 3 4 5"><td>Poniedziałek – piątek</td><td>9:00 – 18:00</td></tr>
+          <tr data-d="6"><td>Sobota</td><td>9:00 – 14:00</td></tr>
+          <tr data-d="0"><td>Niedziela</td><td>zamknięte</td></tr>
+          <tr><td>Kwiatomaty (Oława, Jelcz-Laskowice)</td><td>całą dobę</td></tr>
+        </table>
+        <div class="c-map"><iframe title="Mapa: Kwiaciarnia Strelicja, Wiejska 28A, Oława" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiaciarnia%20Strelicja%20Wiejska%2028A%20O%C5%82awa&z=15&output=embed"></iframe></div>
+      </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="foot night">
-  <svg class="g" data-speed="0" viewBox="0 0 230 270" style="right:3vw;bottom:-10px;width:clamp(140px,14vw,220px)" aria-hidden="true"><g transform="translate(230,0) scale(-1,1)"><path class="a" d="M110 266 C108 220 104 180 98 140" pathLength="1"/><path class="i" d="M98 140 C130 128 170 120 214 112 C176 134 136 146 98 146" pathLength="1"/><path class="b" d="M128 128 C130 96 140 66 160 30 C152 70 146 100 140 126" pathLength="1"/><path class="b" d="M144 124 C156 98 176 76 204 58 C182 84 168 104 156 122" pathLength="1"/><path class="b" d="M120 130 C116 104 118 78 128 52 C128 82 128 104 128 128" pathLength="1"/><path class="i" d="M150 120 C170 108 188 100 206 96" pathLength="1"/><path class="a" d="M104 236 C70 218 46 182 44 134 C72 156 94 192 104 236" pathLength="1"/><path class="a" d="M104 236 C84 206 62 172 44 134" pathLength="1"/><path class="a" d="M112 214 C140 200 168 174 184 144 C154 156 128 180 112 214" pathLength="1"/></g></svg>
-  <div class="foot-grid">
-    <div><img src="img/logo-dark.webp" alt="Kwiaciarnia Strelicja, Iwona Dąbrowa" width="640" height="640" loading="lazy"><p style="margin-top:14px">Świeże kwiaty o każdej porze.</p></div>
-    <div><h3>Kwiaciarnia</h3><p>ul. Wiejska 28A, 55-200 Oława</p><p><a href="tel:+48880056918">880 056 918</a></p><p><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p><p><a href="https://www.instagram.com/kwiaciarniastrelicjaid/" target="_blank" rel="noopener">Instagram</a></p></div>
-    <div><h3>Kwiatomaty 24h</h3><p>Oława, ul. Lipowa 1c</p><p>Jelcz-Laskowice, ul. Oławska 27</p></div>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja, Iwona Dąbrowa" width="640" height="640" loading="lazy"><p style="margin-top:12px">Świeże kwiaty o każdej porze.</p></div>
+      <div><h3>Pracownia</h3><p>ul. Wiejska 28A, 55-200 Oława</p><p><a href="tel:+48880056918">880 056 918</a></p><p><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p><p><a href="https://www.instagram.com/kwiaciarniastrelicjaid/" target="_blank" rel="noopener">Instagram</a></p></div>
+      <div><h3>Kwiatomaty 24/7</h3><p>Oława, ul. Lipowa 1c</p><p>Jelcz-Laskowice, ul. Oławska 27</p></div>
+    </div>
+    <small>© <span id="y">2026</span> Kwiaciarnia Strelicja Iwona Dąbrowa. Strona: Adrian Wojtasik <!-- TODO: potwierdzić podpis z firmą --></small>
   </div>
-  <small>© <span id="y">2026</span> Kwiaciarnia Strelicja Iwona Dąbrowa. Strona: Adrian Wojtasik <!-- TODO: potwierdzić podpis z firmą --></small>
 </footer>
 
 <div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div>
@@ -700,150 +624,90 @@ body.is-night .brand .light{opacity:0}body.is-night .brand .dark{opacity:1}
 (()=>{
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), lerp=(a,b,t)=>a+(b-a)*t;
-const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
-let vw=innerWidth, vh=innerHeight, mobile=vw<=860;
+let vw=innerWidth, vh=innerHeight;
 
 /* time in Poland */
 const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
 const wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[parts.find(p=>p.type==='weekday').value];
 const H=+parts.find(p=>p.type==='hour').value, M=+parts.find(p=>p.type==='minute').value, h=H+M/60;
-const close=wd>=1&&wd<=5?18:wd===6?14:null, open=close!==null&&h>=9&&h<close;
-const st=$('#status');
-if(open) st.querySelector('span').textContent=`Kwiaciarnia otwarta do ${close}:00. Kwiatomaty działają całą dobę.`;
-else {st.classList.add('closed'); st.querySelector('span').textContent='Kwiaciarnia teraz zamknięta. Kwiatomaty działają całą dobę.';}
-$$('.hours tr[data-d]').forEach(tr=>{if(tr.dataset.d.split(' ').includes(String(wd)))tr.classList.add('today')});
-/* kiosk rescue scenarios */
 const hhmm=`${String(H).padStart(2,'0')}:${String(M).padStart(2,'0')}`;
+const closeAt=d=>d>=1&&d<=5?18:d===6?14:null, shopOpen=(d,hr)=>{const c=closeAt(d);return c!==null&&hr>=9&&hr<c};
+const close=closeAt(wd), open=shopOpen(wd,h);
 const DAYN=['niedziela','poniedziałek','wtorek','środa','czwartek','piątek','sobota'];
-const shopOpen=(d,hr)=>{const c=d>=1&&d<=5?18:d===6?14:null;return c!==null&&hr>=9&&hr<c};
-const FIX='Podjedź do kwiatomatu: <b>Oława, Lipowa 1c</b> albo <b>Jelcz-Laskowice, Oławska 27</b>. Wybierasz bukiet z pracowni, płacisz przy automacie i jedziesz.';
-const SC={
-  live:{day:`Teraz, ${DAYN[wd]}`,time:hhmm,d:wd,h:h,problem:open?`Kwiaciarnia jest otwarta do ${close}:00, zapraszamy na Wiejską 28A.`:'Kwiaciarnia jest teraz zamknięta. Ale kwiaty nadal możesz mieć od ręki.',fix:open?'A gdy zamkniemy, bukiety dalej czekają w kwiatomatach: <b>Oława, Lipowa 1c</b> i <b>Jelcz-Laskowice, Oławska 27</b>.':FIX},
-  '6:40':{day:'Dzień roboczy, rano',time:'6:40',d:3,h:6.67,problem:'„Urodziny w pracy, a kwiaciarnie otwierają się dopiero o 9.”',fix:FIX},
-  '21:30':{day:'Wieczór w tygodniu',time:'21:30',d:2,h:21.5,problem:'„Rocznica. Telefon przypomniał o niej dopiero wieczorem.”',fix:FIX},
-  nd11:{day:'Niedziela',time:'11:00',d:0,h:11,problem:'„Imieniny mamy, a w niedzielę wszystkie kwiaciarnie zamknięte.”',fix:FIX},
-  '23:10':{day:'Późny wieczór',time:'23:10',d:5,h:23.17,problem:'„Późny powrót z pracy, a w domu czeka ktoś ważny.”',fix:FIX}};
-$('[data-sc="live"] b').textContent=hhmm; $('[data-sc="live"] span').textContent=open?'Teraz: otwarte wszystko.':'Teraz: kwiaciarnia zamknięta.';
-const scBtns=$$('.sc-list button'), stg=$('#scStage'), rescue=$('#rescue'); let scI=0;
-function showSc(i,anim=true){scI=(i+scBtns.length)%scBtns.length;const b=scBtns[scI],c=SC[b.dataset.sc];
-  scBtns.forEach(x=>{x.setAttribute('aria-selected',x===b);x.querySelector('i').classList.remove('run')});
-  const fill=()=>{$('#scDay').textContent=c.day;$('#scTime').textContent=c.time;const so=shopOpen(c.d,c.h),sh=$('#scShop');
-    sh.className='pill '+(so?'shop':'off');sh.innerHTML='<i></i>'+(so?'otwarta':'zamknięta');$('#scProblem').textContent=c.problem;$('#scFix').innerHTML=c.fix;stg.classList.remove('swap')};
-  if(anim&&!RM){stg.classList.add('swap');setTimeout(fill,300)}else fill();
-  const bar=b.querySelector('i');void bar.offsetWidth;if(!RM&&rescue.dataset.auto==='1')bar.classList.add('run')}
-scBtns.forEach((b,i)=>{b.addEventListener('click',()=>{rescue.dataset.auto='0';showSc(i)});b.querySelector('i').addEventListener('animationend',()=>showSc(scI+1))});
-rescue.addEventListener('mouseenter',()=>rescue.classList.add('paused'));rescue.addEventListener('mouseleave',()=>rescue.classList.remove('paused'));
-rescue.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();rescue.dataset.auto='0';showSc(scI+1);scBtns[scI].focus()}if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();rescue.dataset.auto='0';showSc(scI-1);scBtns[scI].focus()}});
-rescue.dataset.auto='1'; showSc(0,false);
-const steps=$('#steps');
-new IntersectionObserver((e,o)=>e.forEach(x=>{if(x.isIntersecting){steps.classList.add('on');o.disconnect()}}),{threshold:.5}).observe(steps);
+const st=$('#status');
+if(open) st.querySelector('span').textContent=`Pracownia otwarta do ${close}:00. Kwiatomaty działają całą dobę.`;
+else {st.classList.add('closed'); st.querySelector('span').textContent='Pracownia teraz zamknięta. Kwiatomaty działają całą dobę.';}
+$('#todayLbl').textContent=`Dziś, ${DAYN[wd]}`;
+const ts=$('#todayShop'); ts.textContent=close===null?'zamknięta':`9:00–${close}:00`; if(open)ts.classList.add('on');
+$$('.hours tr[data-d]').forEach(tr=>{if(tr.dataset.d.split(' ').includes(String(wd)))tr.classList.add('today')});
+
+/* reveal + motifs */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{rootMargin:'0px 0px -8% 0px'});
+$$('.rv,.g').forEach(el=>RM?el.classList.add('in'):io.observe(el));
 
 /* nav */
 const nav=$('#nav'), mb=$('#menubtn'), bar=$('#callbar');
 mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
 $$('#navlinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
-const links=$$('#navlinks a'), ind=$('#navind'), targets=links.map(a=>$(a.getAttribute('href')));
+const links=$$('#navlinks a'), targets=links.map(a=>$(a.getAttribute('href')));
+let tick=false;
+function onScroll(){tick=false;const y=scrollY;nav.classList.toggle('scrolled',y>10);bar.classList.toggle('show',y>vh*.7);
+  let idx=-1;targets.forEach((t,k)=>{const r=t.getBoundingClientRect();if(r.top<vh*.4&&r.bottom>vh*.4)idx=k});links.forEach((a,k)=>a.toggleAttribute('aria-current',k===idx))}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
 
-/* background stops */
-const css=getComputedStyle(document.documentElement);
-const hex=v=>{v=v.trim().replace('#','');return [0,2,4].map(i=>parseInt(v.slice(i,i+2),16))};
-const COL={paper:hex(css.getPropertyValue('--bg-paper')),sage:hex(css.getPropertyValue('--bg-sage')),night:hex(css.getPropertyValue('--bg-night'))};
-const secs=$$('[data-bg]'); let stops=[];
-const W={paper:{},sage:{sage:1},night:{night:1}};
-const mix=(ca,cb,t)=>{const o=ca.map((v,k)=>lerp(v,cb[k],t));const wa=ca.w,wb=cb.w;o.sage=lerp(wa.sage||0,wb.sage||0,t);o.night=lerp(wa.night||0,wb.night||0,t);return o};
-const colorAt=y=>{if(y<=stops[0][0])return mix(stops[0][1],stops[0][1],0);for(let i=1;i<stops.length;i++){if(y<=stops[i][0]){const[a,ca]=stops[i-1],[b,cb]=stops[i];return mix(ca,cb,b===a?1:clamp((y-a)/(b-a)))}}const l=stops[stops.length-1][1];return mix(l,l,0)};
+/* kiosk scenarios */
+const FIX='Podjedź do kwiatomatu: <b>Oława, Lipowa 1c</b> albo <b>Jelcz-Laskowice, Oławska 27</b>. Wybierasz bukiet z pracowni, płacisz przy automacie i jedziesz.';
+const SC={
+  live:{day:`Teraz, ${DAYN[wd]}`,time:hhmm,d:wd,h:h,problem:open?`Pracownia jest otwarta do ${close}:00. Zapraszamy na Wiejską 28A.`:'Pracownia jest teraz zamknięta. Kwiaty i tak możesz mieć od ręki.',fix:open?'A po zamknięciu bukiety dalej czekają w kwiatomatach: <b>Oława, Lipowa 1c</b> i <b>Jelcz-Laskowice, Oławska 27</b>.':FIX},
+  a:{day:'Dzień roboczy, rano',time:'6:40',d:3,h:6.67,problem:'Urodziny koleżanki w pracy, a kwiaciarnie otwierają się dopiero o 9.',fix:FIX},
+  b:{day:'Wieczór w tygodniu',time:'21:30',d:2,h:21.5,problem:'Rocznica. Telefon przypomniał o niej dopiero wieczorem.',fix:FIX},
+  c:{day:'Niedziela',time:'11:00',d:0,h:11,problem:'Imieniny mamy, a w niedzielę wszystkie kwiaciarnie są zamknięte.',fix:FIX},
+  d:{day:'Późny wieczór',time:'23:10',d:5,h:23.17,problem:'Późny powrót z pracy, a w domu czeka ktoś ważny.',fix:FIX}};
+$('[data-sc="live"] b').textContent=hhmm; $('[data-sc="live"] span').textContent=open?'Teraz: otwarte wszystko.':'Teraz: pracownia zamknięta.';
+const scBtns=$$('.sc-list button'), stg=$('#scStage'), rescue=$('#rescue'); let scI=0, auto=true;
+function showSc(i,anim=true){scI=(i+scBtns.length)%scBtns.length;const b=scBtns[scI],c=SC[b.dataset.sc];
+  scBtns.forEach(x=>{x.setAttribute('aria-selected',x===b);x.querySelector('i').classList.remove('run')});
+  const fill=()=>{$('#scDay').textContent=c.day;$('#scTime').textContent=c.time;const so=shopOpen(c.d,c.h),sh=$('#scShop');
+    sh.className='pill '+(so?'shop':'off');sh.innerHTML='<i></i>'+(so?'otwarta':'zamknięta');$('#scProblem').textContent=c.problem;$('#scFix').innerHTML=c.fix;stg.classList.remove('swap')};
+  if(anim&&!RM){stg.classList.add('swap');setTimeout(fill,300)}else fill();
+  const bi=b.querySelector('i');void bi.offsetWidth;if(!RM&&auto)bi.classList.add('run')}
+scBtns.forEach((b,i)=>{b.addEventListener('click',()=>{auto=false;showSc(i)});b.querySelector('i').addEventListener('animationend',()=>showSc(scI+1))});
+rescue.addEventListener('mouseenter',()=>rescue.classList.add('paused'));rescue.addEventListener('mouseleave',()=>rescue.classList.remove('paused'));
+rescue.addEventListener('keydown',e=>{const k=e.key;if(['ArrowDown','ArrowRight','ArrowUp','ArrowLeft'].includes(k)){e.preventDefault();auto=false;showSc(scI+(k==='ArrowDown'||k==='ArrowRight'?1:-1));scBtns[scI].focus()}});
+showSc(0,false);
 
-/* cached geometry */
-let G={}, gs=[];
-const hero=$('.hero'), win=$('#window'), stage=$('.hero-stage'), w1=$('#window .w1');
-const stm=$('#stmedia'), stImgs=$$('#stmedia img'), masonry=$('#masonry');
-function measure(){vw=innerWidth;vh=innerHeight;mobile=vw<=860;
-  const top=el=>el.getBoundingClientRect().top+scrollY;
-  stops=[];secs.forEach((s,i)=>{const t=top(s),b=t+s.offsetHeight,c=COL[s.dataset.bg].slice();c.w=W[s.dataset.bg];stops.push([i?t+vh*.22:t,c],[b,c])});stops.sort((a,b)=>a[0]-b[0]);
-  gs=$$('.g').map(el=>{el.style.transform='';return{el,top:top(el),h:el.getBoundingClientRect().height,sp:+(el.dataset.speed||.1),stuck:!!el.closest('.hero-stage')}});
-  G.heroTop=top(hero);G.heroH=hero.offsetHeight;G.stTop=top(stm);G.stH=stm.offsetHeight;G.mTop=top(masonry);G.mH=masonry.offsetHeight;
-  G.tg=targets.map(t=>[top(t),t.offsetHeight]); G.links=links.map(a=>[a.offsetLeft,a.offsetWidth]);
-  layoutCols();
-}
+/* occasions panels */
+const pans=$$('.panel');
+const openP=p=>{if(p.classList.contains('open'))return;pans.forEach(x=>{x.classList.toggle('open',x===p);x.setAttribute('aria-expanded',x===p)})};
+pans.forEach(p=>{p.addEventListener('click',()=>openP(p));p.addEventListener('focusin',()=>openP(p));
+  if(matchMedia('(hover:hover)').matches)p.addEventListener('mouseenter',()=>openP(p));
+  p.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target===p){e.preventDefault();openP(p)}})});
 
-/* smoothed scroll value drives everything -> fluid motion even with coarse wheel steps */
-let sy=scrollY, ty=scrollY, running=false, lastNight=null, lastIdx=-2, lastW='';
-const bgl=$$('.bgfx i');
-function tick(){
-  ty=scrollY; sy=RM?ty:lerp(sy,ty,.16); if(Math.abs(ty-sy)<.4)sy=ty;
-  render(sy); if(sy!==ty){requestAnimationFrame(tick)}else running=false;
-}
-function kick(){if(!running){running=true;requestAnimationFrame(tick)}}
-function render(y){
-  // instant UI (use real scroll)
-  nav.classList.toggle('scrolled',ty>20); bar.classList.toggle('show',ty>vh*.8);
-  const c=colorAt(y+vh*.5), rgb=`rgb(${[c[0],c[1],c[2]].map(Math.round)})`;
-  const w=[1,(c.sage+c.night).toFixed(3),c.night.toFixed(3)]; if(w.join()!==lastW){lastW=w.join();bgl[1].style.opacity=w[1];bgl[2].style.opacity=w[2];nav.style.setProperty('--navbg',rgb)}
-  const night=(.2126*c[0]+.7152*c[1]+.0722*c[2])/255<.32; if(night!==lastNight){document.body.classList.toggle('is-night',night);lastNight=night}
-  // hero window
-  const hp=RM?0:clamp((y-G.heroTop)/(G.heroH-vh)), e=ease(hp);
-  hero.style.setProperty('--p',e.toFixed(4));
-  const H0=mobile?vh*.36:vh*.46, W0=mobile?vw*.64:Math.min(vw*.32,480), T0=vh*.5, L0=(vw-W0)/2;
-  const sx=lerp(W0,vw,e)/vw, syy=lerp(H0,vh,e)/vh, cx=lerp(L0+W0/2,vw/2,e)-vw/2, cy=lerp(T0+H0/2,vh/2,e)-vh/2;
-  win.style.transform=`translate3d(${cx.toFixed(2)}px,${cy.toFixed(2)}px,0) scale(${sx.toFixed(5)},${syy.toFixed(5)})`;
-  win.style.setProperty('--isx',(1/sx).toFixed(5));win.style.setProperty('--isy',(1/syy).toFixed(5));
-  { const iw=1024,ih=1280,kv=Math.max(vw/iw,vh/ih),kw=Math.max(W0/iw,H0/ih),r=lerp(kw/kv,1,e),dy=(1-e)*Math.min((ih*kw-H0)/2,ih*kw*.18);
-    if(G.w1k!==vw+'x'+vh){G.w1k=vw+'x'+vh;Object.assign(w1.style,{width:iw*kv+'px',height:ih*kv+'px',left:(vw-iw*kv)/2+'px',top:(vh-ih*kv)/2+'px'})}
-    w1.style.transform=`translate3d(0,${dy.toFixed(1)}px,0) scale(${r.toFixed(5)})`; }
-  win.style.setProperty('--o2',clamp((hp-.55)/.15).toFixed(3)); stage.style.setProperty('--o3',clamp((hp-.78)/.18).toFixed(3));
-  // garden
-  for(const g of gs){const top=g.top-y;let p=g.stuck?clamp(hp*1.6+.25):clamp((vh-top)/(vh*.85));if(RM)p=1;
-    const d=(1-p).toFixed(3); if(d!==g.d){g.d=d;g.el.style.setProperty('--d',d)}
-    if(!g.stuck&&!RM&&top<vh*1.5&&top+g.h>-vh*.5)g.el.style.transform=`translate3d(0,${(-(top+g.h/2-vh/2)*g.sp).toFixed(1)}px,0)`}
-  // gallery columns parallax
-  // studio parallax
-  {const o=(G.stTop+G.stH/2-y-vh/2);if(Math.abs(o)<vh*1.2)stImgs.forEach((im,i)=>im.style.setProperty('--py',(o*[-.06,-.1,-.04][i]).toFixed(1)+'px'))}
-  // nav indicator
-  let idx=-1; const mid=y+vh*.45; G.tg.forEach(([t,hh],k)=>{if(mid>t&&mid<t+hh)idx=k});
-  if(idx!==lastIdx){lastIdx=idx;links.forEach((a,k)=>a.toggleAttribute('aria-current',k===idx));
-    if(idx<0)ind.style.opacity=0;else{const[l,w]=G.links[idx];ind.style.opacity=1;ind.style.width=(w-28)+'px';ind.style.transform=`translateX(${l+14}px)`}}
-}
-addEventListener('scroll',kick,{passive:true});
-addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(()=>{measure();render(sy=scrollY)},150)});
-addEventListener('load',()=>{measure();render(sy=scrollY)});
-
-/* gallery: editorial spreads */
-const items=$$('.gi'); let filter='all', limit=10, cols=[], shown=[];
+/* gallery spreads */
+const masonry=$('#masonry'), items=$$('.gi'); let filter='all', limit=10, shown=[];
 const moreBox=$('#galMore'), moreBtn=$('#moreBtn');
 const QUOTES=[['„Najładniejsza gipsówka w Oławie.”','Agnieszka G., Google'],['„Bardzo miła obsługa, przepiękne bukiety w dobrej cenie.”','Diana D., Google'],
  ['„Kwiaty świeże, starannie dobrane i pięknie się prezentują.”','Wodnik W., Google'],['„Najpiękniejsze bukiety w Oławie i okolicy.”','Łukasz K., Google'],
  ['„Są piękne, bardzo estetyczne i długo się trzymają świeże.”','Monika Ł., Google'],['„Piękne bukiety, wiązanki i stroiki oraz przemiła obsługa.”','Marzena C., Google'],
- ['„Dziś zauroczył mnie przepiękny wianek świąteczny.”','opinia w Google'],['„Widać, że zawód wykonywany z miłości do kwiatów.”','Aleksandra S., Google'],
- ['„Ogromnym atutem jest bukiet od razu w wazonie z wodą.”','Wodnik W., Google'],['„Bukiet ślubny był przepiękny. Na pewno tu wrócimy.”','Anna, Google']];
-// [col, row] per slot; q = quote tile
+ ['„Dziś zauroczył mnie przepiękny wianek świąteczny.”','opinia w Google'],['„Widać, że zawód wykonywany z miłości do kwiatów.”','Aleksandra S., Google']];
 const LA=[['1/8','1/4'],['8/13','1/3'],['9/13','3/5'],['2/6','4/6'],['6/9','5/7'],['q','10/13','5/7'],['q','2/6','6/7']];
 const LB=[['7/13','1/4'],['1/6','1/3'],['1/5','3/5'],['8/12','4/6'],['5/8','5/7'],['q','1/4','5/7'],['q','8/12','6/7']];
 const LM=[['1/7','1/3'],['1/4','3/4'],['4/7','3/5'],['1/4','4/6'],['4/7','5/6'],['q','4/7','6/7']];
-const reveal=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');reveal.unobserve(x.target)}}),{rootMargin:'0px 0px -6% 0px'});
-function layoutCols(){
+const gio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');gio.unobserve(x.target)}}),{rootMargin:'0px 0px -6% 0px'});
+function layout(){vw=innerWidth;vh=innerHeight;
   const vis=items.filter(it=>filter==='all'||it.dataset.cat===filter); shown=vis.slice(0,limit);
-  masonry.textContent=''; cols=[]; let q=0;
-  for(let i=0;i<shown.length;i+=5){
-    const sp=document.createElement('div');sp.className='spread';masonry.appendChild(sp);cols.push(sp);
-    const L=vw<=860?LM:((i/5)%2?LB:LA); const chunk=shown.slice(i,i+5);
-    chunk.forEach((it,k)=>{const[c,r]=L[k];it.style.gridColumn=c;it.style.gridRow=r;sp.appendChild(it);
-      if(!it.classList.contains('in')){it.style.transitionDelay=(k*80)+'ms';reveal.observe(it)}});
-    if(chunk.length===5)L.slice(5).forEach(qq=>{const f=document.createElement('blockquote');f.className='gq';f.style.gridColumn=qq[1];f.style.gridRow=qq[2];
-      const t=QUOTES[q++%QUOTES.length];f.innerHTML=`<p>${t[0]}</p><cite>${t[1]}</cite>`;sp.appendChild(f)});
-  }
-  const rest=vis.length-shown.length; moreBox.hidden=rest<=0; moreBtn.textContent=`Pokaż więcej zdjęć (${rest})`;
-  G.mH=masonry.offsetHeight;
-}
-function refresh(){measure();render(sy=scrollY)}
-$$('.filters button').forEach(b=>b.addEventListener('click',()=>{
-  $$('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-  masonry.classList.add('fading');
-  setTimeout(()=>{filter=b.dataset.f;limit=10;items.forEach(i=>i.classList.remove('in'));refresh();masonry.classList.remove('fading')},350);
-}));
-moreBtn.addEventListener('click',()=>{limit+=10;refresh()});
-if(RM)items.forEach(i=>i.classList.add('in'));
-measure(); render(scrollY);
+  masonry.textContent=''; let q=0;
+  for(let i=0;i<shown.length;i+=5){const sp=document.createElement('div');sp.className='spread';masonry.appendChild(sp);
+    const L=vw<=860?LM:((i/5)%2?LB:LA), chunk=shown.slice(i,i+5);
+    chunk.forEach((it,k)=>{const[c,r]=L[k];it.style.gridColumn=c;it.style.gridRow=r;sp.appendChild(it);if(!it.classList.contains('in')){it.style.transitionDelay=(k*70)+'ms';RM?it.classList.add('in'):gio.observe(it)}});
+    if(chunk.length===5)L.slice(5).forEach(qq=>{const f=document.createElement('blockquote');f.className='gq';f.style.gridColumn=qq[1];f.style.gridRow=qq[2];const t=QUOTES[q++%QUOTES.length];f.innerHTML=`<p>${t[0]}</p><cite>${t[1]}</cite>`;sp.appendChild(f)})}
+  const rest=vis.length-shown.length; moreBox.hidden=rest<=0; moreBtn.textContent=`Pokaż więcej zdjęć (${rest})`}
+$$('.filters button').forEach(b=>b.addEventListener('click',()=>{$$('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));masonry.classList.add('fading');
+  setTimeout(()=>{filter=b.dataset.f;limit=10;items.forEach(i=>i.classList.remove('in'));layout();masonry.classList.remove('fading')},350)}));
+moreBtn.addEventListener('click',()=>{limit+=10;layout()});
+let lastW=vw;addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(()=>{if((innerWidth<=860)!==(lastW<=860)){lastW=innerWidth;layout()}vw=innerWidth;vh=innerHeight},150)});
+layout();
+
 /* lightbox (FLIP) */
 const lb=$('#lb'), li=$('#lbImg'), cap=$('#lbCap'), cnt=$('#lbCount');
 let cur=-1, lastFocus=null;
@@ -867,13 +731,6 @@ lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);
   if(e.key==='Tab'){const f=$$('.lb-ui button');const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
 let tx=null;lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)step(dx<0?1:-1);tx=null});
-
-/* occasions: expanding panels */
-const pans=$$('.panel');
-const openP=p=>{if(p.classList.contains('open'))return;pans.forEach(x=>{x.classList.toggle('open',x===p);x.setAttribute('aria-expanded',x===p)})};
-pans.forEach(p=>{p.addEventListener('click',()=>openP(p));p.addEventListener('focusin',()=>openP(p));
-  if(matchMedia('(hover:hover)').matches)p.addEventListener('mouseenter',()=>openP(p));
-  p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){if(e.target===p){e.preventDefault();openP(p)}}})});
 
 /* reviews */
 const rq=$$('.rq'), rb=$('#rvBar'), rn=$('#rvNum'); let ri=0;
