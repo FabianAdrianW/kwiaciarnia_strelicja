@@ -97,7 +97,7 @@ PLACE = {
  'foot': [motif('strelitzia', 'right:3vw;bottom:-10px;width:clamp(140px,14vw,220px)', 0, True)],
 }
 
-SIZES = ['s1', 's2', 's3', 's1', 's3', 's2']
+CATN = {'bukiety': 'Bukiet', 'okazje': 'Okazja', 'swieta': 'Święta', 'pracownia': 'Pracownia'}
 
 def gallery():
     out = []
@@ -107,7 +107,7 @@ def gallery():
             f'<figure class="gi" data-cat="{it["cat"]}" tabindex="0" role="button" aria-label="Powiększ: {it["alt"]}">'
             f'<img src="img/g/{i}-640.webp" srcset="img/g/{i}-640.webp 640w, img/g/{i}-1280.webp 1280w" sizes="(max-width:860px) 48vw, 32vw" '
             f'width="{w}" height="{h}" loading="lazy" decoding="async" alt="{it["alt"]}" data-full="img/g/{i}-1280.webp">'
-            f'<figcaption>{it["alt"]}</figcaption></figure>')
+            f'<figcaption><b>{CATN[it["cat"]]}</b>{it["alt"]}</figcaption></figure>')
     return '\n'.join(out)
 
 src = (ROOT / 'src' / 'index.src.html').read_text()

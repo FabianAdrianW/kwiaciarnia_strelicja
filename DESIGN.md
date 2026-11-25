@@ -44,14 +44,15 @@ Kwiaciarnia Iwony Dąbrowy, ul. Wiejska 28A, Oława, i dwa kwiatomaty 24/7: Oła
 
 ## Sekcje
 1. **Hero** (sticky 210vh): status na żywo, hasło, CTA; okno (proporcje zdjęcia 4:5) rośnie do pełnego ekranu wyłącznie przez `transform: scale` z kontr-skalą wnętrza (GPU), a przewijanie jest wygładzane (lerp 0,16 w pętli rAF), więc animacja jest płynna także przy skokowym kółku myszy. Crossfade na zdjęcie pracowni, podpis „Zobacz, co wiążemy”.
-2. **Galeria** (v3, bez przypinania): masonry 3 kolumny (mobile 2), kolumny przesuwają się z różną prędkością (paralaksa), zdjęcia odsłaniają się maską od dołu z lekkim zoomem, hover: przybliżenie, ramka w kolorze kwiatu, podpis. Pokazuje 12 zdjęć + „Pokaż więcej zdjęć (n)”. Filtry: Bukiety, Okazje, Święta, Pracownia. Lightbox FLIP z miniatury, strzałki, klawiatura, swipe, licznik.
-3. **Okazje**: duże wiersze typograficzne; hover rozsuwa wiersz, tytuł przechodzi w italic i kolor liścia, linia rysuje się od lewej, zdjęcie odsłania się (clip-path) w osobnej kolumnie i płynie za kursorem w pionie. Mobile: miniatura przy wierszu.
+2. **Galeria** (v4, redakcyjne rozkładówki): siatka 12 kolumn, po 5 zdjęć na rozkładówkę w dwóch lustrzanych układach (duży kadr + mniejsze z przesunięciami i pustą przestrzenią) i kafel z prawdziwym cytatem z opinii; mobile: układ 6-kolumnowy. Odsłanianie maską od dołu z zoomem, hover: przygaszenie pozostałych zdjęć, przybliżenie, podpis z kategorią, kursor-koło „Powiększ”. 10 zdjęć + „Pokaż więcej zdjęć (n)”. Filtry: Bukiety, Okazje, Święta, Pracownia. Lightbox FLIP z miniatury, strzałki, klawiatura, swipe, licznik.
+3. **Okazje** (v4): 5 rozsuwanych paneli ze zdjęciami; zamknięty panel pokazuje pionowy tytuł i ikonę strelicji, najechanie/fokus/klik rozsuwa panel (flex 1 → 4,6), zdjęcie wyostrza się i odzoomowuje, wjeżdża tytuł, opis i CTA. Mobile: panele w pionie (76 px → 440 px).
 4. **Kwiatomaty** (noc, v3): duże „24/7” z żywym statusem; wykres tygodnia: 7 wierszy × 24 h, bursztynowa świecąca linia = kwiatomaty (każdy dzień 0–24), zielone bloki = godziny kwiaciarni (pn–pt 9–18, sob 9–14, niedziela pusta), tło wiersza ciemniejsze w nocy, oś z księżycem i słońcem, znacznik „teraz HH:MM” w dzisiejszym wierszu. Linie rysują się kaskadowo po wejściu w widok. Pod spodem 2 panele z mapą i „Prowadź”, 3 kroki, opinia o kwiatomacie.
 5. **Pracownia**: zdanie o Iwonie, 4 fakty, zdjęcie z paralaksą + witryna.
 6. **Opinie**: „4,9” w dużej skali, rotator jednej opinii (7 s, pasek postępu, pauza na hover/focus, strzałki), taśma krótkich cytatów (pauza na hover).
 7. **Kontakt**: duży numer, kopiowanie, godziny z podświetleniem dzisiejszego dnia, mapa.
 
 ## Ruch
+Skala v4: wszystkie wymiary CSS ×0,85 (odpowiednik 85% zoomu), tekst min. 15 px, cele dotykowe min. 44 px. Wydajność: kolor tła na trzech warstwach `position:fixed` przenikanych przez `opacity` (bez repaintu całej strony), navbar bez `backdrop-filter`, okno hero tylko `transform`, zdjęcie hero w pełnych proporcjach (bez przycięcia).
 Kicker sekcji: ikona strelicji (maska SVG, kolor kwiatu) zamiast kreski.
 Jedna pętla rAF na scroll: tło, hero, galeria, motywy, zegar, paralaksa, wskaźnik menu. Navbar: fixed, stała wysokość; po scrollu pojawia się tło w aktualnym kolorze strony i linia; nad nocą przechodzi w jasny tekst i ciemną wersję logo; hover linku: tekst wysuwa się w górę, a z dołu wjeżdża italic w kolorze kwiatu; aktywna sekcja = linia pod linkiem przesuwana płynnie. `prefers-reduced-motion`: bez przypięć i animacji, motywy narysowane.
 
