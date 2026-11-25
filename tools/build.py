@@ -81,6 +81,8 @@ PLACE = {
  'hero': [motif('strelitzia', 'left:2vw;top:16vh;width:clamp(120px,15vw,240px)', 0),
           motif('eucalyptus', 'right:3vw;top:20vh;width:clamp(80px,8vw,130px)', 0, True),
           motif('vine', 'left:-4vw;bottom:3vh;width:clamp(260px,34vw,560px)', 0)],
+ 'gal': [motif('strelitzia', 'right:-3vw;top:2%;width:clamp(120px,13vw,210px)', .1, True),
+         motif('eucalyptus', 'left:1vw;top:30%;width:clamp(70px,6vw,110px)', .16)],
  'occ': [motif('leaf', 'right:-2vw;top:8%;width:clamp(120px,14vw,220px)', .12, True),
          motif('gerbera', 'left:38%;top:4%;width:clamp(90px,9vw,150px)', .08),
          motif('vine', 'left:-3vw;bottom:6%;width:clamp(280px,40vw,620px)', .05)],
@@ -102,8 +104,8 @@ def gallery():
     for k, it in enumerate(G):
         i, w, h = it['id'], it['w'], it['h']
         out.append(
-            f'<figure class="gi {SIZES[k % len(SIZES)]}" data-cat="{it["cat"]}" tabindex="0" role="button" aria-label="Powiększ: {it["alt"]}">'
-            f'<img src="img/g/{i}-640.webp" srcset="img/g/{i}-640.webp 640w, img/g/{i}-1280.webp 1280w" sizes="(max-width:860px) 80vw, 40vw" '
+            f'<figure class="gi" data-cat="{it["cat"]}" tabindex="0" role="button" aria-label="Powiększ: {it["alt"]}">'
+            f'<img src="img/g/{i}-640.webp" srcset="img/g/{i}-640.webp 640w, img/g/{i}-1280.webp 1280w" sizes="(max-width:860px) 48vw, 32vw" '
             f'width="{w}" height="{h}" loading="lazy" decoding="async" alt="{it["alt"]}" data-full="img/g/{i}-1280.webp">'
             f'<figcaption>{it["alt"]}</figcaption></figure>')
     return '\n'.join(out)

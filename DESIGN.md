@@ -43,15 +43,16 @@ Kwiaciarnia Iwony Dąbrowy, ul. Wiejska 28A, Oława, i dwa kwiatomaty 24/7: Oła
 | `--bloom` | #E8912A | #E8912A | kropki, wskaźniki, motywy (nigdy tekst na jasnym) |
 
 ## Sekcje
-1. **Hero** (sticky 230vh): status na żywo, hasło, CTA; okno z animacją rozmiaru (left/top/width/height z JS, ease in-out), crossfade na zdjęcie pracowni, podpis „Zobacz, co wiążemy”.
-2. **Galeria** (desktop: przypięta, scroll pionowy przesuwa taśmę w poziomie; mobile: natywny swipe ze scroll-snap). 24 realne zdjęcia w 3 wysokościach, paralaksa wewnątrz kadru, podpis wysuwa się na hover, ramka w kolorze kwiatu. Filtry: Bukiety, Okazje, Święta, Pracownia. Lightbox z animacją FLIP z miniatury, strzałki, klawiatura, swipe, licznik.
+1. **Hero** (sticky 210vh): status na żywo, hasło, CTA; okno (proporcje zdjęcia 4:5) rośnie do pełnego ekranu wyłącznie przez `transform: scale` z kontr-skalą wnętrza (GPU), a przewijanie jest wygładzane (lerp 0,16 w pętli rAF), więc animacja jest płynna także przy skokowym kółku myszy. Crossfade na zdjęcie pracowni, podpis „Zobacz, co wiążemy”.
+2. **Galeria** (v3, bez przypinania): masonry 3 kolumny (mobile 2), kolumny przesuwają się z różną prędkością (paralaksa), zdjęcia odsłaniają się maską od dołu z lekkim zoomem, hover: przybliżenie, ramka w kolorze kwiatu, podpis. Pokazuje 12 zdjęć + „Pokaż więcej zdjęć (n)”. Filtry: Bukiety, Okazje, Święta, Pracownia. Lightbox FLIP z miniatury, strzałki, klawiatura, swipe, licznik.
 3. **Okazje**: duże wiersze typograficzne; hover rozsuwa wiersz, tytuł przechodzi w italic i kolor liścia, linia rysuje się od lewej, zdjęcie odsłania się (clip-path) w osobnej kolumnie i płynie za kursorem w pionie. Mobile: miniatura przy wierszu.
-4. **Kwiatomaty** (noc): przypięty zegar 24h (pierścień bursztynowy = kwiatomaty, łuk liścia = dzisiejsze godziny kwiaciarni, wskazówka = aktualna godzina w Polsce, pierścień podziałki obraca się przy scrollu), 2 panele z mapą i „Prowadź”, 3 kroki z linią rysowaną po wejściu, opinia o kwiatomacie.
+4. **Kwiatomaty** (noc, v3): duże „24/7” z żywym statusem; wykres tygodnia: 7 wierszy × 24 h, bursztynowa świecąca linia = kwiatomaty (każdy dzień 0–24), zielone bloki = godziny kwiaciarni (pn–pt 9–18, sob 9–14, niedziela pusta), tło wiersza ciemniejsze w nocy, oś z księżycem i słońcem, znacznik „teraz HH:MM” w dzisiejszym wierszu. Linie rysują się kaskadowo po wejściu w widok. Pod spodem 2 panele z mapą i „Prowadź”, 3 kroki, opinia o kwiatomacie.
 5. **Pracownia**: zdanie o Iwonie, 4 fakty, zdjęcie z paralaksą + witryna.
 6. **Opinie**: „4,9” w dużej skali, rotator jednej opinii (7 s, pasek postępu, pauza na hover/focus, strzałki), taśma krótkich cytatów (pauza na hover).
 7. **Kontakt**: duży numer, kopiowanie, godziny z podświetleniem dzisiejszego dnia, mapa.
 
 ## Ruch
+Kicker sekcji: ikona strelicji (maska SVG, kolor kwiatu) zamiast kreski.
 Jedna pętla rAF na scroll: tło, hero, galeria, motywy, zegar, paralaksa, wskaźnik menu. Navbar: fixed, stała wysokość; po scrollu pojawia się tło w aktualnym kolorze strony i linia; nad nocą przechodzi w jasny tekst i ciemną wersję logo; hover linku: tekst wysuwa się w górę, a z dołu wjeżdża italic w kolorze kwiatu; aktywna sekcja = linia pod linkiem przesuwana płynnie. `prefers-reduced-motion`: bez przypięć i animacji, motywy narysowane.
 
 ## Pliki
