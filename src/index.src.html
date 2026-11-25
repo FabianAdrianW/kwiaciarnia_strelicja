@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwiaciarnia Strelicja Oława · kwiaty i kwiatomaty 24h</title>
+<meta name="description" content="Kwiaciarnia Iwony Dąbrowy przy ul. Wiejskiej 28A w Oławie. Bukiety, śluby, wiązanki i wieńce. Dwa kwiatomaty czynne całą dobę: Oława, Lipowa 1c i Jelcz-Laskowice, Oławska 27. Tel. 880 056 918.">
+<meta name="theme-color" content="#1E3533">
+<link rel="icon" href="img/favicon.png">
+<meta property="og:title" content="Kwiaciarnia Strelicja · świeże kwiaty o każdej porze">
+<meta property="og:description" content="Kwiaciarnia w Oławie i dwa kwiatomaty 24h. Zadzwoń: 880 056 918.">
+<meta property="og:image" content="img/g/47-1280.webp">
+<link rel="preload" as="image" href="img/g/47-640.webp" type="image/webp">
+<link rel="preload" as="font" href="fonts/fraunces-latin-400-normal.woff2" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Florist","name":"Kwiaciarnia Strelicja Iwona Dąbrowa","telephone":"+48880056918","email":"kwiaciarniastrelicjaid@gmail.com",
+"address":{"@type":"PostalAddress","streetAddress":"ul. Wiejska 28A","postalCode":"55-200","addressLocality":"Oława","addressCountry":"PL"},
+"geo":{"@type":"GeoCoordinates","latitude":50.9426035,"longitude":17.2814489},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}],
+"sameAs":["https://www.instagram.com/kwiaciarniastrelicjaid/"]}
+</script>
+<style>
+@font-face{font-family:Fraunces;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-400-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:400;font-style:italic;font-display:swap;src:url(fonts/fraunces-latin-ext-400-italic.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Fraunces;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Fraunces;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/fraunces-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-024F,U+1E00-1EFF}
+
+:root{
+  --ink:#1E3533; --accent:#2B765C; --cta:#B8471A; --cta-hover:#9E3C15; --muted:#5E716C;
+  --paper:#F8F3EA; --bloom:#E8912A; --line:#DDD5C6; --surface:#FFFDF8;
+  --bg-paper:#F8F3EA; --bg-sage:#ECEEE3; --bg-night:#16282A;
+  --night-text:#F8F3EA; --night-muted:#B9C6C1;
+  --text:var(--ink); --text-muted:var(--muted);
+  --display:"Fraunces",Georgia,serif; --body:"Inter",system-ui,-apple-system,sans-serif;
+  --r:2px; --ease:cubic-bezier(.22,.7,.2,1); --nav-h:72px; --gx:clamp(20px,5vw,80px);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg-paper:#172A2B; --bg-sage:#1B3130; --bg-night:#0F1E1F; --text:#F1ECE2; --text-muted:#B9C6C1; --line:#34504D; --accent:#6CC3A0; --surface:#1F3534}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h);overflow-x:clip}
+body{margin:0;background:var(--bg-paper);color:var(--text);font:400 16px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased;transition:color .5s}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--bloom);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.015em;margin:0}
+h2{font-size:clamp(36px,5.4vw,80px);line-height:1}
+h2 em,h1 em{font-style:italic;color:var(--accent)}
+.kicker{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 18px;display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor}
+.lead{font-size:clamp(16px,1.25vw,18px);color:var(--text-muted);max-width:44ch}
+main{position:relative}
+section{position:relative}
+.content{position:relative;z-index:2}
+
+/* garden motifs */
+.g{position:absolute;z-index:1;pointer-events:none;overflow:visible;will-change:transform}
+.g path,.g use{fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.g .a{stroke:var(--accent);opacity:.55}.g .b{stroke:var(--bloom);opacity:.8}.g .i{stroke:var(--text);opacity:.35}
+.g path{stroke-dasharray:1;stroke-dashoffset:var(--d,0)}
+.night .g .a{stroke:#6CC3A0;opacity:.35}.night .g .i{stroke:var(--night-text);opacity:.25}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:var(--r);font:600 15px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease);position:relative;overflow:hidden}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .35s var(--ease)}
+.btn-cta{background:var(--cta);color:#fff}
+.btn-cta:hover{background:var(--cta-hover)}
+.btn-cta:hover svg{transform:rotate(-14deg) scale(1.1)}
+.btn-line{color:var(--text);box-shadow:inset 0 0 0 1px currentColor;background:transparent}
+.btn-line::before{content:"";position:absolute;inset:0;background:var(--text);transform:scaleY(0);transform-origin:bottom;transition:transform .4s var(--ease);z-index:-1}
+.btn-line:hover{color:var(--bg-paper)}
+.btn-line:hover::before{transform:scaleY(1)}
+.btn-line{isolation:isolate}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;display:flex;align-items:center;gap:28px;padding:0 var(--gx);color:var(--text);transition:color .5s var(--ease),background .5s var(--ease)}
+.nav::before{content:"";position:absolute;inset:0;background:var(--navbg,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:0;transition:opacity .5s var(--ease);z-index:-1}
+.nav::after{content:"";position:absolute;left:var(--gx);right:var(--gx);bottom:0;height:1px;background:currentColor;opacity:.15;transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease)}
+.nav.scrolled::before{opacity:.86}.nav.scrolled::after{transform:scaleX(1)}
+.brand{display:block;position:relative;flex:none}
+.brand img{height:54px;width:auto;transition:opacity .5s}
+.brand .dark{position:absolute;inset:0;opacity:0}
+body.is-night .nav{color:var(--night-text)}
+body.is-night .brand .light{opacity:0}body.is-night .brand .dark{opacity:1}
+.nav-links{display:flex;gap:2px;margin:0 auto;list-style:none;padding:0;position:relative}
+.nav-links a{display:block;padding:10px 14px;font-size:15px;text-decoration:none;color:inherit;overflow:hidden;position:relative}
+.nav-links a span{display:block;transition:transform .45s var(--ease)}
+.nav-links a span::after{content:attr(data-t);position:absolute;left:0;top:100%;font-style:italic;font-family:var(--display);font-size:16px;color:var(--bloom)}
+.nav-links a:hover span{transform:translateY(-100%)}
+.nav-ind{position:absolute;bottom:2px;left:0;height:1px;background:var(--bloom);width:0;transition:transform .55s var(--ease),width .55s var(--ease),opacity .3s;opacity:0}
+.nav .btn{min-height:44px;padding:0 18px;font-size:14px}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+
+/* HERO: opening window */
+.hero{height:230vh;--p:0}
+.hero-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.hero-text{position:absolute;inset:0;padding:calc(var(--nav-h) + 4vh) var(--gx) 5vh;display:grid;grid-template-columns:1fr minmax(240px,30vw) 1fr;grid-template-rows:auto 1fr;column-gap:3vw;z-index:3;pointer-events:none}
+.hero-text>*{pointer-events:auto}
+.hero h1{grid-column:1/-1;text-align:center;font-size:clamp(46px,8.6vw,150px);line-height:.92;transform:translateY(calc(var(--p) * -14vh));opacity:calc(1 - var(--p) * 1.8)}
+.hero h1 em{display:block}
+.hero-left,.hero-right{align-self:end;opacity:calc(1 - var(--p) * 3);transform:translateY(calc(var(--p) * 6vh))}
+.hero-left{grid-column:1}
+.hero-right{grid-column:3;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:14px;margin:0 0 18px}
+.status i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(43,118,92,.5);animation:pulse 2.4s infinite;flex:none}
+.status.closed i{background:var(--bloom)}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.proof{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-muted);text-decoration:none;margin-top:6px}
+.proof b{font:400 32px/1 var(--display);color:var(--text)}
+.stars{color:var(--bloom);letter-spacing:2px}
+.window{position:absolute;z-index:2;overflow:hidden;left:var(--wl);top:var(--wt);width:var(--ww);height:var(--wh);border-radius:calc((1 - var(--p)) * 2px)}
+.window img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.window .w1{transform:scale(calc(1.08 - var(--p) * .08));object-position:62% 22%}
+.window .w2{opacity:var(--o2,0)}
+.window::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,30,31,.65),transparent 45%);opacity:var(--o2,0)}
+.window-cap{position:absolute;left:var(--gx);bottom:6vh;z-index:3;color:#F8F3EA;opacity:var(--o3,0);transform:translateY(calc((1 - var(--o3,0)) * 20px))}
+.window-cap p{margin:0;font-size:14px;color:#DCE4E0}
+.window-cap h2{font-size:clamp(34px,5vw,72px)}
+.window-cap h2 em{color:var(--bloom)}
+
+/* GALLERY */
+.gallery{--gp:0}
+.gal-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding-top:var(--nav-h)}
+.gal-head{display:flex;justify-content:space-between;align-items:end;gap:24px;padding:0 var(--gx);margin-bottom:3.5vh;flex-wrap:wrap}
+.gal-head h2{font-size:clamp(34px,4.4vw,64px)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{background:none;border:0;padding:10px 14px;min-height:44px;cursor:pointer;font-size:14px;color:var(--text-muted);position:relative;transition:color .3s}
+.filters button::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:1px;background:var(--bloom);transform:scaleX(0);transition:transform .4s var(--ease)}
+.filters button:hover{color:var(--text)}
+.filters button[aria-pressed="true"]{color:var(--text)}
+.filters button[aria-pressed="true"]::after{transform:scaleX(1)}
+.filters sup{font-size:10px;margin-left:2px;color:var(--accent)}
+.track{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);padding:0 var(--gx);will-change:transform;transform:translateX(var(--tx,0px));transition:opacity .4s}
+.track.fading{opacity:0}
+.gi{flex:none;margin:0;position:relative;cursor:zoom-in;overflow:hidden;border-radius:var(--r);background:var(--line)}
+.gi.s1{height:62vh}.gi.s2{height:46vh;align-self:flex-start}.gi.s3{height:52vh;align-self:flex-end}
+.gi img{height:100%;width:auto;max-width:none;transform:translateX(var(--ix,0px)) scale(1.12);transition:filter .6s var(--ease)}
+.gi::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 0 var(--bloom);transition:box-shadow .4s var(--ease)}
+.gi:hover::after{box-shadow:inset 0 0 0 3px var(--bloom)}
+.gi figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:13px;color:#F8F3EA;background:linear-gradient(transparent,rgba(15,30,31,.75));transform:translateY(100%);transition:transform .45s var(--ease)}
+.gi:hover figcaption,.gi:focus-visible figcaption{transform:none}
+.gi[hidden]{display:none}
+.gal-progress{margin:3.5vh var(--gx) 0;height:1px;background:color-mix(in srgb,var(--text) 15%,transparent);position:relative}
+.gal-progress i{position:absolute;left:0;top:0;height:100%;width:calc(var(--gp) * 100%);background:var(--accent)}
+.gal-hint{font-size:13px;color:var(--text-muted);margin:12px var(--gx) 0}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(12,24,25,.0);transition:background .4s}
+.lb.open{display:block}
+.lb.show{background:rgba(12,24,25,.94)}
+.lb-img{position:absolute;left:50%;top:50%;max-width:86vw;max-height:80vh;width:auto;height:auto;transform:translate(-50%,-50%);transform-origin:center;border-radius:var(--r)}
+.lb-cap{position:absolute;left:0;right:0;bottom:3vh;text-align:center;color:#DCE4E0;font-size:14px;opacity:0;transition:opacity .3s .2s}
+.lb.show .lb-cap,.lb.show .lb-ui{opacity:1}
+.lb-ui{opacity:0;transition:opacity .3s .2s}
+.lb-ui button{position:absolute;width:56px;height:56px;border:0;background:rgba(248,243,234,.08);color:#F8F3EA;cursor:pointer;display:grid;place-items:center;border-radius:50%;transition:background .3s}
+.lb-ui button:hover{background:rgba(232,145,42,.5)}
+.lb-ui svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6}
+.lb-prev{left:3vw;top:50%;margin-top:-28px}.lb-next{right:3vw;top:50%;margin-top:-28px}.lb-close{right:3vw;top:3vh}
+.lb-count{position:absolute;left:3vw;top:3vh;margin-top:18px;color:#DCE4E0;font-size:13px}
+
+/* OCCASIONS */
+.occ-sec{padding:clamp(100px,14vh,180px) var(--gx) clamp(80px,12vh,160px)}
+.occ-head{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(30px,6vh,70px)}
+.occ{list-style:none;margin:0;padding:0;border-top:1px solid color-mix(in srgb,var(--text) 18%,transparent)}
+.occ li{border-bottom:1px solid color-mix(in srgb,var(--text) 18%,transparent);position:relative}
+.occ li::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.occ a{display:grid;grid-template-columns:minmax(0,1.2fr) clamp(180px,15vw,240px) minmax(0,.6fr) auto;gap:3vw;align-items:center;padding:clamp(18px,2.6vh,30px) 0;text-decoration:none;transition:padding .5s var(--ease)}
+.occ h3{font-size:clamp(30px,4.3vw,66px);white-space:nowrap;line-height:1;transition:transform .6s var(--ease),color .4s}
+.occ p{margin:0;color:var(--text-muted);font-size:15px;max-width:36ch;opacity:.75;transition:opacity .4s}
+.occ .go{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--cta);opacity:0;transform:translateX(-10px);transition:.45s var(--ease);white-space:nowrap}
+.occ .go svg{width:16px;height:16px}
+.occ .thumb{display:none}
+.occ .slot{grid-column:2;grid-row:1}
+.occ h3{grid-column:1}.occ p{grid-column:3}.occ .go{grid-column:4}
+.occ li:hover::after,.occ li:focus-within::after{transform:scaleX(1)}
+.occ li:hover a,.occ li:focus-within a{padding:clamp(28px,4vh,46px) 0}
+.occ li:hover h3,.occ li:focus-within h3{transform:translateX(2vw);color:var(--accent);font-style:italic}
+.occ li:hover p{opacity:1}
+.occ li:hover .go,.occ li:focus-within .go{opacity:1;transform:none}
+.occ-float{position:fixed;left:0;top:0;width:clamp(180px,15vw,240px);aspect-ratio:4/5;z-index:30;pointer-events:none;overflow:hidden;border-radius:var(--r);clip-path:inset(50% 0 50% 0);transition:clip-path .55s var(--ease);will-change:transform}
+.occ-float.on{clip-path:inset(0 0 0 0)}
+.occ-float img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.15);transition:opacity .4s,transform .8s var(--ease)}
+.occ-float img.on{opacity:1;transform:none}
+.occ-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px}
+.occ-cta p{margin:0;color:var(--text-muted)}
+
+/* KIOSKS (night) */
+.kiosk{color:var(--night-text);padding:30vh var(--gx) 34vh}
+.kiosk .kicker{color:var(--bloom)}
+.kiosk h2 em{color:var(--bloom)}
+.kiosk .lead{color:var(--night-muted)}
+.k-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,120px);align-items:start}
+.clock-wrap{position:sticky;top:calc(var(--nav-h) + 6vh)}
+.clock{width:min(100%,520px);aspect-ratio:1;display:block;margin:0 auto}
+.clock .ring{transform-origin:200px 200px;transform:rotate(var(--rot,0deg))}
+.clock text{fill:var(--night-muted);font:12px var(--body)}
+.clock .big{font:400 46px var(--display);fill:var(--night-text)}
+.clock .sm{font:13px var(--body);fill:var(--bloom)}
+.clock .hand{transform-origin:200px 200px;transition:transform 1s var(--ease)}
+.clock-legend{display:flex;justify-content:center;gap:24px;font-size:13px;color:var(--night-muted);margin-top:10px;flex-wrap:wrap}
+.clock-legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:8px}
+.k-places{display:grid;gap:18px;margin:44px 0}
+.place{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border:1px solid rgba(248,243,234,.14);border-radius:var(--r);overflow:hidden;transition:border-color .4s}
+.place:hover{border-color:rgba(232,145,42,.6)}
+.place .info{padding:26px 24px;display:flex;flex-direction:column;gap:6px}
+.place b{font:400 clamp(26px,2.6vw,36px)/1.1 var(--display)}
+.place span{color:var(--night-muted);font-size:15px}
+.place .go{margin-top:auto;padding-top:18px;color:var(--bloom);font-weight:600;font-size:14px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.place .go svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.place .go:hover svg{transform:translateX(4px)}
+.place .map{position:relative;min-height:200px;background:#0F1E1F}
+.place iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.6) invert(.9) hue-rotate(180deg) contrast(.9)}
+.steps{list-style:none;padding:0;margin:0 0 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s}
+.steps li{padding:18px 18px 0 0;border-top:1px solid rgba(248,243,234,.2);font-size:15px;color:var(--night-muted);position:relative}
+.steps li::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:var(--bloom);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease)}
+.steps.on li::before{transform:scaleX(1)}
+.steps.on li:nth-child(2)::before{transition-delay:.3s}.steps.on li:nth-child(3)::before{transition-delay:.6s}
+.steps b{display:block;font:400 22px/1.2 var(--display);color:var(--night-text);margin-bottom:6px}
+.k-quote{margin:0;font:italic 400 clamp(20px,1.8vw,26px)/1.45 var(--display);max-width:34ch}
+.k-quote cite{display:block;margin-top:12px;font:400 13px var(--body);color:var(--night-muted)}
+
+/* STUDIO */
+.studio{padding:clamp(120px,18vh,220px) var(--gx) clamp(60px,10vh,120px)}
+.st-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:center}
+.st-media{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--r)}
+.st-media img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;transform:translateY(var(--py,0px))}
+.st-media .inset{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:3/2;inset:auto 0 0 auto;height:auto;border-top:8px solid var(--bg-paper);border-left:8px solid var(--bg-paper);transform:none}
+.statement{font:400 clamp(28px,3vw,46px)/1.15 var(--display);margin:0 0 30px}
+.statement em{color:var(--accent)}
+.facts{list-style:none;padding:0;margin:0 0 34px;display:grid;grid-template-columns:1fr 1fr;gap:22px 30px}
+.facts li{font-size:15px;color:var(--text-muted);padding-top:14px;border-top:1px solid color-mix(in srgb,var(--text) 18%,transparent)}
+.facts b{display:block;color:var(--text);font:400 20px/1.25 var(--display);margin-bottom:4px}
+
+/* REVIEWS */
+.reviews{padding:clamp(80px,12vh,150px) 0 clamp(60px,10vh,120px)}
+.rv-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(30px,6vw,110px);padding:0 var(--gx);align-items:start}
+.score{font:400 clamp(110px,15vw,230px)/.8 var(--display);letter-spacing:-.04em;color:var(--accent)}
+.score small{display:block;font:400 14px/1.5 var(--body);color:var(--text-muted);letter-spacing:0;margin-top:18px}
+.rotator{position:relative;min-height:clamp(260px,30vh,340px)}
+.rq{position:absolute;inset:0;margin:0;opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .9s var(--ease);pointer-events:none}
+.rq.on{opacity:1;transform:none;pointer-events:auto}
+.rq p{margin:0;font:400 clamp(24px,2.7vw,42px)/1.25 var(--display);max-width:30ch}
+.rq cite{display:block;margin-top:20px;font:400 14px var(--body);color:var(--text-muted);font-style:normal}
+.rv-ctrl{display:flex;align-items:center;gap:18px;margin-top:10px}
+.rv-ctrl button{width:48px;height:48px;border-radius:50%;border:1px solid color-mix(in srgb,var(--text) 25%,transparent);background:none;cursor:pointer;display:grid;place-items:center;transition:background .3s,border-color .3s}
+.rv-ctrl button:hover{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.rv-ctrl svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}
+.rv-bar{flex:1;max-width:260px;height:1px;background:color-mix(in srgb,var(--text) 18%,transparent);position:relative;overflow:hidden}
+.rv-bar i{position:absolute;inset:0;background:var(--bloom);transform-origin:left;transform:scaleX(0)}
+.rv-bar i.run{animation:bar 7s linear forwards}
+.rotator:hover~.rv-ctrl .rv-bar i.run,.rv-paused .rv-bar i.run{animation-play-state:paused}
+@keyframes bar{to{transform:scaleX(1)}}
+.rv-num{font-size:13px;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.marquee{margin-top:clamp(50px,9vh,100px);overflow:hidden;border-top:1px solid color-mix(in srgb,var(--text) 14%,transparent);border-bottom:1px solid color-mix(in srgb,var(--text) 14%,transparent);padding:22px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;gap:56px;width:max-content;animation:mq 60s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-track span{white-space:nowrap;font:italic 400 20px/1.3 var(--display)}
+.mq-track span small{font:400 13px var(--body);color:var(--text-muted);font-style:normal;margin-left:10px}
+.mq-track span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--bloom);margin-right:18px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv-all{padding:0 var(--gx);margin-top:30px}
+
+/* CONTACT */
+.contact{padding:clamp(80px,12vh,160px) var(--gx) clamp(70px,10vh,130px)}
+.c-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+.phone-big{display:block;white-space:nowrap;font:400 clamp(46px,6.2vw,100px)/.95 var(--display);text-decoration:none;color:var(--text);margin:10px 0 14px;letter-spacing:-.02em;transition:color .35s}
+.phone-big:hover{color:var(--cta)}
+.copy{background:none;border:0;color:var(--accent);font:600 14px var(--body);cursor:pointer;min-height:44px;padding:0;text-decoration:underline;text-underline-offset:4px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 26px}
+.hours td{padding:12px 0;border-bottom:1px solid color-mix(in srgb,var(--text) 15%,transparent)}
+.hours td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr.today td{color:var(--accent);font-weight:600}
+.c-map{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;background:var(--line);margin-top:8px}
+.c-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.7)}
+.c-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+
+/* FOOTER */
+.foot{background:var(--bg-night);color:var(--night-text);padding:70px var(--gx) 110px;position:relative;overflow:hidden}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;position:relative;z-index:2}
+.foot img{height:86px;width:auto}
+.foot h3{font-size:20px;margin-bottom:10px}
+.foot p,.foot a{font-size:14px;color:var(--night-muted);margin:0 0 6px;text-decoration:none}
+.foot a:hover{color:var(--bloom)}
+.foot small{display:block;margin-top:46px;color:#7D918C;font-size:12px;position:relative;z-index:2}
+
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
+.callbar.show{transform:none}
+.callbar .btn{width:100%;min-height:54px;font-size:16px}
+
+@media (max-width:1020px){
+  .nav-links{display:none}
+  .nav>.btn{margin-left:auto}
+  .menu-btn{display:inline-grid;place-items:center}
+  .nav .btn .long{display:none}
+  .nav.open .nav-links{display:flex;position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;padding:12px 20px 24px;background:var(--bg-paper);color:var(--text)}
+  .nav.open .nav-links a{padding:14px 4px;font-size:20px;font-family:var(--display)}
+  .nav-ind{display:none}
+}
+@media (max-width:860px){
+  .hero{height:200vh}
+  .hero-text{grid-template-columns:1fr;grid-template-rows:auto auto 1fr;row-gap:16px;padding-top:calc(var(--nav-h) + 2vh)}
+  .hero h1{font-size:clamp(42px,12vw,72px)}
+  .hero-left{grid-column:1;grid-row:2;align-self:start;text-align:center}
+  .hero-left .lead{display:none}
+  .hero-left .status{margin:0}
+  .hero-right{grid-column:1;grid-row:3;align-self:end;align-items:stretch}
+  .hero-right .btn-line,.hero-right .proof{display:none}
+  .gallery .gal-stage{position:relative;height:auto;padding:var(--nav-h) 0 40px}
+  .track{overflow-x:auto;scroll-snap-type:x mandatory;transform:none!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px}
+  .track::-webkit-scrollbar{display:none}
+  .gi{scroll-snap-align:center}
+  .gi.s1,.gi.s2,.gi.s3{height:58vh;align-self:center}
+  .gi img{transform:none}
+  .gi figcaption{transform:none}
+  .gal-progress{display:none}
+  .occ-head,.k-grid,.st-grid,.c-grid,.foot-grid,.rv-top{grid-template-columns:1fr}
+  .occ a{grid-template-columns:72px 1fr;gap:16px}
+  .occ .thumb{display:block;width:72px;height:90px;object-fit:cover;border-radius:var(--r);grid-column:1;grid-row:1/span 3}
+  .occ h3{grid-column:2}
+  .occ h3{font-size:clamp(26px,7.4vw,40px);white-space:normal}
+  .occ .go{opacity:1;transform:none;grid-column:2}
+  .occ p{grid-column:2}
+  .occ-float{display:none}
+  .occ .slot{display:none}
+  .clock-wrap{position:relative;top:0}
+  .clock{width:min(84vw,380px)}
+  .place{grid-template-columns:1fr}
+  .place .map{min-height:180px}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .facts{grid-template-columns:1fr}
+  .callbar{display:block}
+  .brand img{height:44px}
+  .score{font-size:110px}
+  .rotator{min-height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero{height:auto}.hero-stage{position:relative;height:100vh}
+  .g path{stroke-dashoffset:0!important}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Przejdź do treści</a>
+<!--SYMBOLS-->
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Kwiaciarnia Strelicja, na górę strony">
+    <img class="light" src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja" width="640" height="640">
+    <img class="dark" src="img/logo-dark.webp" alt="" width="640" height="640">
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#kwiatomaty"><span data-t="Kwiatomaty">Kwiatomaty</span></a></li>
+    <li><a href="#galeria"><span data-t="Galeria">Galeria</span></a></li>
+    <li><a href="#okazje"><span data-t="Okazje">Okazje</span></a></li>
+    <li><a href="#opinie"><span data-t="Opinie">Opinie</span></a></li>
+    <li><a href="#kontakt"><span data-t="Kontakt">Kontakt</span></a></li>
+    <li class="nav-ind" id="navind" aria-hidden="true"></li>
+  </ul>
+  <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span class="long">Zadzwoń:&nbsp;</span>880 056 918</a>
+  <button class="menu-btn" id="menubtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top" data-bg="paper">
+  <div class="hero-stage">
+    <!--G:hero-->
+    <div class="window" id="window" aria-hidden="true">
+      <img class="w1" src="img/g/47-640.webp" srcset="img/g/47-640.webp 640w, img/g/47-1280.webp 1280w" sizes="100vw" width="1024" height="1280" alt="" fetchpriority="high">
+      <img class="w2" src="img/g/10-1280.webp" width="1280" height="960" alt="" loading="lazy">
+    </div>
+    <div class="window-cap" aria-hidden="true"><p>Pracownia przy Wiejskiej 28A</p><h2>Zobacz, co <em>wiążemy.</em></h2></div>
+    <div class="hero-text">
+      <h1>Świeże kwiaty<em>o każdej porze.</em></h1>
+      <div class="hero-left">
+        <p class="status" id="status" role="status"><i></i><span>Kwiaciarnia: pn–pt 9–18, sob 9–14. Kwiatomaty: całą dobę.</span></p>
+        <p class="lead">Kwiaciarnia Iwony Dąbrowy w Oławie. Kiedy sklep jest zamknięty, bukiety czekają w dwóch kwiatomatach: w Oławie i w Jelczu-Laskowicach.</p>
+      </div>
+      <div class="hero-right">
+        <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a>
+        <a class="btn btn-line" href="#kwiatomaty">Gdzie są kwiatomaty</a>
+        <a class="proof" href="#opinie"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Google</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeria" data-bg="paper" aria-labelledby="gal-h">
+  <div class="gal-stage">
+    <div class="gal-head content">
+      <div><p class="kicker">Galeria realizacji</p><h2 id="gal-h">Prosto z <em>pracowni.</em></h2></div>
+      <div class="filters" role="group" aria-label="Filtruj galerię">
+        <button type="button" data-f="all" aria-pressed="true">Wszystko</button>
+        <button type="button" data-f="bukiety" aria-pressed="false">Bukiety</button>
+        <button type="button" data-f="okazje" aria-pressed="false">Okazje</button>
+        <button type="button" data-f="swieta" aria-pressed="false">Święta</button>
+        <button type="button" data-f="pracownia" aria-pressed="false">Pracownia</button>
+      </div>
+    </div>
+    <div class="track content" id="track">
+<!--GALLERY-->
+    </div>
+    <div class="gal-progress" aria-hidden="true"><i></i></div>
+    <p class="gal-hint content">Kliknij zdjęcie, żeby je powiększyć.</p>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section class="occ-sec" id="okazje" data-bg="sage" aria-labelledby="occ-h">
+  <!--G:occ-->
+  <div class="content">
+    <div class="occ-head">
+      <div><p class="kicker">Na każdą okazję</p><h2 id="occ-h">Powiedz, dla kogo.<br><em>Resztę dobierzemy.</em></h2></div>
+      <p class="lead">Nie musisz znać nazw kwiatów. Powiedz, na jaką okazję i dla kogo, a Iwona doradzi i zwiąże bukiet. Dowozimy po Oławie i okolicy.</p>
+    </div>
+    <ul class="occ" id="occ">
+      <li data-img="img/g/48-640.webp"><a href="tel:+48880056918"><img class="thumb" src="img/g/48-640.webp" alt="" loading="lazy" width="640" height="639"><span class="slot" aria-hidden="true"></span><h3>Dla bliskiej osoby</h3><p>Dla żony, mamy, na urodziny, rocznicę i bez okazji.</p><span class="go">Zadzwoń <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-img="img/g/49-640.webp"><a href="tel:+48880056918"><img class="thumb" src="img/g/49-640.webp" alt="" loading="lazy" width="640" height="640"><span class="slot" aria-hidden="true"></span><h3>Ślub</h3><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii.</p><span class="go">Umów termin <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-img="img/g/23-640.webp"><a href="tel:+48880056918"><img class="thumb" src="img/g/23-640.webp" alt="" loading="lazy" width="512" height="640"><span class="slot" aria-hidden="true"></span><h3>Pożegnanie</h3><p>Wiązanki i wieńce. Przygotujemy także na jutro.</p><span class="go">Zadzwoń <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-img="img/g/37-640.webp"><a href="tel:+48880056918"><img class="thumb" src="img/g/37-640.webp" alt="" loading="lazy" width="512" height="640"><span class="slot" aria-hidden="true"></span><h3>Święta i sezon</h3><p>Stroiki, wieńce na drzwi, Walentynki. Warto zamówić wcześniej.</p><span class="go">Zamów <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li data-img="img/g/20-640.webp"><a href="tel:+48880056918"><img class="thumb" src="img/g/20-640.webp" alt="" loading="lazy" width="512" height="640"><span class="slot" aria-hidden="true"></span><h3>Flowerbox i doniczki</h3><p>Coś ładnego na biurko, do domu albo na prezent.</p><span class="go">Zadzwoń <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    </ul>
+    <div class="occ-cta"><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń: 880 056 918</a><p>Ustalimy kwiaty, kolory, cenę i odbiór albo dowóz.</p></div>
+  </div>
+  <div class="occ-float" id="occfloat" aria-hidden="true"></div>
+</section>
+
+<!-- KIOSKS -->
+<section class="kiosk night" id="kwiatomaty" data-bg="night" aria-labelledby="kw-h">
+  <!--G:kiosk-->
+  <div class="k-grid content">
+    <div class="clock-wrap">
+      <svg class="clock" id="clock" viewBox="0 0 400 400" role="img" aria-label="Zegar dobowy: kwiatomaty działają całą dobę, kwiaciarnia w godzinach otwarcia">
+        <g class="ring" id="ring">
+          <circle cx="200" cy="200" r="186" fill="none" stroke="rgba(248,243,234,.12)"/>
+          <g id="ticks"></g>
+        </g>
+        <circle cx="200" cy="200" r="160" fill="none" stroke="#E8912A" stroke-width="3" opacity=".9"/>
+        <path id="shopArc" fill="none" stroke="#6CC3A0" stroke-width="10" stroke-linecap="round"/>
+        <g id="nums"></g>
+        <g class="hand" id="hand"><line x1="200" y1="200" x2="200" y2="58" stroke="#F8F3EA" stroke-width="1.5"/><circle cx="200" cy="58" r="5" fill="#E8912A"/></g>
+        <circle cx="200" cy="200" r="4" fill="#F8F3EA"/>
+        <text class="big" id="clockTime" x="200" y="214" text-anchor="middle">24h</text>
+        <text class="sm" id="clockSub" x="200" y="244" text-anchor="middle">kwiatomaty otwarte</text>
+      </svg>
+      <div class="clock-legend"><span><i style="background:#E8912A"></i>kwiatomaty: 0–24</span><span><i style="background:#6CC3A0"></i>kwiaciarnia dziś</span></div>
+    </div>
+    <div>
+      <p class="kicker">Kwiatomaty, całą dobę</p>
+      <h2 id="kw-h">Kiedy kwiaciarnia śpi,<br><em>kwiaty wciąż czekają.</em></h2>
+      <p class="lead" style="margin-top:22px">W kwiatomatach są bukiety z naszej pracowni. Podjeżdżasz, wybierasz i płacisz przy automacie. Także w nocy, w niedzielę i w święta.</p>
+      <div class="k-places">
+        <article class="place">
+          <div class="info"><b>Oława</b><span>ul. Lipowa 1c</span><span>czynne całą dobę</span>
+            <a class="go" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa" target="_blank" rel="noopener">Prowadź <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="map"><iframe title="Mapa: kwiatomat Oława, ul. Lipowa 1c" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiatomat%20Strelicja%20Lipowa%201c%20O%C5%82awa&z=15&output=embed"></iframe></div>
+        </article>
+        <article class="place">
+          <div class="info"><b>Jelcz-Laskowice</b><span>ul. Oławska 27</span><span>czynne całą dobę</span>
+            <a class="go" href="https://www.google.com/maps/dir/?api=1&destination=Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice" target="_blank" rel="noopener">Prowadź <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+          <div class="map"><iframe title="Mapa: kwiatomat Jelcz-Laskowice, ul. Oławska 27" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=O%C5%82awska%2027%20Jelcz-Laskowice&z=15&output=embed"></iframe></div>
+        </article>
+      </div>
+      <ol class="steps" id="steps">
+        <li><b>Podjedź</b>Oława albo Jelcz-Laskowice, o dowolnej porze.</li>
+        <li><b>Wybierz</b>Bukiety z pracowni, widoczne za szybą.</li>
+        <li><b>Zapłać</b>Przy automacie, bez czekania na otwarcie.</li>
+      </ol>
+      <blockquote class="k-quote">„Sądziłam, że bukiety będą tam drogie i pewnie już długo będą stały. Ku mojemu zaskoczeniu, bukiet cudowny, kwiaty świeże i w przystępnej cenie.”<cite>Karolina L., opinia w Google o kwiatomacie</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section class="studio" id="pracownia" data-bg="paper" aria-labelledby="st-h">
+  <!--G:studio-->
+  <div class="st-grid content">
+    <div class="st-media" id="stmedia">
+      <img src="img/g/17-1280.webp" srcset="img/g/17-640.webp 640w, img/g/17-1280.webp 1280w" sizes="(max-width:860px) 90vw, 50vw" width="1024" height="1280" loading="lazy" alt="Wiadra ze świeżymi kwiatami przy ladzie kwiaciarni">
+      <img class="inset" src="img/g/15-640.webp" width="640" height="413" loading="lazy" alt="Witryna kwiaciarni Strelicja przy ul. Wiejskiej 28A">
+    </div>
+    <div>
+      <p class="kicker">Pracownia przy Wiejskiej 28A</p>
+      <h2 id="st-h" class="sr">Pracownia</h2>
+      <p class="statement">Każdy bukiet wiąże ręcznie <em>Iwona Dąbrowa</em>, florystka z Oławy. Klienci w opiniach piszą o niej po imieniu.</p>
+      <ul class="facts">
+        <li><b>Codziennie świeże</b>Kwiaty cięte i doniczkowe.</li>
+        <li><b>W wazonie z wodą</b>Bukiet możesz dostać od razu gotowy do postawienia.</li>
+        <li><b>Dowóz</b>Po Oławie i okolicy.</li>
+        <li><b>Karta i telefon</b>Płatności bezgotówkowe w kwiaciarni.</li>
+      </ul>
+      <a class="btn btn-line" href="#kontakt">Jak do nas trafić</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="opinie" data-bg="sage" aria-labelledby="rv-h">
+  <!--G:reviews-->
+  <div class="content">
+    <div class="rv-top">
+      <div class="score" aria-label="Ocena 4,9 na 5">4,9<small><span class="stars" aria-hidden="true">★★★★★</span><br>78 opinii w Mapach Google</small></div>
+      <div>
+        <p class="kicker">Opinie klientów</p>
+        <h2 id="rv-h" class="sr">Opinie</h2>
+        <div class="rotator" id="rotator" aria-live="polite">
+          <figure class="rq on"><p>„Przepiękna kompozycja, stworzona z dużym wyczuciem i dbałością o każdy detal. Ogromnym atutem jest bukiet od razu w wazonie z wodą.”</p><cite>Wodnik W., Google</cite></figure>
+          <figure class="rq"><p>„Najpiękniejsze bukiety w Oławie i okolicy. Pani Iwona przemiła i zawsze pomocna we wszystkim.”</p><cite>Łukasz K., Google</cite></figure>
+          <figure class="rq"><p>„Pani Iwona naprawdę wszystko zrobiła super. Jestem bardzo zadowolona z bukietu ślubnego, był przepiękny.”</p><cite>Anna, Google</cite></figure>
+          <figure class="rq"><p>„Zawsze dostaję bukiety od męża z tej kwiaciarni. Są piękne, bardzo estetyczne i długo się trzymają świeże.”</p><cite>Monika Ł., Google</cite></figure>
+          <figure class="rq"><p>„Kwiatki świeże, widać, że zawód wykonywany z miłości do kwiatów.”</p><cite>Aleksandra S., Google</cite></figure>
+        </div>
+        <div class="rv-ctrl">
+          <button type="button" id="rvPrev" aria-label="Poprzednia opinia"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" id="rvNext" aria-label="Następna opinia"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+          <span class="rv-bar"><i id="rvBar"></i></span>
+          <span class="rv-num" id="rvNum">1 / 5</span>
+        </div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true"><div class="mq-track">
+      <span>Bardzo miła obsługa, przepiękne bukiety w dobrej cenie.<small>Diana D.</small></span>
+      <span>Piękne bukiety, wiązanki i stroiki oraz przemiła obsługa.<small>Marzena C.</small></span>
+      <span>Najładniejsza gipsówka w Oławie.<small>Agnieszka G.</small></span>
+      <span>Dziś zauroczył mnie przepiękny wianek świąteczny.<small>Google</small></span>
+      <span>Bukiet cudowny, kwiaty świeże i w przystępnej cenie.<small>Karolina L.</small></span>
+      <span>Bardzo miła obsługa, przepiękne bukiety w dobrej cenie.<small>Diana D.</small></span>
+      <span>Piękne bukiety, wiązanki i stroiki oraz przemiła obsługa.<small>Marzena C.</small></span>
+      <span>Najładniejsza gipsówka w Oławie.<small>Agnieszka G.</small></span>
+      <span>Dziś zauroczył mnie przepiękny wianek świąteczny.<small>Google</small></span>
+      <span>Bukiet cudowny, kwiaty świeże i w przystępnej cenie.<small>Karolina L.</small></span>
+    </div></div>
+    <p class="rv-all"><a class="btn btn-line" href="https://maps.google.com/?cid=10932640024013107505" target="_blank" rel="noopener">Wszystkie opinie w Google</a></p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt" data-bg="paper" aria-labelledby="c-h">
+  <!--G:contact-->
+  <div class="c-grid content">
+    <div>
+      <p class="kicker">Kontakt i dojazd</p>
+      <h2 id="c-h">Zadzwoń <em>albo wpadnij.</em></h2>
+      <a class="phone-big" href="tel:+48880056918">880 056 918</a>
+      <button class="copy" type="button" data-copy="880056918">Kopiuj numer</button>
+      <p style="margin:18px 0 0;font-size:17px">ul. Wiejska 28A, 55-200 Oława<br><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p>
+      <div class="c-links"><a class="btn btn-cta" href="tel:+48880056918">Zadzwoń</a><a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></div>
+    </div>
+    <div>
+      <table class="hours" aria-label="Godziny otwarcia">
+        <tr data-d="1 2 3 4 5"><td>Poniedziałek – piątek</td><td>9:00 – 18:00</td></tr>
+        <tr data-d="6"><td>Sobota</td><td>9:00 – 14:00</td></tr>
+        <tr data-d="0"><td>Niedziela</td><td>zamknięte</td></tr>
+        <tr><td>Kwiatomaty</td><td>całą dobę</td></tr>
+      </table>
+      <div class="c-map"><iframe title="Mapa: Kwiaciarnia Strelicja, Wiejska 28A, Oława" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Kwiaciarnia%20Strelicja%20Wiejska%2028A%20O%C5%82awa&z=15&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot night">
+  <!--G:foot-->
+  <div class="foot-grid">
+    <div><img src="img/logo-dark.webp" alt="Kwiaciarnia Strelicja, Iwona Dąbrowa" width="640" height="640" loading="lazy"><p style="margin-top:14px">Świeże kwiaty o każdej porze.</p></div>
+    <div><h3>Kwiaciarnia</h3><p>ul. Wiejska 28A, 55-200 Oława</p><p><a href="tel:+48880056918">880 056 918</a></p><p><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p><p><a href="https://www.instagram.com/kwiaciarniastrelicjaid/" target="_blank" rel="noopener">Instagram</a></p></div>
+    <div><h3>Kwiatomaty 24h</h3><p>Oława, ul. Lipowa 1c</p><p>Jelcz-Laskowice, ul. Oławska 27</p></div>
+  </div>
+  <small>© <span id="y">2026</span> Kwiaciarnia Strelicja Iwona Dąbrowa. Strona: Adrian Wojtasik <!-- TODO: potwierdzić podpis z firmą --></small>
+</footer>
+
+<div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <img class="lb-img" id="lbImg" alt="">
+  <div class="lb-ui">
+    <span class="lb-count" id="lbCount"></span>
+    <button class="lb-close" id="lbClose" aria-label="Zamknij"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="lb-prev" id="lbPrev" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="lb-next" id="lbNext" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)), lerp=(a,b,t)=>a+(b-a)*t;
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+let vw=innerWidth, vh=innerHeight, mobile=vw<=860;
+
+/* status + clock data */
+const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Warsaw',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+const wd={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[parts.find(p=>p.type==='weekday').value];
+const H=+parts.find(p=>p.type==='hour').value, M=+parts.find(p=>p.type==='minute').value, h=H+M/60;
+const close=wd>=1&&wd<=5?18:wd===6?14:null, open=close!==null&&h>=9&&h<close;
+const st=$('#status');
+if(open) st.querySelector('span').textContent=`Kwiaciarnia otwarta do ${close}:00. Kwiatomaty działają całą dobę.`;
+else {st.classList.add('closed'); st.querySelector('span').textContent='Kwiaciarnia teraz zamknięta. Kwiatomaty działają całą dobę.';}
+$$('.hours tr[data-d]').forEach(tr=>{if(tr.dataset.d.split(' ').includes(String(wd)))tr.classList.add('today')});
+// clock build
+const NS='http://www.w3.org/2000/svg', C=200;
+const pt=(hr,r)=>{const a=(hr/24)*2*Math.PI-Math.PI/2;return [C+r*Math.cos(a),C+r*Math.sin(a)]};
+const ticks=$('#ticks'), nums=$('#nums');
+for(let i=0;i<96;i++){const hr=i/4,[x1,y1]=pt(hr,186),[x2,y2]=pt(hr,i%4?181:174);const l=document.createElementNS(NS,'line');l.setAttribute('x1',x1);l.setAttribute('y1',y1);l.setAttribute('x2',x2);l.setAttribute('y2',y2);l.setAttribute('stroke',i%4?'rgba(248,243,234,.25)':'rgba(248,243,234,.6)');ticks.appendChild(l)}
+[0,3,6,9,12,15,18,21].forEach(n=>{const[x,y]=pt(n,138);const t=document.createElementNS(NS,'text');t.setAttribute('x',x);t.setAttribute('y',y+4);t.setAttribute('text-anchor','middle');t.textContent=n;nums.appendChild(t)});
+if(close!==null){const[a1,b1]=pt(9,160),[a2,b2]=pt(close,160);$('#shopArc').setAttribute('d',`M${a1} ${b1} A160 160 0 0 1 ${a2} ${b2}`)}
+$('#hand').style.transform=`rotate(${h/24*360}deg)`;
+$('#clockTime').textContent=`${String(H).padStart(2,'0')}:${String(M).padStart(2,'0')}`;
+$('#clockSub').textContent=open?'otwarte: kwiaciarnia i kwiatomaty':'otwarte: kwiatomaty';
+
+/* nav */
+const nav=$('#nav'), mb=$('#menubtn'), bar=$('#callbar');
+mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+$$('#navlinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+const links=$$('#navlinks a'), ind=$('#navind'), targets=links.map(a=>$(a.getAttribute('href')));
+
+/* background color stops */
+const css=getComputedStyle(document.documentElement);
+const hex=v=>{v=v.trim().replace('#','');return [0,2,4].map(i=>parseInt(v.slice(i,i+2),16))};
+const COL={paper:hex(css.getPropertyValue('--bg-paper')),sage:hex(css.getPropertyValue('--bg-sage')),night:hex(css.getPropertyValue('--bg-night'))};
+const secs=$$('[data-bg]');
+let stops=[];
+const measureStops=()=>{stops=[];secs.forEach(s=>{const r=s.getBoundingClientRect(),t=r.top+scrollY,b=t+r.height,c=COL[s.dataset.bg];stops.push([t,c],[b-vh*.32,c])});stops.sort((a,b)=>a[0]-b[0])};
+const colorAt=y=>{if(y<=stops[0][0])return stops[0][1];for(let i=1;i<stops.length;i++){if(y<=stops[i][0]){const[a,ca]=stops[i-1],[b,cb]=stops[i];const t=b===a?1:clamp((y-a)/(b-a));return ca.map((v,k)=>Math.round(lerp(v,cb[k],t)))}}return stops[stops.length-1][1]};
+
+/* garden motifs */
+let gs=[];
+const measureG=()=>{gs=$$('.g').map(el=>{el.style.transform='';const r=el.getBoundingClientRect();return{el,top:r.top+scrollY,h:r.height,sp:+(el.dataset.speed||.1),stuck:!!el.closest('.hero-stage')}})};
+
+/* hero */
+const hero=$('.hero'), win=$('#window');
+/* gallery */
+const gal=$('.gallery'), track=$('#track'), galStage=$('.gal-stage');
+let galH=0;
+const sizeGallery=()=>{ if(mobile||RM){gal.style.height='';return}
+  const extra=track.scrollWidth-vw; gal.style.height=(vh+Math.max(0,extra))+'px'; galH=Math.max(0,extra)};
+
+/* steps */
+const steps=$('#steps');
+const ioS=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){steps.classList.add('on');ioS.disconnect()}}),{threshold:.5});ioS.observe(steps);
+
+const measure=()=>{vw=innerWidth;vh=innerHeight;mobile=vw<=860;sizeGallery();measureStops();measureG();frame()};
+
+let ticking=false;
+function frame(){ticking=false;const y=scrollY;
+  // nav
+  nav.classList.toggle('scrolled',y>20); bar.classList.toggle('show',y>vh*.8);
+  // bg
+  const c=colorAt(y+vh*.5); document.body.style.background=`rgb(${c})`;
+  nav.style.setProperty('--navbg',`rgb(${c})`);
+  const lum=(.2126*c[0]+.7152*c[1]+.0722*c[2])/255; document.body.classList.toggle('is-night',lum<.32);
+  // hero
+  const hr=hero.getBoundingClientRect(); const hp=RM?0:clamp(-hr.top/(hr.height-vh)); const e=ease(hp);
+  hero.style.setProperty('--p',e.toFixed(4));
+  const W0=mobile?vw*.62:Math.min(vw*.3,460), H0=mobile?vh*.36:vh*.44, T0=mobile?vh*.5:vh*.5, B0=mobile?vh*.17:vh*.05;
+  const l0=(vw-W0)/2, t0=T0, b0=vh-T0-H0;
+  win.style.setProperty('--wt',lerp(t0,0,e)+'px');win.style.setProperty('--wh',lerp(H0,vh,e)+'px');
+  win.style.setProperty('--wl',lerp(l0,0,e)+'px');win.style.setProperty('--ww',lerp(W0,vw,e)+'px');
+  win.style.setProperty('--o2',clamp((hp-.5)/.3).toFixed(3)); win.parentElement.style.setProperty('--o3',clamp((hp-.78)/.18).toFixed(3));
+  // gallery
+  if(!mobile&&!RM){const gr=gal.getBoundingClientRect();const gp=clamp(-gr.top/(gr.height-vh||1));track.style.setProperty('--tx',(-gp*galH)+'px');gal.style.setProperty('--gp',gp.toFixed(4));
+    if(gr.top<vh&&gr.bottom>0) $$('.gi:not([hidden])').forEach(f=>{const r=f.getBoundingClientRect();const cx=(r.left+r.width/2-vw/2)/vw;f.style.setProperty('--ix',(-cx*40).toFixed(1)+'px')})}
+  // garden
+  gs.forEach(g=>{const top=g.stuck?g.el.getBoundingClientRect().top:g.top-y;
+    let p=g.stuck?clamp(hp*1.6+.25):clamp((vh-top)/(vh*.85)); if(RM)p=1;
+    g.el.style.setProperty('--d',(1-p).toFixed(3));
+    if(!g.stuck&&!RM){const off=(top+g.h/2-vh/2)*g.sp;g.el.style.transform=`translate3d(0,${(-off).toFixed(1)}px,0)`}});
+  // clock ring rotation
+  const kr=$('#kwiatomaty').getBoundingClientRect(); $('#ring').style.setProperty('--rot',(RM?0:(vh-kr.top)*.06).toFixed(2)+'deg');
+  // studio parallax
+  const sm=$('#stmedia').getBoundingClientRect(); $('#stmedia img').style.setProperty('--py',((sm.top+sm.height/2-vh/2)*-.06).toFixed(1)+'px');
+  // nav indicator
+  let idx=-1; targets.forEach((t,k)=>{const r=t.getBoundingClientRect();if(r.top<vh*.45&&r.bottom>vh*.45)idx=k});
+  links.forEach((a,k)=>a.toggleAttribute('aria-current',k===idx));
+  if(idx<0)ind.style.opacity=0;else{const a=links[idx];ind.style.opacity=1;ind.style.width=(a.offsetWidth-28)+'px';ind.style.transform=`translateX(${a.offsetLeft+14}px)`}
+}
+const req=()=>{if(!ticking){ticking=true;requestAnimationFrame(frame)}};
+addEventListener('scroll',req,{passive:true});
+addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(measure,120)});
+addEventListener('load',measure);
+measure();
+
+/* gallery filters */
+const items=$$('.gi');
+$$('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  $$('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  track.classList.add('fading');
+  setTimeout(()=>{const f=b.dataset.f;items.forEach(it=>it.hidden=!(f==='all'||it.dataset.cat===f));
+    if(mobile)track.scrollTo({left:0});
+    sizeGallery();measureStops();measureG();
+    const top=gal.getBoundingClientRect().top+scrollY; if(!mobile&&scrollY>top)scrollTo({top,behavior:'instant'});
+    track.classList.remove('fading');frame()},380);
+}));
+
+/* lightbox with FLIP */
+const lb=$('#lb'), li=$('#lbImg'), cap=$('#lbCap'), cnt=$('#lbCount');
+let cur=-1, lastFocus=null;
+const vis=()=>items.filter(i=>!i.hidden);
+const fit=(w,h)=>{const s=Math.min(vw*.86/w,vh*.8/h,1.4);return[w*s,h*s]};
+function setImg(fig){const im=fig.querySelector('img');li.src=im.dataset.full;li.alt=im.alt;const[w,h]=fit(+im.getAttribute('width'),+im.getAttribute('height'));li.style.width=w+'px';li.style.height=h+'px';cap.textContent=im.alt;const v=vis();cnt.textContent=`${v.indexOf(fig)+1} / ${v.length}`}
+function flipFrom(fig){const r=fig.getBoundingClientRect(),f=li.getBoundingClientRect();
+  const sx=r.width/f.width,sy=r.height/f.height,dx=r.left+r.width/2-(f.left+f.width/2),dy=r.top+r.height/2-(f.top+f.height/2);
+  return `translate(-50%,-50%) translate(${dx}px,${dy}px) scale(${sx},${sy})`}
+function openLB(fig){lastFocus=document.activeElement;cur=vis().indexOf(fig);setImg(fig);lb.classList.add('open');document.documentElement.style.overflow='hidden';
+  if(!RM)li.animate([{transform:flipFrom(fig),borderRadius:'2px'},{transform:'translate(-50%,-50%)'}],{duration:520,easing:'cubic-bezier(.22,.7,.2,1)'});
+  requestAnimationFrame(()=>lb.classList.add('show'));$('#lbClose').focus()}
+function closeLB(){const fig=vis()[cur];lb.classList.remove('show');
+  const done=()=>{lb.classList.remove('open');document.documentElement.style.overflow='';lastFocus&&lastFocus.focus()};
+  if(RM||!fig)return done();const a=li.animate([{transform:'translate(-50%,-50%)'},{transform:flipFrom(fig)}],{duration:420,easing:'cubic-bezier(.4,0,.2,1)'});a.onfinish=done}
+function step(d){const v=vis();cur=(cur+d+v.length)%v.length;
+  const out=li.animate([{opacity:1,transform:'translate(-50%,-50%)'},{opacity:0,transform:`translate(calc(-50% + ${-d*40}px),-50%)`}],{duration:RM?1:200,easing:'ease-in'});
+  out.onfinish=()=>{setImg(v[cur]);li.animate([{opacity:0,transform:`translate(calc(-50% + ${d*40}px),-50%)`},{opacity:1,transform:'translate(-50%,-50%)'}],{duration:RM?1:320,easing:'cubic-bezier(.22,.7,.2,1)'})}}
+items.forEach(f=>{f.addEventListener('click',()=>openLB(f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLB(f)}})});
+$('#lbClose').onclick=closeLB;$('#lbPrev').onclick=()=>step(-1);$('#lbNext').onclick=()=>step(1);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);
+  if(e.key==='Tab'){const f=$$('.lb-ui button');const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
+let sx=null;lb.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)step(dx<0?1:-1);sx=null});
+
+/* occasions floating preview */
+const fl=$('#occfloat');
+if(matchMedia('(pointer:fine)').matches&&!RM){
+  const imgs={};$$('#occ li').forEach(li=>{const im=new Image();im.src=li.dataset.img;im.alt='';fl.appendChild(im);imgs[li.dataset.img]=im;
+    li.addEventListener('mouseenter',()=>{Object.values(imgs).forEach(i=>i.classList.remove('on'));im.classList.add('on');fl.classList.add('on')})});
+  $('#occ').addEventListener('mouseleave',()=>fl.classList.remove('on'));
+  let mx=0,my=0,fx=0,fy=0;const slot=$('#occ .slot');const slotX=()=>slot.getBoundingClientRect().left;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+  (function loop(){fx=lerp(fx,mx,.12);fy=lerp(fy,my,.12);const w=fl.offsetWidth,hh=fl.offsetHeight;fl.style.transform=`translate3d(${slotX()}px,${fy-hh/2}px,0) rotate(${clamp((mx-fx)*.03,-5,5)}deg)`;requestAnimationFrame(loop)})();
+}
+
+/* reviews rotator */
+const rq=$$('.rq'), rb=$('#rvBar'), rn=$('#rvNum'); let ri=0, rt;
+function showR(i){rq[ri].classList.remove('on');ri=(i+rq.length)%rq.length;rq[ri].classList.add('on');rn.textContent=`${ri+1} / ${rq.length}`;rb.classList.remove('run');void rb.offsetWidth;if(!RM)rb.classList.add('run')}
+rb.addEventListener('animationend',()=>showR(ri+1));
+$('#rvNext').onclick=()=>showR(ri+1);$('#rvPrev').onclick=()=>showR(ri-1);
+const rotWrap=$('#rotator').parentElement;
+rotWrap.addEventListener('mouseenter',()=>rotWrap.classList.add('rv-paused'));rotWrap.addEventListener('mouseleave',()=>rotWrap.classList.remove('rv-paused'));
+rotWrap.addEventListener('focusin',()=>rotWrap.classList.add('rv-paused'));rotWrap.addEventListener('focusout',()=>rotWrap.classList.remove('rv-paused'));
+if(!RM)rb.classList.add('run');
+
+/* copy */
+$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Skopiowano';setTimeout(()=>b.textContent='Kopiuj numer',2000)}catch(e){location.href='tel:+48'+b.dataset.copy}}));
+$('#y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

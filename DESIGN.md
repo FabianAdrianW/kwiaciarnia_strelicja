@@ -18,67 +18,50 @@ Kwiaciarnia Iwony Dąbrowy, ul. Wiejska 28A, Oława, i dwa kwiatomaty 24/7: Oła
 4. **Bukiet w wazonie z wodą** (opinie) → wyróżnik w sekcji Pracownia.
 5. **Pani Iwona** (opinie po imieniu) → głos marki: na Ty, ciepło, konkretnie.
 
-## Kombinacja (macierz)
+## Kombinacja v2 (redesign 25.11.2026, na prośbę Fabiana: mniej szablonowo, bez karteczek i krzywizn, płynnie)
 | Oś | Wybór |
 |---|---|
-| Układ | jedna historia przewijana „dzień → noc → dzień” |
-| Typografia | szeryf redakcyjny Fraunces + Inter |
-| Źródło koloru | logo i szyld (liść, kwiat strelicji, ciemna zieleń szyldu) |
-| Hero | duży kadr zdjęcia strelicji przycięty przy krawędzi + typografia |
-| Sygnatura | żywy status otwarcia (Europe/Warsaw) + kwiatomat z przegródkami, które się podświetlają; navbar przechodzi w tryb nocny nad sekcją kwiatomatów |
+| Układ | jedno płótno bez granic sekcji; kolor tła interpoluje się przy scrollu (len → szałwia → noc → len) |
+| Typografia | Fraunces (duże, redakcyjne nagłówki, italic w kolorze liścia) + Inter |
+| Źródło koloru | logo i szyld |
+| Hero | „otwierane okno”: hasło na środku, pod nim wąskie okno ze strelicją; przy scrollu okno rośnie do pełnego ekranu i przechodzi w zdjęcie pracowni → galeria |
+| Sygnatura | rysunkowe motywy kwiatów w tle (strelicja, liść, eukaliptus, róża, gerbera, pnącze), rysowane kreską przy scrollu z paralaksą + zegar 24h przy kwiatomatach |
 
-**Złamana konwencja:** kwiaciarnie stawiają sklep na pierwszym miejscu, a automat chowają. Tu kwiatomaty mają własną nocną scenę i są pierwszym linkiem w menu.
-
-**Świadome wyjątki od listy zakazanej:** kremowe tło + terakota CTA i Inter. Decyzja Fabiana z 24.11.2026: zostaje jak w brand booku. Kolory pochodzą z logo, nie z trendu.
+**Złamana konwencja:** kwiatomaty jako pełna nocna scena z zegarem dobowym (pierwszy link w menu), a nie dopisek w stopce.
+**Świadome wyjątki od listy zakazanej:** kremowe tło + terakota CTA, Inter (decyzja Fabiana 24.11.2026).
 
 ## Tokeny
-| Token | Jasny | Ciemny | Rola | Źródło |
-|---|---|---|---|---|
-| `--ink` | #1E3533 | tekst #F1ECE2 | tekst, noc | szyld |
-| `--accent` | #2B765C | #6CC3A0 | linki, etykiety, ikony | liść w logo |
-| `--cta` | #B8471A | #B8471A | wyłącznie CTA | kwiat strelicji + czerwień róż |
-| `--muted` | #5E716C | #B9C6C1 | tekst pomocniczy | szałwia |
-| `--paper` / `--bg` | #F8F3EA | #172A2B | tło | len |
-| `--bloom` | #E8912A | #E8912A | kropki, linie, nocne akcenty (nigdy tekst na jasnym) | kwiat strelicji |
-| `--night` | #16282A | — | sekcja kwiatomatów, stopka | szyld nocą |
+| Token | Jasny | Ciemny | Rola |
+|---|---|---|---|
+| `--ink` / `--text` | #1E3533 | #F1ECE2 | tekst |
+| `--accent` | #2B765C | #6CC3A0 | nagłówki italic, linki, motywy |
+| `--cta` | #B8471A | #B8471A | wyłącznie CTA |
+| `--muted` | #5E716C | #B9C6C1 | tekst pomocniczy |
+| `--bg-paper` | #F8F3EA | #172A2B | tło: hero, galeria, pracownia, kontakt |
+| `--bg-sage` | #ECEEE3 | #1B3130 | tło: okazje, opinie |
+| `--bg-night` | #16282A | #0F1E1F | kwiatomaty, stopka |
+| `--bloom` | #E8912A | #E8912A | kropki, wskaźniki, motywy (nigdy tekst na jasnym) |
 
-Kontrast (AA): ink/len 11,8:1, accent/len 4,9:1, muted/len 4,7:1, biały/cta 5,3:1, bloom/night ≥5,3:1.
+## Sekcje
+1. **Hero** (sticky 230vh): status na żywo, hasło, CTA; okno z animacją rozmiaru (left/top/width/height z JS, ease in-out), crossfade na zdjęcie pracowni, podpis „Zobacz, co wiążemy”.
+2. **Galeria** (desktop: przypięta, scroll pionowy przesuwa taśmę w poziomie; mobile: natywny swipe ze scroll-snap). 24 realne zdjęcia w 3 wysokościach, paralaksa wewnątrz kadru, podpis wysuwa się na hover, ramka w kolorze kwiatu. Filtry: Bukiety, Okazje, Święta, Pracownia. Lightbox z animacją FLIP z miniatury, strzałki, klawiatura, swipe, licznik.
+3. **Okazje**: duże wiersze typograficzne; hover rozsuwa wiersz, tytuł przechodzi w italic i kolor liścia, linia rysuje się od lewej, zdjęcie odsłania się (clip-path) w osobnej kolumnie i płynie za kursorem w pionie. Mobile: miniatura przy wierszu.
+4. **Kwiatomaty** (noc): przypięty zegar 24h (pierścień bursztynowy = kwiatomaty, łuk liścia = dzisiejsze godziny kwiaciarni, wskazówka = aktualna godzina w Polsce, pierścień podziałki obraca się przy scrollu), 2 panele z mapą i „Prowadź”, 3 kroki z linią rysowaną po wejściu, opinia o kwiatomacie.
+5. **Pracownia**: zdanie o Iwonie, 4 fakty, zdjęcie z paralaksą + witryna.
+6. **Opinie**: „4,9” w dużej skali, rotator jednej opinii (7 s, pasek postępu, pauza na hover/focus, strzałki), taśma krótkich cytatów (pauza na hover).
+7. **Kontakt**: duży numer, kopiowanie, godziny z podświetleniem dzisiejszego dnia, mapa.
 
-## Typografia
-Fraunces 400/400i/600 (nagłówki), Inter 400/600 (tekst). OFL, hostowane lokalnie w `fonts/` (latin + latin-ext). Hero `clamp(44px,6.6vw,104px)`, h2 `clamp(34px,5.2vw,68px)`, body 16/1.6.
+## Ruch
+Jedna pętla rAF na scroll: tło, hero, galeria, motywy, zegar, paralaksa, wskaźnik menu. Navbar: fixed, stała wysokość; po scrollu pojawia się tło w aktualnym kolorze strony i linia; nad nocą przechodzi w jasny tekst i ciemną wersję logo; hover linku: tekst wysuwa się w górę, a z dołu wjeżdża italic w kolorze kwiatu; aktywna sekcja = linia pod linkiem przesuwana płynnie. `prefers-reduced-motion`: bez przypięć i animacji, motywy narysowane.
 
-## Kompozycja (łamanie schematu)
-- Każda sekcja ma własne wcięcia: hero `7vw` lewo, okazje `12vw` lewo, noc wyrównana do prawej, pracownia `9vw` prawo, opinie `6vw`.
-- Nakładanie: zdjęcie róż w hero zwisa na sekcję okazji, mapa wchodzi na opinie (−110 px), ogromne „4,9” wychodzi poza ekran.
-- 4 przejścia z kształtem: fala płatka (hero→okazje), zęby jodły/świerku (okazje→noc), miękka fala (noc→dzień), ząbkowany brzeg bibuły (pracownia→opinie).
-- Tła graficzne: faktura lnu (hero), cienie liści strelicji (okazje), nocne niebo z bursztynową poświatą (kwiatomaty), znak strelicji (hero). Wszystkie proceduralne (Pillow), tylko jako faktura.
-- Okazje jako bileciki zawieszone na pinezce, różne szerokości i obroty (−2°…+2,2°), ciemny bilecik = CTA.
-
-## Ruch i interakcje
-- Navbar: fixed, stała wysokość 72 px. Po scrollu rysuje się linia dolna + cień. Nad sekcją kwiatomatów płynnie przechodzi w tryb nocny (tło, kolor, wersja logo). Kropka w kolorze kwiatu przesuwa się pod aktywnym linkiem, a podkreślenie linku rysuje się od lewej.
-- Pnącze pod nagłówkiem okazji rysuje się raz (stroke-dashoffset), listki pojawiają się z opóźnieniem.
-- Bileciki po najechaniu: prostują się, unoszą, zdjęcie przybliża się o 6%, pod tytułem rysuje się pnącze.
-- Kwiatomat: co 2,6 s zapalają się losowo dwie przegródki; najechanie podświetla przegródkę bursztynem i pokazuje nazwę.
-- Przyciski: CTA ciemnieje, słuchawka się obraca.
-- `prefers-reduced-motion`: wszystko statyczne. Brak wjeżdżania sekcji.
-
-## CTA
-| Sekcja | Akcja główna | Druga |
-|---|---|---|
-| Navbar | Zadzwoń: 880 056 918 | — |
-| Hero | Zadzwoń | Gdzie są kwiatomaty |
-| Okazje | ciemny bilecik → Zadzwoń | każdy bilecik = tel: |
-| Kwiatomaty | Prowadź (Mapy Google) ×2 | — |
-| Pracownia | Jak do nas trafić | — |
-| Opinie | Wszystkie opinie w Google | — |
-| Dojazd | duży numer, Zadzwoń, Kopiuj numer | Wyznacz trasę |
-| Mobile | dolny pasek „Zadzwoń” po przewinięciu | — |
+## Pliki
+`src/index.src.html` + `tools/build.py` (galeria z `tools/gallery.json`, motywy SVG) → `index.html`. `python3 tools/build.py --preview OUT.html` daje plik z osadzonymi zasobami.
 
 ## Zdjęcia
-Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwierdzona przez Fabiana (24.11.2026).** WebP 480/960, bez EXIF. Rysunek kwiatomatu to ilustracja CSS ze zdjęciami realnych bukietów, podpisana jako „rysunek poglądowy”. Brak zdjęć generowanych przez AI i stocków.
+Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwierdzona przez Fabiana (24.11.2026).** WebP 480/960, bez EXIF. Galeria: 24 zdjęcia, WebP 640/1280. Motywy kwiatowe to rysunki wektorowe (tools/build.py), tylko dekoracja tła. Brak zdjęć generowanych przez AI i stocków.
 
 ## Do uzupełnienia
-- [ ] Zdjęcia kwiatomatów (noc + z bliska) → zastąpią rysunek poglądowy
+- [ ] Zdjęcia kwiatomatów (noc + z bliska) → do galerii i sekcji kwiatomatów
 - [ ] Niedziela: szyld 10–14, Google brak; na stronie „zamknięte”
 - [ ] Potwierdzić, że bukiet w wazonie z wodą to stała opcja
 - [ ] Przejąć profil Google kwiatomatu w Jelczu-Laskowicach
