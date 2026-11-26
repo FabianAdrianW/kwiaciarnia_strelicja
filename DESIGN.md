@@ -53,7 +53,7 @@ Promienie: 4 px (drobne), 14 px (karty, zdjęcia), 18–28 px (panele). Przycisk
 7. **Kontakt**: ciemna karta z dużym numerem, godzinami (dziś podświetlony) i przyciskiem do mapy.
 
 ## Ruch
-Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz), Ken Burns zdjęcia hero, hover kart/zdjęć, przełączanie scenariuszy i opinii z paskami postępu. Brak przypinania, paralaksy i zmiany koloru tła. `prefers-reduced-motion`: wszystko statyczne.
+Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz), wolna taśma bukietów w hero, wjazd „Kwiatomat: otwarte.” w liniach, hover kart/zdjęć, przelot mapy do wybranego punktu, rotator opinii z paskiem postępu. Brak przypinania, paralaksy i zmiany koloru tła. `prefers-reduced-motion`: wszystko statyczne.
 
 ## Pliki
 `src/index.src.html` + `tools/build.py` (galeria z `tools/gallery.json`, motywy SVG; poprzednia wersja v5 w historii git) → `index.html`. `python3 tools/build.py --preview OUT.html` daje plik z osadzonymi zasobami.
@@ -62,7 +62,7 @@ Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz),
 Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwierdzona przez Fabiana (24.11.2026).** WebP 480/960, bez EXIF. Galeria: 24 zdjęcia, WebP 640/1280. Motywy kwiatowe to rysunki wektorowe (tools/build.py), tylko dekoracja tła. Brak zdjęć generowanych przez AI i stocków.
 
 ## Do uzupełnienia
-- [ ] Kafle mapy CARTO: darmowe do 75 tys. odsłon mapy miesięcznie; przy większym ruchu przejść na własne kafle lub OSM
+- [ ] Kafle mapy CARTO: sprawdzić aktualne warunki darmowego użycia przed publikacją; w razie potrzeby podmienić URL kafli w `initMap()`
 - [ ] Zdjęcia kwiatomatów (noc + z bliska) → do galerii i sekcji kwiatomatów
 - [ ] Niedziela: szyld 10–14, Google brak; na stronie „zamknięte”
 - [ ] Potwierdzić, że bukiet w wazonie z wodą to stała opcja
