@@ -26,8 +26,8 @@ Powód: v2–v5 były niespójne, przejścia agresywne (przeskok w tryb nocny, p
 | Układ | jedna szerokość treści (max 1320 px), rytm: hero → dwie drogi → panel kwiatomatów → pracownia → galeria → opinie → karta kontaktu |
 | Typografia | Fraunces + Inter, nagłówki z drugą linią italic w kolorze liścia |
 | Kolor | len (tło), szałwia (panel kwiatomatów), bursztyn (karta kwiatomatu, akcenty 24/7), butelkowa zieleń (scena scenariuszy, karta kontaktu), terakota tylko na „Zadzwoń/Zamów” |
-| Hero | zapraszający: tekst + zdjęcie pracowni z wolnym Ken Burns, plakietka „24/7 kwiatomaty”, karta „Dziś: pracownia / kwiatomaty” z prawdziwymi godzinami |
-| Sygnatura | dwie równorzędne karty „Wpadnij do pracowni” / „Kwiatomat zawsze otwarty” + scenariusze „Kiedy kwiatomat ratuje sytuację” |
+| Hero (v7) | wyśrodkowane hasło i zaproszenie, CTA „Odwiedź pracownię” + „Gdzie mam najbliżej?”, pod spodem pełnoszeroka taśma 12 bukietów sunąca wolno w bok (pauza na hover); bez powiększania zdjęć |
+| Sygnatura | linie „problem? → Kwiatomat: otwarte.” + mapa „Gdzie masz najbliżej?” z czasem dojazdu |
 
 **Świadome wyjątki od listy zakazanej:** kremowe tło + terakota CTA, Inter (decyzja Fabiana 24.11.2026).
 
@@ -44,13 +44,13 @@ Powód: v2–v5 były niespójne, przejścia agresywne (przeskok w tryb nocny, p
 Promienie: 4 px (drobne), 14 px (karty, zdjęcia), 18–28 px (panele). Przyciski-pigułki.
 
 ## Sekcje
-1. **Hero**: status na żywo, „Świeże kwiaty o każdej porze.”, zaproszenie do pracowni + informacja o kwiatomatach, CTA „Odwiedź pracownię” i „Znajdź kwiatomat” (telefon tylko w navbarze), 4,9 ★. Zdjęcie wnętrza pracowni, plakietka 24/7, karta dzisiejszych godzin.
+1. **Hero** (v7): status na żywo, hasło, zaproszenie, 2 CTA, ocena 4,9 i link do kwiatomatów, taśma bukietów (marquee 70 s, maska na krawędziach, `prefers-reduced-motion` = stop).
 2. **Dwie drogi**: karta pracowni (zdjęcie lady, godziny, dowóz) i bursztynowa karta kwiatomatu (24/7, adresy). Hover: zoom zdjęcia, strzałka.
-3. **Kwiatomaty** (panel szałwiowy): „Kwiaciarnia zamknięta? Kwiatomat nie.”, 3 korzyści, scenariusze (Teraz na żywo, 6:40, 21:30, niedziela 11:00, 23:10) z ciemną sceną: godzina, status pracowni vs kwiatomatu, problem, rozwiązanie, przyciski nawigacji; 2 karty lokalizacji z mapą; opinia o kwiatomacie.
+3. **Kwiatomaty** (v7): „Kwiaciarnia zamknięta? Kwiatomat nie.”; 6 linii pytanie → „Kwiatomat: otwarte.” (pierwsza na żywo z aktualną godziną; odpowiedź wjeżdża po wejściu w widok); ciemna karta 24/7 z adresami; **wyszukiwarka „Gdzie masz najbliżej?”**: mapa Leaflet (lokalnie w `vendor/leaflet`, kafle CARTO Voyager + OSM, atrybucja w rogu) z pinezkami pracowni i 2 kwiatomatów, przycisk geolokalizacji (dane zostają w przeglądarce) i szybkie miejscowości (Oława, Jelcz-Laskowice, Siechnice, Brzeg, Wrocław); lista sortowana po odległości z czasem dojazdu autem (szacunek: odległość w linii prostej × 1,35, 28/45/60 km/h), statusem otwarcia, plakietką „najbliższy kwiatomat” i „Prowadź” do Map Google; opinia o kwiatomacie.
 4. **Pracownia**: kolaż 3 zdjęć, „Bukiet związany przy Tobie.”, o Iwonie, 4 fakty, „Zamów” + „Jak dojechać”; okazje jako 5 rozsuwanych paneli.
-5. **Galeria**: rozkładówki z 2 cytatami z opinii, filtry-pigułki, „Pokaż więcej”, lightbox FLIP.
+5. **Galeria**: rozkładówki z 2 cytatami z opinii (bez przygaszania zdjęć na hover), filtry-pigułki, „Pokaż więcej”, lightbox FLIP.
 6. **Opinie**: 4,9 + rotator z paskiem postępu.
-7. **Kontakt**: ciemna karta z dużym numerem, godzinami (dziś podświetlony), mapą.
+7. **Kontakt**: ciemna karta z dużym numerem, godzinami (dziś podświetlony) i przyciskiem do mapy.
 
 ## Ruch
 Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz), Ken Burns zdjęcia hero, hover kart/zdjęć, przełączanie scenariuszy i opinii z paskami postępu. Brak przypinania, paralaksy i zmiany koloru tła. `prefers-reduced-motion`: wszystko statyczne.
@@ -62,6 +62,7 @@ Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz),
 Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwierdzona przez Fabiana (24.11.2026).** WebP 480/960, bez EXIF. Galeria: 24 zdjęcia, WebP 640/1280. Motywy kwiatowe to rysunki wektorowe (tools/build.py), tylko dekoracja tła. Brak zdjęć generowanych przez AI i stocków.
 
 ## Do uzupełnienia
+- [ ] Kafle mapy CARTO: darmowe do 75 tys. odsłon mapy miesięcznie; przy większym ruchu przejść na własne kafle lub OSM
 - [ ] Zdjęcia kwiatomatów (noc + z bliska) → do galerii i sekcji kwiatomatów
 - [ ] Niedziela: szyld 10–14, Google brak; na stronie „zamknięte”
 - [ ] Potwierdzić, że bukiet w wazonie z wodą to stała opcja
