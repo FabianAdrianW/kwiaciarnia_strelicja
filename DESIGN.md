@@ -46,7 +46,7 @@ Promienie: 4 px (drobne), 14 px (karty, zdjęcia), 18–28 px (panele). Przycisk
 ## Sekcje
 1. **Hero** (v7): status na żywo, hasło, zaproszenie, 2 CTA, ocena 4,9 i link do kwiatomatów, taśma bukietów (marquee 70 s, maska na krawędziach, `prefers-reduced-motion` = stop).
 2. **Dwie drogi**: karta pracowni (zdjęcie lady, godziny, dowóz) i bursztynowa karta kwiatomatu (24/7, adresy). Hover: zoom zdjęcia, strzałka.
-3. **Kwiatomaty** (v7): „Kwiaciarnia zamknięta? Kwiatomat nie.”; 6 linii pytanie → „Kwiatomat: otwarte.” (pierwsza na żywo z aktualną godziną; odpowiedź wjeżdża po wejściu w widok); ciemna karta 24/7 z adresami; **wyszukiwarka „Gdzie masz najbliżej?”**: mapa Leaflet (lokalnie w `vendor/leaflet`, kafle CARTO Voyager + OSM, atrybucja w rogu) z pinezkami pracowni i 2 kwiatomatów, przycisk geolokalizacji (dane zostają w przeglądarce) i szybkie miejscowości (Oława, Jelcz-Laskowice, Siechnice, Brzeg, Wrocław); lista sortowana po odległości z czasem dojazdu autem (szacunek: odległość w linii prostej × 1,35, 28/45/60 km/h), statusem otwarcia, plakietką „najbliższy kwiatomat” i „Prowadź” do Map Google; opinia o kwiatomacie.
+3. **Kwiatomaty** (v7): „Kwiaciarnia zamknięta? Kwiatomat nie.”; 6 linii pytanie → „Kwiatomat: otwarte.” (pierwsza na żywo z aktualną godziną; odpowiedź wjeżdża po wejściu w widok); ciemna karta 24/7 z adresami; **wyszukiwarka „Gdzie masz najbliżej?”**: mapa Leaflet (lokalnie w `vendor/leaflet`, kafle OpenStreetMap (bez klucza API, ocieplone filtrem CSS), atrybucja i link „Zgłoś błąd mapy” w rogu) z pinezkami pracowni i 2 kwiatomatów, przycisk geolokalizacji (dane zostają w przeglądarce) i szybkie miejscowości (Oława, Jelcz-Laskowice, Siechnice, Brzeg, Wrocław); lista sortowana po odległości z czasem dojazdu autem (szacunek: odległość w linii prostej × 1,35, 28/45/60 km/h), statusem otwarcia, plakietką „najbliższy kwiatomat” i „Prowadź” do Map Google; opinia o kwiatomacie.
 4. **Pracownia**: kolaż 3 zdjęć, „Bukiet związany przy Tobie.”, o Iwonie, 4 fakty, „Zamów” + „Jak dojechać”; okazje jako 5 rozsuwanych paneli.
 5. **Galeria**: rozkładówki z 2 cytatami z opinii (bez przygaszania zdjęć na hover), filtry-pigułki, „Pokaż więcej”, lightbox FLIP.
 6. **Opinie**: 4,9 + rotator z paskiem postępu.
@@ -62,7 +62,7 @@ Tylko: fade-up przy wejściu w widok (raz), rysowanie motywów kwiatowych (raz),
 Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwierdzona przez Fabiana (24.11.2026).** WebP 480/960, bez EXIF. Galeria: 24 zdjęcia, WebP 640/1280. Motywy kwiatowe to rysunki wektorowe (tools/build.py), tylko dekoracja tła. Brak zdjęć generowanych przez AI i stocków.
 
 ## Do uzupełnienia
-- [ ] Kafle mapy CARTO: sprawdzić aktualne warunki darmowego użycia przed publikacją; w razie potrzeby podmienić URL kafli w `initMap()`
+- [ ] Kafle OSM (tile.openstreetmap.org) zgodnie z polityką OSMF: dozwolone przy małym ruchu, wymagana atrybucja; przy dużym ruchu przejść na własne kafle/komercyjnego dostawcę (URL w `initMap()`)
 - [ ] Zdjęcia kwiatomatów (noc + z bliska) → do galerii i sekcji kwiatomatów
 - [ ] Niedziela: szyld 10–14, Google brak; na stronie „zamknięte”
 - [ ] Potwierdzić, że bukiet w wazonie z wodą to stała opcja
