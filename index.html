@@ -364,7 +364,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .f-map{min-height:340px}
   .panels{flex-direction:column;height:auto}
   .panel{flex:none;height:70px;transition:height .8s var(--ease)}
-  .panel.open{height:400px}
+  .panel.open{flex:none;height:min(400px,56vh)}
   .pn-v{writing-mode:horizontal-tb;transform:none;left:20px;bottom:auto;top:50%;margin-top:-11px}
   .spread{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:26vw}
   .gi figcaption{display:none}
@@ -712,6 +712,11 @@ $('#locBtn').addEventListener('click',()=>{if(!navigator.geolocation){fMsg.textC
 /* occasions panels */
 const pans=$$('.panel');
 const openP=p=>{if(p.classList.contains('open'))return;pans.forEach(x=>{x.classList.toggle('open',x===p);x.setAttribute('aria-expanded',x===p)})};
+/* touch screens: scrolling opens the next panel, one is always open */
+if(!matchMedia('(hover:hover)').matches){const box=$('#panels');let pt=false;
+  const scrollPan=()=>{pt=false;const r=box.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
+    const k=Math.max(0,Math.min(pans.length-1,Math.floor((vh*.5-r.top)/(r.height/pans.length))));openP(pans[k])};
+  addEventListener('scroll',()=>{if(!pt){pt=true;requestAnimationFrame(scrollPan)}},{passive:true})}
 pans.forEach(p=>{p.addEventListener('click',()=>openP(p));p.addEventListener('focusin',()=>openP(p));
   if(matchMedia('(hover:hover)').matches)p.addEventListener('mouseenter',()=>openP(p));
   p.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target===p){e.preventDefault();openP(p)}})});
