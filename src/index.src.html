@@ -9,8 +9,8 @@
 <link rel="icon" href="img/favicon.png">
 <meta property="og:title" content="Kwiaciarnia Strelicja · świeże kwiaty o każdej porze">
 <meta property="og:description" content="Kwiaciarnia w Oławie i dwa kwiatomaty 24h. Zadzwoń: 880 056 918.">
-<meta property="og:image" content="img/g/10-1280.webp">
-<link rel="preload" as="image" href="img/g/10-1280.webp" type="image/webp">
+<meta property="og:image" content="img/g/47-1280.webp">
+<link rel="preload" as="image" href="img/g/47-1280.webp" imagesrcset="img/g/47-640.webp 640w, img/g/47-1280.webp 1280w" imagesizes="(max-width:860px) 100vw, 60vw" type="image/webp">
 <link rel="preload" as="font" href="fonts/fraunces-latin-400-normal.woff2" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Florist","name":"Kwiaciarnia Strelicja Iwona Dąbrowa","telephone":"+48880056918","email":"kwiaciarniastrelicjaid@gmail.com",
@@ -99,28 +99,44 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 
 /* HERO */
-.hero{padding:calc(var(--nav-h) + clamp(34px,7vh,80px)) 0 clamp(30px,5vh,56px);text-align:center;position:relative}
-.hero .wrap{display:flex;flex-direction:column;align-items:center}
+.hero{position:relative;min-height:min(94vh,880px);display:flex;align-items:center;padding:calc(var(--nav-h) + clamp(30px,6vh,70px)) 0 clamp(40px,8vh,90px)}
+.hero .wrap{width:100%}
+.hero-txt{max-width:600px;position:relative;z-index:3}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(60vw,1100px);margin:0;z-index:1;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.55) 22%,#000 46%),linear-gradient(0deg,transparent 0,#000 26%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.55) 22%,#000 46%),linear-gradient(0deg,transparent 0,#000 26%);mask-composite:intersect;
+  animation:settle 2.6s var(--ease) both}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--paper) 55%,transparent),transparent 18%);pointer-events:none}
+@keyframes settle{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+.hero-cap{position:absolute;right:clamp(18px,3vw,48px);bottom:clamp(40px,10vh,110px);z-index:3;display:flex;align-items:center;gap:12px;max-width:290px;padding:12px 16px 12px 12px;border-radius:var(--r-lg);background:color-mix(in srgb,var(--surface) 86%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 18px 40px -24px rgba(30,53,51,.55);font-size:13px;line-height:1.4;color:var(--muted)}
+.hero-cap::before{content:"";width:28px;height:28px;flex:none;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat}
+.hero-cap b{display:block;font:italic 400 17px/1.2 var(--display);color:var(--ink)}
 .status{display:inline-flex;align-items:center;gap:10px;font-size:13px;padding:7px 14px 7px 11px;border-radius:40px;background:var(--surface);box-shadow:0 0 0 1px var(--line);margin:0 0 22px;text-align:left}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(43,118,92,.5);animation:pulse 2.4s infinite;flex:none}
 .status.closed i{background:var(--bloom)}
 @keyframes pulse{70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.hero h1{font-size:clamp(44px,6.6vw,104px);line-height:.95;margin:0 0 20px}
+.hero h1{font-size:clamp(46px,6.4vw,100px);line-height:.95;margin:0 0 22px}
 .hero h1 em{display:block}
-.hero .lead{font-size:clamp(16px,1.3vw,19px);max-width:52ch;margin:0 auto 26px}
-.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:22px}
-.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 26px;font-size:13px;color:var(--text-muted)}
+.hero .lead{font-size:clamp(16px,1.25vw,18px);max-width:46ch;margin:0 0 28px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.hero-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;font-size:13px;color:var(--text-muted)}
 .hero-meta a{text-decoration:none;display:inline-flex;align-items:center;gap:8px}
 .hero-meta b{font:400 24px/1 var(--display);color:var(--text)}
 .hero-meta .k{color:var(--cta);font-weight:600}
 .hero-meta .k i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--bloom);animation:pulse 2.4s infinite}
 .stars{color:var(--bloom);letter-spacing:2px}
-.ribbon{margin-top:clamp(34px,6vh,64px);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.rb-track{display:flex;gap:clamp(10px,1.1vw,16px);width:max-content;align-items:center;animation:rb 70s linear infinite}
+
+/* INSTAGRAM ribbon (before footer) */
+.ig{padding:clamp(50px,8vh,90px) 0 0}
+.ig-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.ig-head h2{font-size:clamp(26px,2.8vw,40px)}
+.ribbon{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rb-track{display:flex;gap:clamp(10px,1.1vw,16px);width:max-content;align-items:center;animation:rb 80s linear infinite}
 .ribbon:hover .rb-track{animation-play-state:paused}
 @keyframes rb{to{transform:translateX(-50%)}}
-.rb-track figure{margin:0;height:clamp(200px,32vh,330px);border-radius:var(--r-lg);overflow:hidden;flex:none;position:relative}
-.rb-track figure:nth-child(3n+2){height:clamp(170px,27vh,280px)}
+.rb-track figure{margin:0;height:clamp(150px,22vh,230px);border-radius:var(--r-lg);overflow:hidden;flex:none;position:relative}
+.rb-track figure:nth-child(3n+2){height:clamp(130px,19vh,200px)}
 .rb-track img{height:100%;width:auto;max-width:none;transition:transform 1s var(--ease)}
 .rb-track figure:hover img{transform:scale(1.04)}
 
@@ -149,27 +165,22 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .k-ill .big{font:400 clamp(48px,5vw,80px)/.85 var(--display);color:var(--ink);letter-spacing:-.03em;text-align:right}
 
 /* KIOSK section */
-.kiosk-panel{background:var(--sage);border-radius:clamp(18px,2vw,28px);padding:clamp(40px,7vh,90px) clamp(20px,4vw,64px);position:relative;overflow:hidden}
+.kiosk-panel{background:var(--sage);border-radius:clamp(18px,2vw,28px);padding:clamp(36px,6vh,72px) clamp(20px,4vw,64px);position:relative;overflow:hidden}
 .kiosk-panel>*{position:relative;z-index:2}
-.k-lines{list-style:none;margin:0 0 clamp(40px,7vh,70px);padding:0;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
-.k-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:clamp(14px,2.2vh,22px) 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
-.k-lines .q{font:400 clamp(22px,2.7vw,40px)/1.15 var(--display);color:var(--ink)}
-.k-lines .a{display:inline-flex;align-items:center;gap:12px;font:italic 400 clamp(22px,2.7vw,40px)/1.15 var(--display);color:var(--cta);white-space:nowrap;opacity:0;transform:translateX(-14px);transition:opacity .7s var(--ease) .35s,transform .9s var(--ease) .35s}
-.k-lines .a::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.5);animation:pulse 2.4s infinite}
-.k-lines li.in .a{opacity:1;transform:none}
-.k-lines li.live .q{color:var(--accent)}
-.k-sign{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(18px,3vw,44px);align-items:center;background:var(--ink);color:var(--paper);border-radius:var(--r-lg);padding:clamp(22px,3vw,36px) clamp(22px,3vw,40px);margin-bottom:clamp(40px,7vh,70px)}
-.k-sign .big{font:400 clamp(56px,6vw,96px)/.85 var(--display);color:var(--amber);letter-spacing:-.03em}
-.k-sign h3{font-size:clamp(22px,2vw,30px);margin-bottom:6px}
-.k-sign p{margin:0;color:#C9D3CF;font-size:14px;max-width:52ch}
-.k-sign ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.k-sign li{font-size:12px;font-weight:600;padding:6px 11px;border-radius:40px;background:rgba(248,243,234,.08);box-shadow:inset 0 0 0 1px rgba(248,243,234,.18)}
+.k-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:start;margin-bottom:clamp(36px,6vh,64px)}
+.k-intro .lead{margin:20px 0 22px}
+.k-addr{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.k-addr li{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 13px;border-radius:40px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.k-addr li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bloom)}
 .btn-amber{background:var(--bloom);color:#1E3533}.btn-amber:hover{background:var(--amber)}
 .btn-ghost{color:var(--paper);box-shadow:inset 0 0 0 1px rgba(248,243,234,.4)}.btn-ghost:hover{box-shadow:inset 0 0 0 1px var(--paper)}
-.k-quote{margin:clamp(30px,5vh,50px) 0 0;display:flex;gap:18px;align-items:flex-start;max-width:820px}
-.k-quote::before{content:"„";font:400 70px/.8 var(--display);color:var(--bloom)}
-.k-quote p{margin:0;font:italic 400 clamp(18px,1.6vw,24px)/1.4 var(--display)}
-.k-quote cite{display:block;margin-top:8px;font:400 13px var(--body);color:var(--text-muted);font-style:normal}
+.k-lines{list-style:none;margin:0;padding:0;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.k-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:clamp(11px,1.7vh,16px) 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.k-lines .q{font:400 clamp(17px,1.45vw,22px)/1.2 var(--display);color:var(--ink)}
+.k-lines .a{display:inline-flex;align-items:center;gap:9px;font:italic 400 clamp(17px,1.45vw,22px)/1.2 var(--display);color:var(--cta);white-space:nowrap;opacity:0;transform:translateX(-12px);transition:opacity .7s var(--ease) .3s,transform .9s var(--ease) .3s}
+.k-lines .a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.5);animation:pulse 2.4s infinite}
+.k-lines li.in .a{opacity:1;transform:none}
+.k-lines li.live .q{color:var(--accent)}
 
 /* FINDER (map) */
 .finder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(14px,2vw,28px);align-items:stretch}
@@ -334,11 +345,15 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .nav.open .nav-links a{padding:13px 4px;font-size:19px;font-family:var(--display)}
 }
 @media (max-width:860px){
-  .hero-grid,.sec-head,.ways-grid,.rescue,.st-intro,.rv-grid,.contact-card,.foot-grid,.k-places{grid-template-columns:minmax(0,1fr)}
+  .sec-head,.ways-grid,.rescue,.st-intro,.rv-grid,.contact-card,.foot-grid,.k-places{grid-template-columns:minmax(0,1fr)}
   .rescue>div{min-width:0}
-  .finder,.k-sign{grid-template-columns:minmax(0,1fr)}
-  .k-lines li{grid-template-columns:1fr;gap:4px}
-  .k-lines .q,.k-lines .a{font-size:22px}
+  .finder,.k-top{grid-template-columns:minmax(0,1fr)}
+  .hero{min-height:0;flex-direction:column;align-items:stretch;padding-top:var(--nav-h)}
+  .hero-photo{position:relative;width:auto;height:min(62vh,520px);margin:0 0 -70px}
+  .hero-photo img{-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 35%);mask-image:linear-gradient(0deg,transparent 0,#000 35%)}
+  .hero-cap{display:none}
+  .k-lines li{grid-template-columns:1fr;gap:2px}
+  .k-lines .q{font-size:19px}.k-lines .a{font-size:17px}
   .f-item{grid-template-columns:38px minmax(0,1fr);}
   .f-dist{grid-column:2;text-align:left}
   .f-map{min-height:340px}
@@ -355,7 +370,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv,.gi{opacity:1;transform:none}.g path{stroke-dashoffset:0}
+  .rv,.gi,.hero-photo img{opacity:1;transform:none}.g path{stroke-dashoffset:0}
 }
 </style>
 <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
@@ -382,8 +397,9 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <!--G:hero-->
-  <div class="wrap">
+  <figure class="hero-photo"><img src="img/g/47-1280.webp" srcset="img/g/47-640.webp 640w, img/g/47-1280.webp 1280w" sizes="(max-width:860px) 100vw, 60vw" width="1024" height="1280" alt="Kompozycja ze strelicją, goździkami i liśćmi z pracowni Strelicja" fetchpriority="high"></figure>
+  <p class="hero-cap rv d3"><span><b>Strelicja</b>Kwiat, od którego wzięliśmy nazwę. Ta kompozycja powstała w naszej pracowni.</span></p>
+    <div class="wrap"><div class="hero-txt">
     <p class="status rv" id="status" role="status"><i></i><span>Pracownia: pn–pt 9–18, sob 9–14. Kwiatomaty: całą dobę.</span></p>
     <h1 class="rv d1">Świeże kwiaty<em>o każdej porze.</em></h1>
     <p class="lead rv d2">Zapraszamy do pracowni przy Wiejskiej 28A w Oławie. Iwona dobierze kwiaty i zwiąże bukiet na Twoją okazję. A gdy jesteśmy zamknięci, bukiety czekają w kwiatomatach, w dzień i w nocy.</p>
@@ -395,10 +411,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
       <a href="#opinie"><b>4,9</b><span><span class="stars" aria-hidden="true">★★★★★</span> 78 opinii w Google</span></a>
       <a class="k" href="#kwiatomaty"><i></i>Kwiatomaty: Oława i Jelcz-Laskowice, 24/7</a>
     </div>
-  </div>
-  <div class="ribbon rv d2" aria-label="Bukiety z pracowni">
-    <div class="rb-track"><figure><img src="img/g/48-640.webp" width="540" height="539" alt="Duży bukiet z różowych róż, goździków i alstromerii" decoding="async"></figure><figure><img src="img/g/56-640.webp" width="540" height="540" alt="Bukiet czerwonych róż z białymi różami w środku" decoding="async"></figure><figure><img src="img/g/9-640.webp" width="540" height="580" alt="Bukiet z czerwonych róż, różowych gerber i eukaliptusa" decoding="async"></figure><figure><img src="img/g/49-640.webp" width="540" height="540" alt="Jasny bukiet z eustom, gerbery i kulek craspedii" decoding="async"></figure><figure><img src="img/g/37-640.webp" width="512" height="640" alt="Świąteczny wieniec z jodły, bombek i kraciastej kokardy" decoding="async"></figure><figure><img src="img/g/20-640.webp" width="512" height="640" alt="Flowerbox z różami i alstromeriami" decoding="async"></figure><figure><img src="img/g/54-640.webp" width="511" height="640" alt="Kosz pełen czerwonych róż" loading="lazy" decoding="async"></figure><figure><img src="img/g/26-640.webp" width="512" height="640" alt="Bukiet z róż, eustom i zieleni w pastelach" loading="lazy" decoding="async"></figure><figure><img src="img/g/47-640.webp" width="512" height="640" alt="Kompozycja ze strelicją, goździkami i liśćmi" loading="lazy" decoding="async"></figure><figure><img src="img/g/29-640.webp" width="512" height="640" alt="Wiązka czerwonych róż w białym wazonie" loading="lazy" decoding="async"></figure><figure><img src="img/g/18-640.webp" width="512" height="640" alt="Bukiet z różowych róż i eustom w papierze" loading="lazy" decoding="async"></figure><figure><img src="img/g/55-640.webp" width="540" height="540" alt="Bukiet ze słoneczników, róż i zieleni" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/48-640.webp" width="540" height="539" aria-hidden="true" alt="Duży bukiet z różowych róż, goździków i alstromerii" decoding="async"></figure><figure><img loading="lazy" src="img/g/56-640.webp" width="540" height="540" aria-hidden="true" alt="Bukiet czerwonych róż z białymi różami w środku" decoding="async"></figure><figure><img loading="lazy" src="img/g/9-640.webp" width="540" height="580" aria-hidden="true" alt="Bukiet z czerwonych róż, różowych gerber i eukaliptusa" decoding="async"></figure><figure><img loading="lazy" src="img/g/49-640.webp" width="540" height="540" aria-hidden="true" alt="Jasny bukiet z eustom, gerbery i kulek craspedii" decoding="async"></figure><figure><img loading="lazy" src="img/g/37-640.webp" width="512" height="640" aria-hidden="true" alt="Świąteczny wieniec z jodły, bombek i kraciastej kokardy" decoding="async"></figure><figure><img loading="lazy" src="img/g/20-640.webp" width="512" height="640" aria-hidden="true" alt="Flowerbox z różami i alstromeriami" decoding="async"></figure><figure><img loading="lazy" src="img/g/54-640.webp" width="511" height="640" aria-hidden="true" alt="Kosz pełen czerwonych róż" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/26-640.webp" width="512" height="640" aria-hidden="true" alt="Bukiet z róż, eustom i zieleni w pastelach" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/47-640.webp" width="512" height="640" aria-hidden="true" alt="Kompozycja ze strelicją, goździkami i liśćmi" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/29-640.webp" width="512" height="640" aria-hidden="true" alt="Wiązka czerwonych róż w białym wazonie" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/18-640.webp" width="512" height="640" aria-hidden="true" alt="Bukiet z różowych róż i eustom w papierze" loading="lazy" decoding="async"></figure><figure><img loading="lazy" src="img/g/55-640.webp" width="540" height="540" aria-hidden="true" alt="Bukiet ze słoneczników, róż i zieleni" loading="lazy" decoding="async"></figure></div>
-  </div>
+  </div></div>
 </section>
 
 <!-- TWO WAYS -->
@@ -428,16 +441,15 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   <div class="wrap">
     <div class="kiosk-panel">
       <!--G:kiosk-->
-      <div class="sec-head">
-        <div><p class="kicker rv">Kwiatomaty Strelicja</p><h2 id="kw-h" class="rv d1">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2></div>
-        <p class="lead rv d2">Kwiatomat rozwiązuje to, czego kwiaciarnia o tej porze nie może. Dwa automaty z bukietami z naszej pracowni, czynne całą dobę.</p>
-      </div>
-      <ul class="k-lines"><li class="rv live" id="kLive"><span class="q">Teraz, {hhmm}, a kwiaciarnie zamknięte?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Niedziela, a mama ma imieniny?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Rocznica przypomniana o 21:30?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Urodziny w pracy o 7 rano?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Święta i wszystko pozamykane?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Wracasz po 22:00 i chcesz zrobić niespodziankę?</span><span class="a">Kwiatomat: otwarte.</span></li></ul>
-      <div class="k-sign rv">
-        <div class="big" aria-hidden="true">24/7</div>
-        <div><h3>Kwiatomaty Strelicja</h3><p>Bukiety wiązane w naszej pracowni, nie z hurtowni. Wybierasz za szybą, płacisz przy automacie i jedziesz. Także w nocy, w niedziele i w święta.</p>
-          <ul><li>Oława, ul. Lipowa 1c</li><li>Jelcz-Laskowice, ul. Oławska 27</li></ul></div>
-        <a class="btn btn-amber" href="#mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Który mam bliżej?</a>
+      <div class="k-top">
+        <div class="k-intro">
+          <p class="kicker rv">Kwiatomaty Strelicja</p>
+          <h2 id="kw-h" class="rv d1">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2>
+          <p class="lead rv d2">Dwa automaty z bukietami wiązanymi w naszej pracowni, nie z hurtowni. Wybierasz za szybą, płacisz przy automacie i jedziesz. W nocy, w niedziele i w święta.</p>
+          <ul class="k-addr rv d2"><li>Oława, ul. Lipowa 1c</li><li>Jelcz-Laskowice, ul. Oławska 27</li></ul>
+          <a class="btn btn-amber rv d3" href="#mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Który mam bliżej?</a>
+        </div>
+        <ul class="k-lines"><li class="rv live" id="kLive"><span class="q">Teraz, {hhmm}, a kwiaciarnie zamknięte?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Niedziela, a mama ma imieniny?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Rocznica przypomniana o 21:30?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Święta i wszystko pozamykane?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Wracasz po 22:00 i chcesz zrobić niespodziankę?</span><span class="a">Kwiatomat: otwarte.</span></li></ul>
       </div>
 
       <div class="finder" id="mapa">
@@ -458,8 +470,6 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
         </div>
         <div class="f-map"><div id="map" role="region" aria-label="Mapa: pracownia i kwiatomaty"></div></div>
       </div>
-
-      <blockquote class="k-quote rv"><div><p>Sądziłam, że bukiety będą tam drogie i pewnie już długo będą stały. Ku mojemu zaskoczeniu, bukiet cudowny, kwiaty świeże i w przystępnej cenie.</p><cite>Karolina L., opinia w Google o kwiatomacie</cite></div></blockquote>
     </div>
   </div>
 </section>
@@ -563,6 +573,17 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
         <a class="btn btn-amber" href="#mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Pokaż na mapie, gdzie mam najbliżej</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="ig" aria-labelledby="ig-h">
+  <div class="wrap ig-head">
+    <h2 id="ig-h" class="rv">Nowe bukiety <em>co tydzień.</em></h2>
+    <a class="link rv d1" href="https://www.instagram.com/kwiaciarniastrelicjaid/" target="_blank" rel="noopener">@kwiaciarniastrelicjaid na Instagramie <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="ribbon rv" aria-label="Bukiety z pracowni">
+    <div class="rb-track"><figure><img fetchpriority="low" src="img/g/48-640.webp" width="540" height="539" alt="Duży bukiet z różowych róż, goździków i alstromerii" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/56-640.webp" width="540" height="540" alt="Bukiet czerwonych róż z białymi różami w środku" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/9-640.webp" width="540" height="580" alt="Bukiet z czerwonych róż, różowych gerber i eukaliptusa" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/49-640.webp" width="540" height="540" alt="Jasny bukiet z eustom, gerbery i kulek craspedii" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/37-640.webp" width="512" height="640" alt="Świąteczny wieniec z jodły, bombek i kraciastej kokardy" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/20-640.webp" width="512" height="640" alt="Flowerbox z różami i alstromeriami" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/54-640.webp" width="511" height="640" alt="Kosz pełen czerwonych róż" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/26-640.webp" width="512" height="640" alt="Bukiet z róż, eustom i zieleni w pastelach" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/47-640.webp" width="512" height="640" alt="Kompozycja ze strelicją, goździkami i liśćmi" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/29-640.webp" width="512" height="640" alt="Wiązka czerwonych róż w białym wazonie" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/18-640.webp" width="512" height="640" alt="Bukiet z różowych róż i eustom w papierze" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/55-640.webp" width="540" height="540" alt="Bukiet ze słoneczników, róż i zieleni" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/48-640.webp" width="540" height="539" aria-hidden="true" alt="Duży bukiet z różowych róż, goździków i alstromerii" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/56-640.webp" width="540" height="540" aria-hidden="true" alt="Bukiet czerwonych róż z białymi różami w środku" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/9-640.webp" width="540" height="580" aria-hidden="true" alt="Bukiet z czerwonych róż, różowych gerber i eukaliptusa" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/49-640.webp" width="540" height="540" aria-hidden="true" alt="Jasny bukiet z eustom, gerbery i kulek craspedii" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/37-640.webp" width="512" height="640" aria-hidden="true" alt="Świąteczny wieniec z jodły, bombek i kraciastej kokardy" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/20-640.webp" width="512" height="640" aria-hidden="true" alt="Flowerbox z różami i alstromeriami" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/54-640.webp" width="511" height="640" aria-hidden="true" alt="Kosz pełen czerwonych róż" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/26-640.webp" width="512" height="640" aria-hidden="true" alt="Bukiet z róż, eustom i zieleni w pastelach" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/47-640.webp" width="512" height="640" aria-hidden="true" alt="Kompozycja ze strelicją, goździkami i liśćmi" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/29-640.webp" width="512" height="640" aria-hidden="true" alt="Wiązka czerwonych róż w białym wazonie" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/18-640.webp" width="512" height="640" aria-hidden="true" alt="Bukiet z różowych róż i eustom w papierze" decoding="async"></figure><figure><img fetchpriority="low" src="img/g/55-640.webp" width="540" height="540" aria-hidden="true" alt="Bukiet ze słoneczników, róż i zieleni" decoding="async"></figure></div>
   </div>
 </section>
 </main>

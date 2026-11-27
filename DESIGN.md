@@ -26,7 +26,7 @@ Powód: v2–v5 były niespójne, przejścia agresywne (przeskok w tryb nocny, p
 | Układ | jedna szerokość treści (max 1320 px), rytm: hero → dwie drogi → panel kwiatomatów → pracownia → galeria → opinie → karta kontaktu |
 | Typografia | Fraunces + Inter, nagłówki z drugą linią italic w kolorze liścia |
 | Kolor | len (tło), szałwia (panel kwiatomatów), bursztyn (karta kwiatomatu, akcenty 24/7), butelkowa zieleń (scena scenariuszy, karta kontaktu), terakota tylko na „Zadzwoń/Zamów” |
-| Hero (v7) | wyśrodkowane hasło i zaproszenie, CTA „Odwiedź pracownię” + „Gdzie mam najbliżej?”, pod spodem pełnoszeroka taśma 12 bukietów sunąca wolno w bok (pauza na hover); bez powiększania zdjęć |
+| Hero (v8) | hasło po lewej, po prawej duże zdjęcie kompozycji ze strelicją (#47) wtopione w tło maską gradientu, podpis „Strelicja: kwiat, od którego wzięliśmy nazwę”; taśma bukietów przeniesiona nad stopkę (Instagram) |
 | Sygnatura | linie „problem? → Kwiatomat: otwarte.” + mapa „Gdzie masz najbliżej?” z czasem dojazdu |
 
 **Świadome wyjątki od listy zakazanej:** kremowe tło + terakota CTA, Inter (decyzja Fabiana 24.11.2026).
@@ -70,3 +70,7 @@ Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwier
 - [ ] Wektor logo
 - [ ] Podpis „Strona: Adrian Wojtasik” do potwierdzenia z firmą
 - [ ] Domena
+
+## v8 (27.11.2026)
+- Hero: zdjęcie strelicji wtopione w tło zamiast taśmy (taśma nad stopką jako pasek Instagrama).
+- Kwiatomaty: dwie kolumny (intro + 5 linii), usunięta ciemna karta 24/7 i powtórzony cytat; sekcja ok. 38% niższa na desktopie.

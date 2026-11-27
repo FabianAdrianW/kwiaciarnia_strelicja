@@ -78,10 +78,8 @@ def motif(name, style, speed=0.1, flip=False):
     return f'<svg class="g" data-speed="{speed}" viewBox="{vb}" style="{style}" aria-hidden="true">{inner}</svg>'
 
 PLACE = {
- 'hero': [motif('strelitzia', 'left:-1vw;top:58%;width:clamp(100px,10vw,170px)', 0),
-          motif('eucalyptus', 'right:1.5vw;top:10%;width:clamp(60px,5vw,90px)', 0, True)],
- 'kiosk': [motif('vine', 'right:-4%;top:3%;width:clamp(240px,30vw,460px)', 0, True),
-           motif('gerbera', 'left:46%;bottom:2%;width:clamp(80px,7vw,120px)', 0)],
+ 'hero': [],
+ 'kiosk': [motif('gerbera', 'right:3%;bottom:2%;width:clamp(70px,6vw,110px)', 0)],
  'studio': [motif('leaf', 'right:1vw;top:2%;width:clamp(90px,8vw,140px)', 0, True)],
  'gal': [motif('rose', 'left:1vw;top:0;width:clamp(80px,7vw,120px)', 0)],
  'reviews': [motif('eucalyptus', 'right:3vw;top:10%;width:clamp(60px,5vw,90px)', 0)],
