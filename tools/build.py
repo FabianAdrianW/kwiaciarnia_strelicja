@@ -79,7 +79,7 @@ def motif(name, style, speed=0.1, flip=False):
 
 PLACE = {
  'hero': [],
- 'kiosk': [motif('gerbera', 'right:3%;bottom:2%;width:clamp(70px,6vw,110px)', 0)],
+ 'kiosk': [],
  'studio': [motif('leaf', 'right:1vw;top:2%;width:clamp(90px,8vw,140px)', 0, True)],
  'gal': [motif('rose', 'left:1vw;top:0;width:clamp(80px,7vw,120px)', 0)],
  'reviews': [motif('eucalyptus', 'right:3vw;top:10%;width:clamp(60px,5vw,90px)', 0)],
