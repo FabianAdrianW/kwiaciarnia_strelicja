@@ -72,6 +72,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 22px;border-radius:40px;font:600 14px/1 var(--body);text-decoration:none;cursor:pointer;border:0;transition:background .3s var(--ease),color .3s,box-shadow .3s,transform .3s var(--ease)}
 .btn svg{width:17px;height:17px;flex:none;transition:transform .35s var(--ease)}
+.btn.busy{opacity:.7;pointer-events:none}
 .btn-cta{background:var(--cta);color:#fff}
 .btn-cta:hover{background:var(--cta-hover)}
 .btn-cta:hover svg{transform:rotate(-14deg) scale(1.1)}
@@ -179,13 +180,17 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .k-sep::after{background:linear-gradient(270deg,transparent,color-mix(in srgb,var(--ink) 18%,transparent))}
 .k-sep i{width:22px;height:22px;background:var(--bloom);-webkit-mask:var(--sprig) center/contain no-repeat;mask:var(--sprig) center/contain no-repeat;transform:rotate(-8deg) scale(.6);opacity:0;transition:transform 1s var(--ease) .3s,opacity .8s .3s}
 .k-sep.in i{transform:rotate(-8deg);opacity:1}
-.k-lines{list-style:none;margin:0;padding:0;border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
-.k-lines li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:clamp(11px,1.7vh,16px) 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
-.k-lines .q{font:400 clamp(17px,1.45vw,22px)/1.2 var(--display);color:var(--ink)}
-.k-lines .a{display:inline-flex;align-items:center;gap:9px;font:italic 400 clamp(17px,1.45vw,22px)/1.2 var(--display);color:var(--cta);white-space:nowrap;opacity:0;transform:translateX(-12px);transition:opacity .7s var(--ease) .3s,transform .9s var(--ease) .3s}
-.k-lines .a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.5);animation:pulse 2.4s infinite}
-.k-lines li.in .a{opacity:1;transform:none}
-.k-lines li.live .q{color:var(--accent)}
+.k-rot{border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent);border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent);padding:clamp(22px,4vh,40px) 0;align-self:center}
+.k-q{position:relative;height:2.5em;overflow:hidden;margin:0 0 10px;font:400 clamp(20px,2vw,30px)/1.2 var(--display);color:var(--ink)}
+.k-q span{position:absolute;left:0;right:0;top:0;transition:transform .7s var(--ease),opacity .5s}
+.k-q span.out{transform:translateY(-60%);opacity:0}
+.k-q span.pre{transform:translateY(60%);opacity:0;transition:none}
+.k-q span.live{color:var(--accent)}
+.k-a{display:flex;align-items:center;gap:14px;margin:0;font:italic 400 clamp(30px,3.4vw,52px)/1 var(--display);color:var(--cta);letter-spacing:-.01em;white-space:nowrap}
+.k-a::before{content:"";width:14px;height:14px;flex:none;border-radius:50%;background:var(--bloom);box-shadow:0 0 0 0 rgba(232,145,42,.5);animation:pulse 2.4s infinite}
+.k-dots{display:flex;gap:6px;margin-top:22px}
+.k-dots i{width:18px;height:2px;border-radius:2px;background:color-mix(in srgb,var(--ink) 16%,transparent);transition:background .4s,width .4s var(--ease)}
+.k-dots i.on{background:var(--bloom);width:34px}
 
 /* FINDER (map) */
 .finder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(14px,2vw,28px);align-items:stretch}
@@ -196,13 +201,13 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .f-chips button{border:0;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);border-radius:40px;padding:8px 13px;min-height:40px;font-size:13px;cursor:pointer;transition:background .3s,box-shadow .3s}
 .f-chips button:hover,.f-chips button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--ink);background:#fff}
 .f-msg{font-size:13px;color:var(--text-muted);min-height:20px;margin:0 0 10px}
-.f-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.f-item{background:var(--surface);border-radius:var(--r-lg);padding:16px 18px;display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .3s,transform .3s var(--ease);box-shadow:inset 0 0 0 1px transparent}
+.f-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.f-item{background:var(--surface);border-radius:var(--r-lg);padding:12px 16px;display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .3s,transform .3s var(--ease);box-shadow:inset 0 0 0 1px transparent}
 .f-item:hover,.f-item.sel{box-shadow:inset 0 0 0 1px var(--ink);transform:translateY(-1px)}
 .f-ic{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font:600 11px/1 var(--body)}
 .f-ic.k{background:var(--bloom);color:#1E3533}.f-ic.p{background:var(--ink);color:var(--amber)}
 .f-ic svg{width:20px;height:20px}
-.f-item b{display:block;font:400 19px/1.2 var(--display)}
+.f-item b{display:block;font:400 18px/1.2 var(--display)}
 .f-item small{display:block;color:var(--text-muted);font-size:13px}
 .f-item .st{font-size:12px;font-weight:600}
 .f-item .st.on{color:var(--accent)}.f-item .st.off{color:#9A6B4A}
@@ -212,6 +217,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .f-dist a{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--cta);text-decoration:none}
 .f-badge{display:inline-block;margin-left:6px;font:600 11px var(--body);color:#1E3533;background:var(--amber);border-radius:40px;padding:2px 8px;vertical-align:middle}
 .f-note{margin:12px 0 0;font-size:12px;color:var(--text-muted)}
+.f-loc{display:none}
 .f-map{position:relative;min-height:clamp(360px,56vh,560px);border-radius:var(--r-lg);overflow:hidden;background:#E7E3D8}
 #map{position:absolute;inset:0}
 .leaflet-container{font:inherit;background:#E7E3D8}
@@ -339,17 +345,26 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 
 .callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .45s var(--ease)}
 .callbar.show{transform:none}
-.callbar .btn{width:100%;min-height:52px;font-size:15px}
+.callbar{gap:8px}
+.callbar .btn{flex:1;min-height:52px;font-size:15px;box-shadow:0 10px 24px -12px rgba(30,53,51,.55)}
+.go-near{margin-left:auto}
+.nav .go-near{min-height:42px;padding:0 16px;font-size:13px}
+.nav .go-near+.btn{margin-left:0}
+.nav-in>.btn-cta{flex:none}
 
 @media (max-width:1020px){
   .nav-links{display:none}
-  .nav-in>.btn{margin-left:auto}
+  .nav-in>.btn-cta{margin-left:auto}
   .menu-btn{display:inline-grid;place-items:center}
   .nav .btn .long{display:none}
   .nav.open .nav-links{display:flex;position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;padding:10px var(--gx) 22px;background:var(--paper);box-shadow:0 20px 30px -24px rgba(0,0,0,.4)}
   .nav.open .nav-links a{padding:13px 4px;font-size:19px;font-family:var(--display)}
 }
 @media (max-width:860px){
+  .ways-grid{display:block}
+  .way{min-height:min(420px,62vh)}
+  .way-shop{position:sticky;top:calc(var(--nav-h) + 10px);transform-origin:50% 0;transform:scale(calc(1 - var(--p,0)*.06));filter:brightness(calc(1 - var(--p,0)*.35))}
+  .way-kiosk{margin-top:14px;z-index:2;box-shadow:0 -24px 40px -28px rgba(30,53,51,.55)}
   .sec-head,.ways-grid,.rescue,.st-intro,.rv-grid,.contact-card,.foot-grid,.k-places{grid-template-columns:minmax(0,1fr)}
   .rescue>div{min-width:0}
   .finder,.k-top{grid-template-columns:minmax(0,1fr)}
@@ -357,11 +372,23 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .hero-photo{position:relative;width:auto;height:min(62vh,520px);margin:0 0 -70px}
   .hero-photo img{-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 35%);mask-image:linear-gradient(0deg,transparent 0,#000 35%)}
   .hero-cap{display:none}
-  .k-lines li{grid-template-columns:1fr;gap:2px}
-  .k-lines .q{font-size:19px}.k-lines .a{font-size:17px}
-  .f-item{grid-template-columns:38px minmax(0,1fr);}
-  .f-dist{grid-column:2;text-align:left}
-  .f-map{min-height:340px}
+  .k-q{font-size:19px}.k-a{font-size:32px}
+  .finder{display:flex;flex-direction:column;gap:0}
+  .f-side{display:contents}
+  .f-side h3{order:1;margin-bottom:14px}
+  .f-side>p.f-intro,.f-actions{display:none}
+  .f-map{order:2;min-height:300px;height:300px}
+  .f-msg{order:3;margin:12px 0 8px;min-height:0}
+  .f-list{order:4;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*clamp(20px,4vw,64px));padding:2px clamp(20px,4vw,64px) 6px;scrollbar-width:none;scroll-padding:0 clamp(20px,4vw,64px)}
+  .f-list::-webkit-scrollbar{display:none}
+  .f-item{flex:0 0 80%;scroll-snap-align:start;grid-template-columns:38px minmax(0,1fr);gap:2px 12px;padding:12px 14px;position:relative}
+  .f-item small{font-size:12px}
+  .f-item b{font-size:17px;padding-right:64px}.f-item .f-badge{display:none}
+  .f-dist{grid-column:2;text-align:left;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .f-dist br{display:none}.f-dist strong{font-size:17px}.f-dist a{position:absolute;right:14px;top:13px;margin:0}
+  .f-dist:not(:has(strong)){display:contents}
+  .f-note{order:5}
+  .f-loc{display:inline-flex;position:absolute;right:10px;top:10px;z-index:500;min-height:42px;padding:0 14px;font-size:13px;box-shadow:0 8px 20px -10px rgba(30,53,51,.6)}
   .panels{flex-direction:column;height:auto}
   .panel{flex:none;height:70px;transition:height .8s var(--ease)}
   .panel.open{flex:none;height:min(400px,56vh)}
@@ -370,7 +397,8 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .gi figcaption{display:none}
   .gq p{font-size:17px}
   .facts{grid-template-columns:1fr 1fr}
-  .callbar{display:block}
+  .callbar{display:flex}
+  .nav .go-near{display:none}
   .brand img{height:42px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -394,6 +422,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
     <li><a href="#opinie">Opinie</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
   </ul>
+  <button type="button" class="btn btn-line go-near" data-go><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg><span class="go-l">Prowadź</span></button>
   <a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><span class="long">Zadzwoń:&nbsp;</span>880 056 918</a>
   <button class="menu-btn" id="menubtn" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
 </div></header>
@@ -452,7 +481,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
           <h2 id="kw-h" class="rv d1">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2>
           <p class="lead rv d2">Dwa automaty z bukietami wiązanymi w naszej pracowni, nie z hurtowni. Wybierasz za szybą, płacisz przy automacie i jedziesz. W nocy, w niedziele i w święta.</p>
         </div>
-        <ul class="k-lines"><li class="rv live" id="kLive"><span class="q">Teraz, {hhmm}, a kwiaciarnie zamknięte?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Niedziela, a mama ma imieniny?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Zapomniałeś o rocznicy?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Święta i wszystko pozamykane?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Wracasz po 22:00 i chcesz zrobić niespodziankę?</span><span class="a">Kwiatomat: otwarte.</span></li></ul>
+        <div class="k-rot rv d1"><p class="k-q" id="kQ" aria-live="polite"><span></span></p><p class="k-a">Kwiatomat: otwarte.</p><div class="k-dots" id="kDots" aria-hidden="true"></div></div>
       </div>
 
       <div class="k-sep rv" aria-hidden="true"><i></i></div>
@@ -460,13 +489,13 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
       <div class="finder" id="mapa">
         <div class="f-side">
           <h3 class="rv">Gdzie masz <em>najbliżej?</em></h3>
-          <p class="rv d1">Sprawdź, ile jedziesz do pracowni i do każdego kwiatomatu. Twoja lokalizacja zostaje w przeglądarce i nigdzie jej nie wysyłamy.</p>
+          <p class="f-intro rv d1">Sprawdź, ile jedziesz do pracowni i do każdego kwiatomatu. Twoja lokalizacja zostaje w przeglądarce i nigdzie jej nie wysyłamy.</p>
           <div class="f-actions"><button type="button" class="btn btn-dark" id="locBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Użyj mojej lokalizacji</button></div>
           <p class="f-msg" id="fMsg" role="status"></p>
           <ul class="f-list" id="fList"></ul>
-          <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Mapach Google.</p>
+          <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Mapach Google. Twoja lokalizacja zostaje w przeglądarce.</p>
         </div>
-        <div class="f-map"><div id="map" role="region" aria-label="Mapa: pracownia i kwiatomaty"></div></div>
+        <div class="f-map"><button type="button" class="btn btn-dark f-loc" id="locBtn2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Moja lokalizacja</button><div id="map" role="region" aria-label="Mapa: pracownia i kwiatomaty"></div></div>
       </div>
     </div>
   </div>
@@ -597,7 +626,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   </div>
 </footer>
 
-<div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div>
+<div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń</a><button type="button" class="btn btn-amber" data-go><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg><span class="go-l">Prowadź</span></button></div>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
   <img class="lb-img" id="lbImg" alt="">
@@ -639,14 +668,26 @@ mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttr
 $$('#navlinks a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
 const links=$$('#navlinks a'), targets=links.map(a=>$(a.getAttribute('href')));
 let tick=false;
-function onScroll(){tick=false;const y=scrollY;nav.classList.toggle('scrolled',y>10);bar.classList.toggle('show',y>vh*.7);
+function onScroll(){tick=false;const y=scrollY;nav.classList.toggle('scrolled',y>10);bar.classList.toggle('show',y>vh*.25);
   let idx=-1;targets.forEach((t,k)=>{const r=t.getBoundingClientRect();if(r.top<vh*.4&&r.bottom>vh*.4)idx=k});links.forEach((a,k)=>a.toggleAttribute('aria-current',k===idx))}
 addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
 
+/* stacked cards (mobile): kiosk card slides over the studio card */
+const wShop=$('.way-shop'), wK=$('.way-kiosk');
+function stackP(){if(innerWidth>860||RM){wShop.style.removeProperty('--p');return}const r=wK.getBoundingClientRect(),h=wShop.offsetHeight;
+  wShop.style.setProperty('--p',Math.max(0,Math.min(1,1-(r.top-nav.offsetHeight-10)/h)).toFixed(3))}
+addEventListener('scroll',()=>requestAnimationFrame(stackP),{passive:true});stackP();
+
 /* kiosk lines */
-const kl=$('#kLive .q'); if(kl){kl.textContent=open?`Teraz ${hhmm}, a pracownia czynna do ${close}:00?`:`Teraz, ${hhmm}, a kwiaciarnie zamknięte?`; if(open)$('#kLive .a').textContent='Wpadnij albo do kwiatomatu.'}
-const kio=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');kio.unobserve(x.target)}}),{threshold:.6});
-$$('.k-lines li').forEach(li=>RM?li.classList.add('in'):kio.observe(li));
+const KQ=[open?`Po ${close}:00 kwiaciarnie zamknięte?`:`Teraz ${hhmm} i kwiaciarnie zamknięte?`,...["Niedziela, a mama ma imieniny?", "Zapomniałeś o rocznicy?", "Święta i wszystko pozamykane?", "Wracasz po 22:00 i chcesz zrobić niespodziankę?"]];
+const kq=$('#kQ'), kd=$('#kDots'); let ki=0, kt=null;
+kd.innerHTML=KQ.map(()=>'<i></i>').join('');
+function showQ(i,anim){const old=kq.querySelector('span');const n=document.createElement('span');n.textContent=KQ[i];if(i===0)n.className='live';
+  $$('#kDots i').forEach((d,k)=>d.classList.toggle('on',k===i));
+  if(!anim||RM){kq.replaceChildren(n);return}
+  n.classList.add('pre');kq.appendChild(n);old.classList.add('out');requestAnimationFrame(()=>requestAnimationFrame(()=>n.classList.remove('pre')));setTimeout(()=>old.remove(),800)}
+showQ(0,false);
+if(!RM)new IntersectionObserver(es=>es.forEach(x=>{clearInterval(kt);if(x.isIntersecting)kt=setInterval(()=>{ki=(ki+1)%KQ.length;showQ(ki,true)},3200)}),{threshold:.3}).observe(kq);
 
 /* finder: map + nearest */
 const PLACES=[
@@ -665,9 +706,10 @@ function renderList(){
   if(me)rows.sort((a,b)=>a.km-b.km);
   const nearK=me?rows.find(r=>r.p.kind==='k'):null;
   fList.innerHTML=rows.map(({p,km})=>`<li class="f-item" data-id="${p.id}" tabindex="0"><span class="f-ic ${p.kind}">${p.kind==='k'?'24/7':STORE}</span><div><b>${p.name}${nearK&&nearK.p===p?'<span class="f-badge">najbliższy kwiatomat</span>':''}</b><small>${p.addr}</small>${status(p)}</div><div class="f-dist">${km!==null?`<strong>${fmtMin(drive(km))}</strong><span>autem · ${fmtKm(km)}</span><br>`:''}<a href="https://www.google.com/maps/dir/?api=1&destination=${p.dest}" target="_blank" rel="noopener">Prowadź</a></div></li>`).join('');
+  let swT;fList.onscroll=()=>{clearTimeout(swT);swT=setTimeout(()=>{if(innerWidth>860)return;const L=fList.getBoundingClientRect().left;let best=null,bd=1e9;$$('.f-item').forEach(li=>{const d=Math.abs(li.getBoundingClientRect().left-L-20);if(d<bd){bd=d;best=li}});if(best&&!best.classList.contains('sel'))focusPlace(best.dataset.id,true)},140)};
   $$('.f-item').forEach(li=>{const go=()=>focusPlace(li.dataset.id);li.addEventListener('click',e=>{if(!e.target.closest('a'))go()});li.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go()}})});
 }
-function focusPlace(id){$$('.f-item').forEach(x=>x.classList.toggle('sel',x.dataset.id===id));if(map){const p=PLACES.find(x=>x.id===id);map.flyTo(p.ll,15,{duration:RM?0:.8});mk[id].openPopup()}}
+function focusPlace(id,quiet){$$('.f-item').forEach(x=>x.classList.toggle('sel',x.dataset.id===id));if(map){const p=PLACES.find(x=>x.id===id);map.flyTo(p.ll,quiet?13:15,{duration:RM?0:.8});if(!quiet)mk[id].openPopup()}}
 function setMe(ll,label){me=ll;renderList();fMsg.textContent=label;
   if(map){if(meMk)meMk.setLatLng(ll);else meMk=L.marker(ll,{icon:L.divIcon({className:'',html:'<div class="mk me" style="width:18px;height:18px"></div>',iconSize:[18,18]}),title:'Ty'}).addTo(map).bindPopup('Tu jesteś');
     map.flyToBounds(L.latLngBounds([ll,...PLACES.map(p=>p.ll)]).pad(.2),{duration:RM?0:.9})}}
@@ -681,10 +723,18 @@ function initMap(){if(map)return;if(!window.L){addEventListener('load',initMap,{
 }
 renderList();
 new IntersectionObserver((e,o)=>e.forEach(x=>{if(x.isIntersecting){initMap();o.disconnect()}}),{rootMargin:'300px'}).observe($('#map'));
-$('#locBtn').addEventListener('click',()=>{if(!navigator.geolocation){fMsg.textContent='Twoja przeglądarka nie udostępnia lokalizacji.';return}
+function useLoc(){if(!navigator.geolocation){fMsg.textContent='Twoja przeglądarka nie udostępnia lokalizacji.';return}
   fMsg.textContent='Sprawdzam lokalizację…';
   navigator.geolocation.getCurrentPosition(pos=>{setMe([pos.coords.latitude,pos.coords.longitude],'Odległości od Twojej lokalizacji.')},
-   ()=>{fMsg.textContent='Nie udało się pobrać lokalizacji. Sprawdź uprawnienia w przeglądarce.'},{enableHighAccuracy:false,timeout:10000,maximumAge:300000})});
+   ()=>{fMsg.textContent='Nie udało się pobrać lokalizacji. Sprawdź uprawnienia w przeglądarce.'},{enableHighAccuracy:false,timeout:10000,maximumAge:300000})}
+$('#locBtn').addEventListener('click',useLoc);
+/* go to nearest point open right now */
+const goLabel=open?'Prowadź':'Do kwiatomatu';$$('.go-l').forEach(e=>e.textContent=goLabel);
+$$('[data-go]').forEach(b=>b.setAttribute('aria-label',open?'Prowadź do najbliższego punktu':'Prowadź do najbliższego kwiatomatu'));
+const goTo=p=>{location.href=`https://www.google.com/maps/dir/?api=1&destination=${p.dest}&travelmode=driving`};
+function goNearest(ll){const c=PLACES.filter(p=>p.kind==='k'||open);goTo(ll?c.reduce((a,b)=>hav(ll,a.ll)<=hav(ll,b.ll)?a:b):PLACES[1])}
+$$('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(me)return goNearest(me);if(!navigator.geolocation)return goNearest(null);
+  b.classList.add('busy');navigator.geolocation.getCurrentPosition(pos=>{b.classList.remove('busy');goNearest([pos.coords.latitude,pos.coords.longitude])},()=>{b.classList.remove('busy');goNearest(null)},{timeout:7000,maximumAge:300000})}));$('#locBtn2').addEventListener('click',useLoc);
 
 /* occasions panels */
 const pans=$$('.panel');
