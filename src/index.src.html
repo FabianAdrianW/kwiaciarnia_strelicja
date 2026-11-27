@@ -493,7 +493,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
           <div class="f-actions"><button type="button" class="btn btn-dark" id="locBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Użyj mojej lokalizacji</button></div>
           <p class="f-msg" id="fMsg" role="status"></p>
           <ul class="f-list" id="fList"></ul>
-          <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Mapach Google. Twoja lokalizacja zostaje w przeglądarce.</p>
+          <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Twojej aplikacji z mapami. Twoja lokalizacja zostaje w przeglądarce.</p>
         </div>
         <div class="f-map"><button type="button" class="btn btn-dark f-loc" id="locBtn2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Moja lokalizacja</button><div id="map" role="region" aria-label="Mapa: pracownia i kwiatomaty"></div></div>
       </div>
@@ -588,7 +588,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
         <a class="phone-big rv d2" href="tel:+48880056918">880 056 918</a>
         <button class="copy" type="button" data-copy="880056918">Kopiuj numer</button>
         <p class="c-addr">Pracownia: ul. Wiejska 28A, 55-200 Oława<br><a href="mailto:kwiaciarniastrelicjaid@gmail.com">kwiaciarniastrelicjaid@gmail.com</a></p>
-        <div class="st-cta"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń</a><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></div>
+        <div class="st-cta"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń</a><a class="btn btn-ghost" data-nav="p" href="https://www.google.com/maps/dir/?api=1&destination=Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></div>
       </div>
       <div>
         <table class="hours" aria-label="Godziny otwarcia">
@@ -694,6 +694,9 @@ const PLACES=[
  {id:'p',name:'Pracownia',addr:'ul. Wiejska 28A, Oława',ll:[50.9426035,17.2814489],kind:'p',dest:'Kwiaciarnia+Strelicja+Wiejska+28A+O%C5%82awa'},
  {id:'k1',name:'Kwiatomat Oława',addr:'ul. Lipowa 1c, Oława',ll:[50.9449797,17.2863513],kind:'k',dest:'Kwiatomat+Strelicja+ID+24%2F7+Lipowa+1c+O%C5%82awa'},
  {id:'k2',name:'Kwiatomat Jelcz-Laskowice',addr:'ul. Oławska 27, Jelcz-Laskowice',ll:[51.0350625,17.3400625],kind:'k',dest:'Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice'}];
+const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const navUrl=p=>IOS?`https://maps.apple.com/?daddr=${p.ll[0]},${p.ll[1]}&q=${encodeURIComponent(p.kind==='p'?'Kwiaciarnia Strelicja':p.name+' Strelicja')}&dirflg=d`:`https://www.google.com/maps/dir/?api=1&destination=${p.dest}&travelmode=driving`;
+$$('a[data-nav]').forEach(a=>a.href=navUrl(PLACES.find(x=>x.id===a.dataset.nav)));
 const hav=(a,b)=>{const R=6371,t=x=>x*Math.PI/180,dLa=t(b[0]-a[0]),dLo=t(b[1]-a[1]);const q=Math.sin(dLa/2)**2+Math.cos(t(a[0]))*Math.cos(t(b[0]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(q))};
 const drive=km=>{const road=km*1.35,spd=road<5?28:road<20?45:60;return Math.max(2,Math.round(road/spd*60+2))};
 const fmtKm=km=>km<1?`${Math.round(km*1000)} m`:`${km.toFixed(km<10?1:0).replace('.',',')} km`;
@@ -705,7 +708,7 @@ function renderList(){
   const rows=PLACES.map(p=>({p,km:me?hav(me,p.ll):null}));
   if(me)rows.sort((a,b)=>a.km-b.km);
   const nearK=me?rows.find(r=>r.p.kind==='k'):null;
-  fList.innerHTML=rows.map(({p,km})=>`<li class="f-item" data-id="${p.id}" tabindex="0"><span class="f-ic ${p.kind}">${p.kind==='k'?'24/7':STORE}</span><div><b>${p.name}${nearK&&nearK.p===p?'<span class="f-badge">najbliższy kwiatomat</span>':''}</b><small>${p.addr}</small>${status(p)}</div><div class="f-dist">${km!==null?`<strong>${fmtMin(drive(km))}</strong><span>autem · ${fmtKm(km)}</span><br>`:''}<a href="https://www.google.com/maps/dir/?api=1&destination=${p.dest}" target="_blank" rel="noopener">Prowadź</a></div></li>`).join('');
+  fList.innerHTML=rows.map(({p,km})=>`<li class="f-item" data-id="${p.id}" tabindex="0"><span class="f-ic ${p.kind}">${p.kind==='k'?'24/7':STORE}</span><div><b>${p.name}${nearK&&nearK.p===p?'<span class="f-badge">najbliższy kwiatomat</span>':''}</b><small>${p.addr}</small>${status(p)}</div><div class="f-dist">${km!==null?`<strong>${fmtMin(drive(km))}</strong><span>autem · ${fmtKm(km)}</span><br>`:''}<a href="${navUrl(p)}" target="_blank" rel="noopener">Prowadź</a></div></li>`).join('');
   let swT;fList.onscroll=()=>{clearTimeout(swT);swT=setTimeout(()=>{if(innerWidth>860)return;const L=fList.getBoundingClientRect().left;let best=null,bd=1e9;$$('.f-item').forEach(li=>{const d=Math.abs(li.getBoundingClientRect().left-L-20);if(d<bd){bd=d;best=li}});if(best&&!best.classList.contains('sel'))focusPlace(best.dataset.id,true)},140)};
   $$('.f-item').forEach(li=>{const go=()=>focusPlace(li.dataset.id);li.addEventListener('click',e=>{if(!e.target.closest('a'))go()});li.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go()}})});
 }
@@ -717,7 +720,7 @@ function initMap(){if(map)return;if(!window.L){addEventListener('load',initMap,{
   map=L.map('map',{scrollWheelZoom:false,zoomControl:true,attributionControl:true}).setView([50.985,17.31],11);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://www.openstreetmap.org/fixthemap">Zgłoś błąd mapy</a>'}).addTo(map);
   PLACES.forEach(p=>{const sz=p.kind==='k'?40:44;mk[p.id]=L.marker(p.ll,{title:p.name,icon:L.divIcon({className:'',html:`<div class="mk ${p.kind}" style="width:${sz}px;height:${sz}px">${p.kind==='k'?'24/7':'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10h16l-1.5-5h-13z"/><path d="M5 10v10h14V10M10 20v-5h4v5"/></svg>'}</div>`,iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]})}).addTo(map)
-    .bindPopup(`<b>${p.name}</b><br>${p.addr}<br><a href="https://www.google.com/maps/dir/?api=1&destination=${p.dest}" target="_blank" rel="noopener">Prowadź</a>`)});
+    .bindPopup(`<b>${p.name}</b><br>${p.addr}<br><a href="${navUrl(p)}" target="_blank" rel="noopener">Prowadź</a>`)});
   map.fitBounds(L.latLngBounds(PLACES.map(p=>p.ll)).pad(.25));
   if(me)setMe(me,fMsg.textContent);
 }
@@ -731,7 +734,7 @@ $('#locBtn').addEventListener('click',useLoc);
 /* go to nearest point open right now */
 const goLabel=open?'Prowadź':'Do kwiatomatu';$$('.go-l').forEach(e=>e.textContent=goLabel);
 $$('[data-go]').forEach(b=>b.setAttribute('aria-label',open?'Prowadź do najbliższego punktu':'Prowadź do najbliższego kwiatomatu'));
-const goTo=p=>{location.href=`https://www.google.com/maps/dir/?api=1&destination=${p.dest}&travelmode=driving`};
+const goTo=p=>{location.href=navUrl(p)};
 function goNearest(ll){const c=PLACES.filter(p=>p.kind==='k'||open);goTo(ll?c.reduce((a,b)=>hav(ll,a.ll)<=hav(ll,b.ll)?a:b):PLACES[1])}
 $$('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(me)return goNearest(me);if(!navigator.geolocation)return goNearest(null);
   b.classList.add('busy');navigator.geolocation.getCurrentPosition(pos=>{b.classList.remove('busy');goNearest([pos.coords.latitude,pos.coords.longitude])},()=>{b.classList.remove('busy');goNearest(null)},{timeout:7000,maximumAge:300000})}));$('#locBtn2').addEventListener('click',useLoc);
