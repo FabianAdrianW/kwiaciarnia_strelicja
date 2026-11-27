@@ -193,14 +193,14 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .k-dots i.on{background:var(--bloom);width:34px}
 
 /* FINDER (map) */
-.finder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(14px,2vw,28px);align-items:stretch}
+.finder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(20px,4vw,64px);align-items:start}
 .f-side h3{font-size:clamp(26px,2.6vw,40px);margin-bottom:8px}
 .f-side>p{margin:0 0 18px;color:var(--text-muted);font-size:14px}
 .f-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
 .f-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
 .f-chips button{border:0;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);border-radius:40px;padding:8px 13px;min-height:40px;font-size:13px;cursor:pointer;transition:background .3s,box-shadow .3s}
 .f-chips button:hover,.f-chips button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--ink);background:#fff}
-.f-msg{font-size:13px;color:var(--text-muted);min-height:20px;margin:0 0 10px}
+.f-msg{font-size:13px;color:var(--text-muted);margin:0 0 10px}.f-msg:empty{display:none}
 .f-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .f-item{background:var(--surface);border-radius:var(--r-lg);padding:12px 16px;display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .3s,transform .3s var(--ease);box-shadow:inset 0 0 0 1px transparent}
 .f-item:hover,.f-item.sel{box-shadow:inset 0 0 0 1px var(--ink);transform:translateY(-1px)}
@@ -217,16 +217,6 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .f-dist a{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--cta);text-decoration:none}
 .f-badge{display:inline-block;margin-left:6px;font:600 11px var(--body);color:#1E3533;background:var(--amber);border-radius:40px;padding:2px 8px;vertical-align:middle}
 .f-note{margin:12px 0 0;font-size:12px;color:var(--text-muted)}
-.f-loc{display:none}
-.f-map{position:relative;min-height:clamp(360px,56vh,560px);border-radius:var(--r-lg);overflow:hidden;background:#E7E3D8}
-#map{position:absolute;inset:0}
-.leaflet-container{font:inherit;background:#E7E3D8}
-.leaflet-tile-pane{filter:saturate(.55) sepia(.18) contrast(.96) brightness(1.03)}
-.mk{display:grid;place-items:center;border-radius:50%;font:600 11px/1 var(--body);box-shadow:0 6px 16px -6px rgba(30,53,51,.6);border:2px solid #fff}
-.mk.k{background:var(--bloom);color:#1E3533}.mk.p{background:var(--ink);color:var(--amber)}
-.mk.me{background:#2B76D2;border:3px solid #fff;box-shadow:0 0 0 6px rgba(43,118,210,.22)}
-.leaflet-popup-content{font:14px/1.4 var(--body);margin:12px 14px}
-.leaflet-popup-content b{font:400 17px var(--display)}
 
 /* STUDIO */
 .st-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,90px);align-items:center}
@@ -296,6 +286,18 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .lb-ui svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6}
 .lb-prev{left:2.5vw;top:50%;margin-top:-24px}.lb-next{right:2.5vw;top:50%;margin-top:-24px}.lb-close{right:2.5vw;top:3vh}
 .lb-count{position:absolute;left:2.5vw;top:3vh;margin-top:14px;color:#DCE4E0;font-size:12px}
+
+/* nav app sheet (iOS) */
+.ns{position:fixed;inset:0;z-index:120;display:none;background:rgba(12,24,25,0);transition:background .3s}
+.ns.open{display:block}.ns.show{background:rgba(12,24,25,.45)}
+.ns-card{position:absolute;left:10px;right:10px;bottom:10px;background:var(--surface);border-radius:22px;padding:12px 20px calc(16px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .35s var(--ease)}
+.ns.show .ns-card{transform:none}
+.ns-grip{display:block;width:38px;height:4px;border-radius:4px;background:var(--line);margin:0 auto 14px}
+.ns-k{margin:0;font-size:12px;font-weight:600;color:var(--accent)}
+.ns-t{margin:2px 0 0;font:400 22px/1.2 var(--display)}
+.ns-a{margin:2px 0 16px;font-size:13px;color:var(--text-muted)}
+.ns-btns{display:grid;gap:8px}.ns-btns .btn{width:100%;min-height:50px}
+.ns-x{display:block;width:100%;margin-top:6px;min-height:46px;background:none;border:0;font-weight:600;color:var(--text-muted);cursor:pointer}
 
 /* REVIEWS */
 .rv-grid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(26px,5vw,90px);align-items:start}
@@ -373,25 +375,20 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .hero-photo img{-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 35%);mask-image:linear-gradient(0deg,transparent 0,#000 35%)}
   .hero-cap{display:none}
   .k-q{font-size:19px}.k-a{font-size:32px}
-  .finder{display:flex;flex-direction:column;gap:0}
-  .f-side{display:contents}
-  .f-side h3{order:1;margin-bottom:14px}
-  .f-side>p.f-intro,.f-actions{display:none}
-  .f-map{order:2;min-height:300px;height:300px}
-  .f-msg{order:3;margin:12px 0 8px;min-height:0}
-  .f-list{order:4;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1*clamp(20px,4vw,64px));padding:2px clamp(20px,4vw,64px) 6px;scrollbar-width:none;scroll-padding:0 clamp(20px,4vw,64px)}
-  .f-list::-webkit-scrollbar{display:none}
-  .f-item{flex:0 0 80%;scroll-snap-align:start;grid-template-columns:38px minmax(0,1fr);gap:2px 12px;padding:12px 14px;position:relative}
-  .f-item small{font-size:12px}
-  .f-item b{font-size:17px;padding-right:64px}.f-item .f-badge{display:none}
-  .f-dist{grid-column:2;text-align:left;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .f-dist br{display:none}.f-dist strong{font-size:17px}.f-dist a{position:absolute;right:14px;top:13px;margin:0}
-  .f-dist:not(:has(strong)){display:contents}
-  .f-note{order:5}
-  .f-loc{display:inline-flex;position:absolute;right:10px;top:10px;z-index:500;min-height:42px;padding:0 14px;font-size:13px;box-shadow:0 8px 20px -10px rgba(30,53,51,.6)}
-  .panels{flex-direction:column;height:auto}
-  .panel{flex:none;height:70px;transition:height .8s var(--ease)}
-  .panel.open{flex:none;height:min(400px,56vh)}
+  .finder{gap:18px}.f-side>p.f-intro{font-size:14px;margin-bottom:14px}.f-actions{margin:0}
+  .f-item{grid-template-columns:38px minmax(0,1fr) auto;gap:12px;padding:12px 14px}
+  .f-ic{width:38px;height:38px}
+  .f-item b{font-size:17px}.f-item small{font-size:12px}
+  .f-badge{display:none}
+  .pn-track{height:calc(var(--stage) + 4 * 34vh);--stage:min(600px,calc(100svh - var(--nav-h) - 110px))}
+  .panels{position:sticky;top:calc(var(--nav-h) + 12px);flex-direction:column;height:var(--stage)}
+  .panel{flex:.0001 1 58px;transition:flex-grow .55s var(--ease);will-change:flex-grow}
+  .panel.open{flex:1 1 58px}
+  .panel img{filter:none;transform:scale(1.06);transition:transform .8s var(--ease)}
+  .panel img::after{display:none}
+  .panel:not(.open) img{opacity:.75}
+  .pn-body{transition:opacity .35s,transform .45s var(--ease)}
+  .panel.open .pn-body{transition-delay:.2s}
   .pn-v{writing-mode:horizontal-tb;transform:none;left:20px;bottom:auto;top:50%;margin-top:-11px}
   .spread{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:26vw}
   .gi figcaption{display:none}
@@ -406,8 +403,6 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   .rv,.gi,.hero-photo img{opacity:1;transform:none}.g path{stroke-dashoffset:0}
 }
 </style>
-<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-<script src="vendor/leaflet/leaflet.js" defer></script>
 </head>
 <body>
 <a class="sr" href="#main">Przejdź do treści</a>
@@ -416,7 +411,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
   <a class="brand" href="#top" aria-label="Kwiaciarnia Strelicja, na górę strony"><img src="img/logo-transparent.webp" alt="Kwiaciarnia Strelicja" width="640" height="640"></a>
   <ul class="nav-links" id="navlinks">
     <li><a class="hl" href="#kwiatomaty">Kwiatomaty 24/7</a></li>
-    <li><a href="#mapa">Mapa</a></li>
+    <li><a href="#mapa">Dojazd</a></li>
     <li><a href="#pracownia">Pracownia</a></li>
     <li><a href="#galeria">Galeria</a></li>
     <li><a href="#opinie">Opinie</a></li>
@@ -489,13 +484,15 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
       <div class="finder" id="mapa">
         <div class="f-side">
           <h3 class="rv">Gdzie masz <em>najbliżej?</em></h3>
-          <p class="f-intro rv d1">Sprawdź, ile jedziesz do pracowni i do każdego kwiatomatu. Twoja lokalizacja zostaje w przeglądarce i nigdzie jej nie wysyłamy.</p>
+          <p class="f-intro rv d1">Sprawdź, ile jedziesz do pracowni i do każdego kwiatomatu. „Prowadź” od razu otwiera trasę w Twojej aplikacji z mapami.</p>
           <div class="f-actions"><button type="button" class="btn btn-dark" id="locBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Użyj mojej lokalizacji</button></div>
           <p class="f-msg" id="fMsg" role="status"></p>
-          <ul class="f-list" id="fList"></ul>
-          <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Twojej aplikacji z mapami. Twoja lokalizacja zostaje w przeglądarce.</p>
         </div>
-        <div class="f-map"><button type="button" class="btn btn-dark f-loc" id="locBtn2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Moja lokalizacja</button><div id="map" role="region" aria-label="Mapa: pracownia i kwiatomaty"></div></div>
+        <div class="f-right">
+          <ul class="f-list" id="fList"></ul>
+          <p class="f-note">Czas dojazdu autem jest szacunkowy. Twoja lokalizacja zostaje w przeglądarce i nigdzie jej nie wysyłamy.</p>
+        </div>
+        
       </div>
     </div>
   </div>
@@ -527,7 +524,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 
     <div class="occ-wrap">
       <div class="occ-title rv"><h3>Na jaką okazję <em>szukasz kwiatów?</em></h3><p class="lead" style="max-width:40ch">Wybierz okazję. Resztę dobierzemy razem.</p></div>
-      <div class="panels rv" id="panels"><article class="panel open" tabindex="0" aria-expanded="true"><img src="img/g/48-1280.webp" srcset="img/g/48-640.webp 640w, img/g/48-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Dla bliskiej osoby</span><div class="pn-body"><h4>Dla <em>bliskiej</em> osoby</h4><p>Dla żony, mamy, na urodziny, rocznicę i bez okazji. Powiedz, kim jest i co lubi.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/49-1280.webp" srcset="img/g/49-640.webp 640w, img/g/49-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Ślub</span><div class="pn-body"><h4><em>Ślub</em></h4><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii. Ustalimy kolory i termin z wyprzedzeniem.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/23-1280.webp" srcset="img/g/23-640.webp 640w, img/g/23-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Pożegnanie</span><div class="pn-body"><h4><em>Pożegnanie</em></h4><p>Wiązanki i wieńce przygotowane spokojnie i z szacunkiem, także na jutro.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/37-1280.webp" srcset="img/g/37-640.webp 640w, img/g/37-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Święta i sezon</span><div class="pn-body"><h4>Święta <em>i sezon</em></h4><p>Stroiki, wieńce na drzwi, dekoracje na stół i Walentynki. W sezonie zamów wcześniej.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/20-1280.webp" srcset="img/g/20-640.webp 640w, img/g/20-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Flowerbox i doniczki</span><div class="pn-body"><h4>Flowerbox <em>i doniczki</em></h4><p>Kwiaty w pudełku, rośliny doniczkowe i szklane ogrody. Na biurko albo na prezent.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article></div>
+      <div class="pn-track"><div class="panels rv" id="panels"><article class="panel open" tabindex="0" aria-expanded="true"><img src="img/g/48-1280.webp" srcset="img/g/48-640.webp 640w, img/g/48-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Dla bliskiej osoby</span><div class="pn-body"><h4>Dla <em>bliskiej</em> osoby</h4><p>Dla żony, mamy, na urodziny, rocznicę i bez okazji. Powiedz, kim jest i co lubi.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/49-1280.webp" srcset="img/g/49-640.webp 640w, img/g/49-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Ślub</span><div class="pn-body"><h4><em>Ślub</em></h4><p>Bukiet ślubny, wianki, dekoracja sali i ceremonii. Ustalimy kolory i termin z wyprzedzeniem.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/23-1280.webp" srcset="img/g/23-640.webp 640w, img/g/23-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Pożegnanie</span><div class="pn-body"><h4><em>Pożegnanie</em></h4><p>Wiązanki i wieńce przygotowane spokojnie i z szacunkiem, także na jutro.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/37-1280.webp" srcset="img/g/37-640.webp 640w, img/g/37-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Święta i sezon</span><div class="pn-body"><h4>Święta <em>i sezon</em></h4><p>Stroiki, wieńce na drzwi, dekoracje na stół i Walentynki. W sezonie zamów wcześniej.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article><article class="panel" tabindex="0" aria-expanded="false"><img src="img/g/20-1280.webp" srcset="img/g/20-640.webp 640w, img/g/20-1280.webp 1280w" sizes="(max-width:860px) 92vw, 60vw" alt="" loading="lazy" decoding="async"><span class="pn-v" aria-hidden="true">Flowerbox i doniczki</span><div class="pn-body"><h4>Flowerbox <em>i doniczki</em></h4><p>Kwiaty w pudełku, rośliny doniczkowe i szklane ogrody. Na biurko albo na prezent.</p><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń: 880 056 918</a></div></article></div></div>
     </div>
   </div>
 </section>
@@ -651,6 +648,11 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 
 <div class="callbar" id="callbar"><a class="btn btn-cta" href="tel:+48880056918"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>Zadzwoń</a><button type="button" class="btn btn-amber" data-go><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg><span class="go-l">Prowadź</span></button></div>
 
+<div class="ns" id="navSheet" role="dialog" aria-modal="true" aria-labelledby="nsTitle"><div class="ns-card">
+  <i class="ns-grip" aria-hidden="true"></i><p class="ns-k">Prowadź do</p><p class="ns-t" id="nsTitle"></p><p class="ns-a" id="nsAddr"></p>
+  <div class="ns-btns"><a class="btn btn-dark" id="nsApple" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Mapy Apple</a><a class="btn btn-line" id="nsGoogle" href="#">Google Maps</a><a class="btn btn-line" id="nsWaze" href="#" target="_blank" rel="noopener">Waze</a></div>
+  <button type="button" class="ns-x" id="nsClose">Anuluj</button></div></div>
+
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
   <img class="lb-img" id="lbImg" alt="">
   <div class="lb-ui">
@@ -719,7 +721,7 @@ const PLACES=[
  {id:'k2',name:'Kwiatomat Jelcz-Laskowice',addr:'ul. Oławska 27, Jelcz-Laskowice',ll:[51.0350625,17.3400625],kind:'k',dest:'Kwiatomat+Strelicja+ID+24%2F7+O%C5%82awska+27+Jelcz-Laskowice'}];
 const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
 const navUrl=p=>IOS?`https://maps.apple.com/?daddr=${p.ll[0]},${p.ll[1]}&q=${encodeURIComponent(p.kind==='p'?'Kwiaciarnia Strelicja':p.name+' Strelicja')}&dirflg=d`:`https://www.google.com/maps/dir/?api=1&destination=${p.dest}&travelmode=driving`;
-$$('a[data-nav]').forEach(a=>a.href=navUrl(PLACES.find(x=>x.id===a.dataset.nav)));
+$$('a[data-nav]').forEach(a=>{const p=PLACES.find(x=>x.id===a.dataset.nav);a.href=navUrl(p);a.addEventListener('click',e=>{if(IOS){e.preventDefault();goTo(p,null)}})});
 const hav=(a,b)=>{const R=6371,t=x=>x*Math.PI/180,dLa=t(b[0]-a[0]),dLo=t(b[1]-a[1]);const q=Math.sin(dLa/2)**2+Math.cos(t(a[0]))*Math.cos(t(b[0]))*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(q))};
 const drive=km=>{const road=km*1.35,spd=road<5?28:road<20?45:60;return Math.max(2,Math.round(road/spd*60+2))};
 const fmtKm=km=>km<1?`${Math.round(km*1000)} m`:`${km.toFixed(km<10?1:0).replace('.',',')} km`;
@@ -731,24 +733,10 @@ function renderList(){
   const rows=PLACES.map(p=>({p,km:me?hav(me,p.ll):null}));
   if(me)rows.sort((a,b)=>a.km-b.km);
   const nearK=me?rows.find(r=>r.p.kind==='k'):null;
-  fList.innerHTML=rows.map(({p,km})=>`<li class="f-item" data-id="${p.id}" tabindex="0"><span class="f-ic ${p.kind}">${p.kind==='k'?'24/7':STORE}</span><div><b>${p.name}${nearK&&nearK.p===p?'<span class="f-badge">najbliższy kwiatomat</span>':''}</b><small>${p.addr}</small>${status(p)}</div><div class="f-dist">${km!==null?`<strong>${fmtMin(drive(km))}</strong><span>autem · ${fmtKm(km)}</span><br>`:''}<a href="${navUrl(p)}" target="_blank" rel="noopener">Prowadź</a></div></li>`).join('');
-  let swT;fList.onscroll=()=>{clearTimeout(swT);swT=setTimeout(()=>{if(innerWidth>860)return;const L=fList.getBoundingClientRect().left;let best=null,bd=1e9;$$('.f-item').forEach(li=>{const d=Math.abs(li.getBoundingClientRect().left-L-20);if(d<bd){bd=d;best=li}});if(best&&!best.classList.contains('sel'))focusPlace(best.dataset.id,true)},140)};
-  $$('.f-item').forEach(li=>{const go=()=>focusPlace(li.dataset.id);li.addEventListener('click',e=>{if(!e.target.closest('a'))go()});li.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();go()}})});
+  fList.innerHTML=rows.map(({p,km})=>`<li class="f-item" data-id="${p.id}"><span class="f-ic ${p.kind}">${p.kind==='k'?'24/7':STORE}</span><div><b>${p.name}${nearK&&nearK.p===p?'<span class="f-badge">najbliższy kwiatomat</span>':''}</b><small>${p.addr}</small>${status(p)}</div><div class="f-dist">${km!==null?`<strong>${fmtMin(drive(km))}</strong><span>autem · ${fmtKm(km)}</span><br>`:''}<a href="${navUrl(p)}" data-place="${p.id}" target="_blank" rel="noopener">Prowadź</a></div></li>`).join('');
 }
-function focusPlace(id,quiet){$$('.f-item').forEach(x=>x.classList.toggle('sel',x.dataset.id===id));if(map){const p=PLACES.find(x=>x.id===id);map.flyTo(p.ll,quiet?13:15,{duration:RM?0:.8});if(!quiet)mk[id].openPopup()}}
-function setMe(ll,label){me=ll;renderList();fMsg.textContent=label;
-  if(map){if(meMk)meMk.setLatLng(ll);else meMk=L.marker(ll,{icon:L.divIcon({className:'',html:'<div class="mk me" style="width:18px;height:18px"></div>',iconSize:[18,18]}),title:'Ty'}).addTo(map).bindPopup('Tu jesteś');
-    map.flyToBounds(L.latLngBounds([ll,...PLACES.map(p=>p.ll)]).pad(.2),{duration:RM?0:.9})}}
-function initMap(){if(map)return;if(!window.L){addEventListener('load',initMap,{once:true});return}
-  map=L.map('map',{scrollWheelZoom:false,zoomControl:true,attributionControl:true}).setView([50.985,17.31],11);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://www.openstreetmap.org/fixthemap">Zgłoś błąd mapy</a>'}).addTo(map);
-  PLACES.forEach(p=>{const sz=p.kind==='k'?40:44;mk[p.id]=L.marker(p.ll,{title:p.name,icon:L.divIcon({className:'',html:`<div class="mk ${p.kind}" style="width:${sz}px;height:${sz}px">${p.kind==='k'?'24/7':'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10h16l-1.5-5h-13z"/><path d="M5 10v10h14V10M10 20v-5h4v5"/></svg>'}</div>`,iconSize:[sz,sz],iconAnchor:[sz/2,sz/2]})}).addTo(map)
-    .bindPopup(`<b>${p.name}</b><br>${p.addr}<br><a href="${navUrl(p)}" target="_blank" rel="noopener">Prowadź</a>`)});
-  map.fitBounds(L.latLngBounds(PLACES.map(p=>p.ll)).pad(.25));
-  if(me)setMe(me,fMsg.textContent);
-}
+function setMe(ll,label){me=ll;renderList();fMsg.textContent=label;}
 renderList();
-new IntersectionObserver((e,o)=>e.forEach(x=>{if(x.isIntersecting){initMap();o.disconnect()}}),{rootMargin:'300px'}).observe($('#map'));
 function useLoc(){if(!navigator.geolocation){fMsg.textContent='Twoja przeglądarka nie udostępnia lokalizacji.';return}
   fMsg.textContent='Sprawdzam lokalizację…';
   navigator.geolocation.getCurrentPosition(pos=>{setMe([pos.coords.latitude,pos.coords.longitude],'Odległości od Twojej lokalizacji.')},
@@ -757,18 +745,28 @@ $('#locBtn').addEventListener('click',useLoc);
 /* go to nearest point open right now */
 const goLabel=open?'Prowadź':'Do kwiatomatu';$$('.go-l').forEach(e=>e.textContent=goLabel);
 $$('[data-go]').forEach(b=>b.setAttribute('aria-label',open?'Prowadź do najbliższego punktu':'Prowadź do najbliższego kwiatomatu'));
-const goTo=p=>{location.href=navUrl(p)};
-function goNearest(ll){const c=PLACES.filter(p=>p.kind==='k'||open);goTo(ll?c.reduce((a,b)=>hav(ll,a.ll)<=hav(ll,b.ll)?a:b):PLACES[1])}
+const sheet=$('#navSheet');
+function goTo(p,km){if(!IOS){location.href=navUrl(p);return}
+  const [la,lo]=p.ll;$('#nsTitle').textContent=p.name+(km!=null?` · ${fmtMin(drive(km))}`:'');$('#nsAddr').textContent=p.addr;
+  $('#nsApple').href=`https://maps.apple.com/?daddr=${la},${lo}&q=${encodeURIComponent(p.kind==='p'?'Kwiaciarnia Strelicja':p.name+' Strelicja')}&dirflg=d`;
+  $('#nsGoogle').href=`comgooglemaps://?daddr=${la},${lo}&directionsmode=driving`;
+  $('#nsWaze').href=`https://waze.com/ul?ll=${la},${lo}&navigate=yes`;
+  sheet.classList.add('open');requestAnimationFrame(()=>sheet.classList.add('show'));$('#nsApple').focus()}
+const closeSheet=()=>{sheet.classList.remove('show');setTimeout(()=>sheet.classList.remove('open'),300)};
+sheet.addEventListener('click',e=>{if(e.target===sheet||e.target.closest('#nsClose')||e.target.closest('a'))closeSheet()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet.classList.contains('open'))closeSheet()});
+fList.addEventListener('click',e=>{const a=e.target.closest('a[data-place]');if(!a||!IOS)return;e.preventDefault();const p=PLACES.find(x=>x.id===a.dataset.place);goTo(p,me?hav(me,p.ll):null)});
+function goNearest(ll){const c=PLACES.filter(p=>p.kind==='k'||open);const p=ll?c.reduce((a,b)=>hav(ll,a.ll)<=hav(ll,b.ll)?a:b):PLACES[1];goTo(p,ll?hav(ll,p.ll):null)}
 $$('[data-go]').forEach(b=>b.addEventListener('click',()=>{if(me)return goNearest(me);if(!navigator.geolocation)return goNearest(null);
-  b.classList.add('busy');navigator.geolocation.getCurrentPosition(pos=>{b.classList.remove('busy');goNearest([pos.coords.latitude,pos.coords.longitude])},()=>{b.classList.remove('busy');goNearest(null)},{timeout:7000,maximumAge:300000})}));$('#locBtn2').addEventListener('click',useLoc);
+  b.classList.add('busy');navigator.geolocation.getCurrentPosition(pos=>{b.classList.remove('busy');goNearest([pos.coords.latitude,pos.coords.longitude])},()=>{b.classList.remove('busy');goNearest(null)},{timeout:7000,maximumAge:300000})}));
 
 /* occasions panels */
 const pans=$$('.panel');
 const openP=p=>{if(p.classList.contains('open'))return;pans.forEach(x=>{x.classList.toggle('open',x===p);x.setAttribute('aria-expanded',x===p)})};
-/* touch screens: scrolling opens the next panel, one is always open */
-if(!matchMedia('(hover:hover)').matches){const box=$('#panels');let pt=false;
-  const scrollPan=()=>{pt=false;const r=box.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
-    const k=Math.max(0,Math.min(pans.length-1,Math.floor((vh*.5-r.top)/(r.height/pans.length))));openP(pans[k])};
+/* touch screens: sticky stage, scroll position picks the open panel (never skips: position-based) */
+if(!matchMedia('(hover:hover)').matches){const tr=$('.pn-track'), box=$('#panels');let pt=false;
+  const scrollPan=()=>{pt=false;if(innerWidth>860)return;const r=tr.getBoundingClientRect(), run=tr.offsetHeight-box.offsetHeight;if(r.bottom<0||r.top>vh||run<=0)return;
+    const prog=Math.max(0,Math.min(.999,(nav.offsetHeight+12-r.top)/run));openP(pans[Math.floor(prog*pans.length)])};
   addEventListener('scroll',()=>{if(!pt){pt=true;requestAnimationFrame(scrollPan)}},{passive:true})}
 pans.forEach(p=>{p.addEventListener('click',()=>openP(p));p.addEventListener('focusin',()=>openP(p));
   if(matchMedia('(hover:hover)').matches)p.addEventListener('mouseenter',()=>openP(p));

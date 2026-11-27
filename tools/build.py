@@ -115,9 +115,6 @@ if len(sys.argv) > 2 and sys.argv[1] == '--preview':
     s = re.sub(r' srcset="[^"]*"', '', s)
     s = re.sub(r'(src|href|data-full|data-img)="((?:img|fonts)/[^"]+)"', lambda m: f'{m.group(1)}="{d(m.group(2))}"', s)
     s = s.replace('rel="preload"', 'rel="x"')
-    lcss = (ROOT / 'vendor/leaflet/leaflet.css').read_text(); ljs = (ROOT / 'vendor/leaflet/leaflet.js').read_text()
-    s = s.replace('<link rel="stylesheet" href="vendor/leaflet/leaflet.css">', '<style>' + lcss + '</style>')
-    s = s.replace('<script src="vendor/leaflet/leaflet.js" defer></script>', '<script>' + ljs + '</script>')
     pathlib.Path(sys.argv[2]).write_text(s)
     print('preview', len(s) // 1024, 'KB')
 else:

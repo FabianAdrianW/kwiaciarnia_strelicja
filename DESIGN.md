@@ -74,5 +74,6 @@ Realizacje z Instagrama @kwiaciarniastrelicjaid. **Zgoda właścicielki: potwier
 ## v8 (27.11.2026)
 - Hero: zdjęcie strelicji wtopione w tło zamiast taśmy (taśma nad stopką jako pasek Instagrama).
 - Kwiatomaty: dwie kolumny (intro + 5 linii), usunięta ciemna karta 24/7 i powtórzony cytat; sekcja ok. 38% niższa na desktopie.
-- Mobile (27.11 popołudnie): karta kwiatomatu wjeżdża na przyklejoną kartę pracowni (pracownia lekko maleje i ciemnieje); pytania jako jedna rotująca linia (3,2 s) nad stałym „Kwiatomat: otwarte.”; mapa nad listą, punkty jako karty przesuwane palcem (przesunięcie = przelot mapy), „Moja lokalizacja” w rogu mapy; okazje: przewijanie rozwija kolejny panel.
-- Przycisk „Prowadź” (pasek mobilny obok „Zadzwoń”, navbar na desktopie): najbliższy punkt otwarty teraz (w godzinach pracy pracownia lub kwiatomat, poza nimi kwiatomat); bez zgody na lokalizację → Kwiatomat Oława. Etykieta poza godzinami: „Do kwiatomatu”.
+- Mobile (27.11): karta kwiatomatu wjeżdża na przyklejoną kartę pracowni; pytania jako jedna rotująca linia nad stałym „Kwiatomat: otwarte.”; okazje jako przyklejona scena (pozycja przewinięcia wybiera otwarty panel, nic nie da się przeskoczyć).
+- Mapa usunięta (Leaflet wyrzucony z repo); „Dojazd” to lista 3 punktów z czasem dojazdu po „Użyj mojej lokalizacji”.
+- Przycisk „Prowadź” (pasek mobilny obok „Zadzwoń”, navbar na desktopie): najbliższy punkt otwarty teraz; bez zgody na lokalizację → Kwiatomat Oława; poza godzinami „Do kwiatomatu”. iOS: panel wyboru Mapy Apple / Google Maps (comgooglemaps://) / Waze; Android i desktop: Google Maps od razu.
