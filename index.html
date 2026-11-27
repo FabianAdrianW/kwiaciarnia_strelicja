@@ -169,7 +169,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
 .kiosk-panel>*{position:relative;z-index:2}
 .k-top{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:start;margin-bottom:clamp(36px,6vh,64px)}
 .k-intro .lead{margin:20px 0 22px}
-.k-addr{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.k-addr{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .k-addr li{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:7px 13px;border-radius:40px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
 .k-addr li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bloom)}
 .btn-amber{background:var(--bloom);color:#1E3533}.btn-amber:hover{background:var(--amber)}
@@ -447,9 +447,8 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
           <h2 id="kw-h" class="rv d1">Kwiaciarnia zamknięta?<br><em>Kwiatomat nie.</em></h2>
           <p class="lead rv d2">Dwa automaty z bukietami wiązanymi w naszej pracowni, nie z hurtowni. Wybierasz za szybą, płacisz przy automacie i jedziesz. W nocy, w niedziele i w święta.</p>
           <ul class="k-addr rv d2"><li>Oława, ul. Lipowa 1c</li><li>Jelcz-Laskowice, ul. Oławska 27</li></ul>
-          <a class="btn btn-amber rv d3" href="#mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Który mam bliżej?</a>
         </div>
-        <ul class="k-lines"><li class="rv live" id="kLive"><span class="q">Teraz, {hhmm}, a kwiaciarnie zamknięte?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Niedziela, a mama ma imieniny?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Rocznica przypomniana o 21:30?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Święta i wszystko pozamykane?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Wracasz po 22:00 i chcesz zrobić niespodziankę?</span><span class="a">Kwiatomat: otwarte.</span></li></ul>
+        <ul class="k-lines"><li class="rv live" id="kLive"><span class="q">Teraz, {hhmm}, a kwiaciarnie zamknięte?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Niedziela, a mama ma imieniny?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Zapomniałeś o rocznicy?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Święta i wszystko pozamykane?</span><span class="a">Kwiatomat: otwarte.</span></li><li class="rv"><span class="q">Wracasz po 22:00 i chcesz zrobić niespodziankę?</span><span class="a">Kwiatomat: otwarte.</span></li></ul>
       </div>
 
       <div class="finder" id="mapa">
@@ -457,13 +456,6 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--accent)}
           <h3 class="rv">Gdzie masz <em>najbliżej?</em></h3>
           <p class="rv d1">Sprawdź, ile jedziesz do pracowni i do każdego kwiatomatu. Twoja lokalizacja zostaje w przeglądarce i nigdzie jej nie wysyłamy.</p>
           <div class="f-actions"><button type="button" class="btn btn-dark" id="locBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Użyj mojej lokalizacji</button></div>
-          <div class="f-chips" role="group" aria-label="Albo wybierz miejscowość">
-            <button type="button" data-ll="50.9457,17.2903">Oława</button>
-            <button type="button" data-ll="51.0393,17.3346">Jelcz-Laskowice</button>
-            <button type="button" data-ll="51.0306,17.1475">Siechnice</button>
-            <button type="button" data-ll="50.8617,17.4685">Brzeg</button>
-            <button type="button" data-ll="51.1079,17.0385">Wrocław</button>
-          </div>
           <p class="f-msg" id="fMsg" role="status"></p>
           <ul class="f-list" id="fList"></ul>
           <p class="f-note">Czas dojazdu autem jest szacunkowy. Dokładną trasę pokaże „Prowadź” w Mapach Google.</p>
@@ -706,11 +698,10 @@ function initMap(){if(map)return;if(!window.L){addEventListener('load',initMap,{
 }
 renderList();
 new IntersectionObserver((e,o)=>e.forEach(x=>{if(x.isIntersecting){initMap();o.disconnect()}}),{rootMargin:'300px'}).observe($('#map'));
-$('#locBtn').addEventListener('click',()=>{if(!navigator.geolocation){fMsg.textContent='Twoja przeglądarka nie udostępnia lokalizacji. Wybierz miejscowość.';return}
+$('#locBtn').addEventListener('click',()=>{if(!navigator.geolocation){fMsg.textContent='Twoja przeglądarka nie udostępnia lokalizacji.';return}
   fMsg.textContent='Sprawdzam lokalizację…';
-  navigator.geolocation.getCurrentPosition(pos=>{$$('.f-chips button').forEach(b=>b.setAttribute('aria-pressed',false));setMe([pos.coords.latitude,pos.coords.longitude],'Odległości od Twojej lokalizacji.')},
-   ()=>{fMsg.textContent='Nie udało się pobrać lokalizacji. Wybierz miejscowość poniżej.'},{enableHighAccuracy:false,timeout:10000,maximumAge:300000})});
-$$('.f-chips button').forEach(b=>b.addEventListener('click',()=>{$$('.f-chips button').forEach(x=>x.setAttribute('aria-pressed',x===b));setMe(b.dataset.ll.split(',').map(Number),`Odległości od centrum: ${b.textContent}.`)}));
+  navigator.geolocation.getCurrentPosition(pos=>{setMe([pos.coords.latitude,pos.coords.longitude],'Odległości od Twojej lokalizacji.')},
+   ()=>{fMsg.textContent='Nie udało się pobrać lokalizacji. Sprawdź uprawnienia w przeglądarce.'},{enableHighAccuracy:false,timeout:10000,maximumAge:300000})});
 
 /* occasions panels */
 const pans=$$('.panel');
